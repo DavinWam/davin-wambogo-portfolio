@@ -1,0 +1,1339 @@
+/* Old Colors
+    '#0E2440' // Dark blue
+    '#6A517D' // Purple
+    '#C25D8C' // Pink
+    '#F57382' // magenta
+    '#F57382' // light red
+    '#F59371' // pastel orange
+    '#FAC2AA' // Peach'
+*/
+
+/*  
+    #121212 // black - background
+    #1F1F1F // Dark Grey - pane
+    #BB86FC // light purple - Header/ primary Color
+    #03DAC5 // light teal - Secondary Color
+    #F59371 // pastel orange - links
+    #C25D8C // Pink - link hover
+       
+*/
+:root{
+    --color-background: #121212;
+}
+
+
+/* =======================
+   Global Styles
+   ======================= */
+
+/* Reset default margins and paddings for consistency across browsers */
+body,
+h1,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base styles for the body element */
+body {
+    font-family: Geneva, Tahoma, sans-serif;
+    background-color: var(--color-background);
+    /* Black background */
+    color: #BB86FC;
+    /* Light purple text color */
+    line-height: 1.6;
+    /* Improved readability */
+}
+
+/* =======================
+   Typography
+   ======================= */
+
+/* Main heading (h1) */
+h1 {
+    font-size: clamp(34px, 5vw, 48px);
+    /* Minimum 24px, scales with viewport, maximum 48px */
+}
+
+/* Secondary heading (h2) */
+h2 {
+    display: inline-block;
+    /* Allows centering */
+    border-bottom: 6px solid white;
+    /* Thicker underline */
+    width: 80px;
+    /* Controls the width of the underline */
+    margin: 20px auto;
+    /* Centers the h2 within its container */
+    font-size: clamp(18px, 4vw, 34px);
+    /* Minimum 18px, scales with viewport, maximum 34px */
+    white-space: nowrap;
+    /* Prevents text wrapping */
+}
+
+/* Tertiary heading (h3) */
+h3 {
+    font-size: clamp(16px, 3.5vw, 32px);
+    /* Minimum 16px, scales with viewport, maximum 32px */
+    color: white;
+    /* White text for readability */
+}
+
+h4 {
+    font-size: clamp(14px, 3vw, 24px);
+    /* Minimum 14px, scales with viewport, maximum 24px */
+}
+
+h5 {
+    font-size: clamp(12px, 2.5vw, 20px);
+    /* Minimum 12px, scales with viewport, maximum 20px */
+    color: #03DAC5;
+}
+
+/* Paragraphs and list items */
+p,
+li {
+    font-size: clamp(20px, 1vw, 24px);
+    /* Minimum 14px, scales with viewport, maximum 18px */
+    color: white;
+    /* White text for readability */
+}
+
+
+/* =======================
+   Footer
+   ======================= */
+
+/* Styles for the footer element */
+footer {
+    background-color: #1F1F1F;
+    /* Dark Grey background */
+    text-align: center;
+    /* Center aligns text */
+    padding: 10px 0;
+    /* Adds padding for better spacing */
+}
+
+
+
+/* =======================
+   Header Styles
+   ======================= */
+
+/* Initial styles for the header */
+header {
+    position: relative;
+    z-index: 1000;
+    background-color: #1F1F1F;
+    /* Dark Grey background */
+    color: #fff;
+    /* White text */
+    display: flex;
+    /* Flexbox layout for positioning */
+    justify-content: space-between;
+    /* Space out content */
+    align-items: center;
+    /* Vertically center items */
+    padding: 20px 20px;
+    /* Padding around the content */
+    transition: padding 0.3s, height 0.3s;
+    /* Smooth transition for padding and height changes */
+    position: relative;
+    /* Positioning context for pseudo-element */
+}
+
+/* Pseudo-element for a bottom border in the header */
+header::after {
+    content: "";
+    display: block;
+    width: 80%;
+    /* Adjusts the width of the border */
+    height: 2px;
+    /* Thickness of the border */
+    background-color: #BB86FC;
+    /* Light purple border color */
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    /* Centers the border */
+}
+.text-container {
+    display: inline-block; /* Allows the div to scale with the content */
+    width: 100%; /* Adjusts width based on content */
+    max-width: 100%; /* Ensures it doesn't exceed the container's width */
+    white-space: nowrap; /* Prevents text wrapping */
+    min-height: 20px;
+}
+
+/* Blinking pipe animation for text cursor effects */
+.blinking-pipe {
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+        /* Makes the pipe disappear halfway through the animation */
+    }
+}
+
+/* Links in the header, including visited links */
+header a,
+header a:visited {
+    color: #fff;
+    /* White text for links */
+}
+
+/* Header when at the top of the page */
+header.at-top {
+    height: 80px;
+    /* Increased height */
+    padding: 20px 20px;
+    /* Additional padding */
+}
+
+/* Header when scrolling down */
+header.scrolled {
+    height: 60px;
+    /* Reduced height */
+    padding: 10px 20px;
+    /* Less padding */
+}
+
+/* Container inside the header, ensuring full width usage */
+header>div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Hover state for links in the header */
+header a:hover {
+    color: #03DAC5;
+    /* Light teal color on hover */
+}
+
+/* Removes default padding and list styles for the header navigation */
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* Inline display for navigation items in the header */
+header li {
+    display: inline;
+}
+
+/* Header text styles */
+header h1 {
+    font-size: clamp(16px, 3.5vw, 32px); 
+    /* Adjust the minimum size if needed */
+    transition: font-size 0.3s ease;
+    color: #03DAC5;
+}
+
+
+/* Highlighted text within the header h1 */
+header h1 .highlight {
+    color: #BB86FC;
+    /* Light purple for emphasized text */
+}
+
+/* Font size adjustment for the header text when at the top of the page */
+header.at-top h1 {
+    font-size: clamp(24px, 6vw, 38px);
+
+}
+
+
+
+/* =======================
+   Navigation
+   ======================= */
+   nav {
+    display: flex;
+    align-items: center; /* Center the navigation buttons vertically */
+    justify-content: flex-end; /* Align the navigation to the right */
+    width: 80%;
+    min-width: 380;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 100%; /* Ensure the ul spans the full width of the nav */
+    padding: 0;
+    padding-left: 20px;
+    margin: 0;
+    gap: 10px; /* Add gap between buttons */
+}
+
+nav ul li {
+    flex-grow: 1; /* Make each li element grow to fill available space */
+    margin: 0; /* Remove margin from li to prevent extra spacing */
+}
+
+.nav-button {
+    display: flex;
+    align-items: center; /* Center the button content vertically */
+    justify-content: center; /* Center the button content horizontally */
+    background-color: #BB86FC; /* Purple background for buttons */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    margin: 0; /* Remove margin from the button itself */
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background-color 0.3s, width 0.3s;
+    width: 100%; /* Ensure buttons fill their li containers */
+    min-width: 100px;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.nav-button:hover {
+    background-color: #C25D8C; /* Pink background for hover */
+}
+
+.nav-button.current-page,
+.nav-button:hover {
+    background-color: #03DAC5; /* Teal color for current page or hover state */
+    color: #fff;
+}
+
+.current-page {
+    background-color: #C25D8C; /* Pink background for hover or current page */
+}
+
+/* =======================
+   Responsive Styles for Header
+   ======================= */
+   @media (max-width: 932px) {
+
+    /* Adjust header padding and layout for smaller screens */
+    header{
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items horizontally */
+        padding: 15px 10px;
+        /* Reduce padding */
+        z-index: 1000;
+        /* Ensure header stays on top */
+    }
+
+    /* Adjust header text size for smaller screens */
+    header h1 {
+        text-align: center;
+        /* Center the text horizontally */
+    }
+
+    /* Responsive Navigation Button Styles */
+    .nav-button {
+        padding: 10px 15px;
+        /* Further reduce padding on smaller screens */
+        font-size: clamp(12px, 2vw, 16px);
+        /* Slightly reduce font size for better fit */
+        width: 80%;
+        /* Ensure buttons take up full width */
+        max-width: none;
+        text-align: center;
+        /* Center text within the button */
+    }
+
+    /* Adjust navigation layout for smaller screens */
+    nav ul {
+        flex-direction: column;
+        /* Stack navigation items vertically */
+        width: 100%;
+        /* Full width */
+        margin-top: 10px;
+        /* Add spacing */
+        align-items: center;
+        /* Center the navigation items */
+        padding: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        /* Ensure li elements take up full width */
+        margin-bottom: 10px;
+        /* Space between navigation items */
+        display: flex;
+        justify-content: center;
+        /* Center the li elements */
+    }
+
+    /* Adjust header navigation for mobile */
+    nav {
+        justify-content: center;
+        /* Center navigation horizontally */
+        width: 100%;
+        /* Full width */
+    }
+
+    /* Hide the border on smaller screens */
+    header::after {
+        display: none;
+    }
+}
+
+/* =======================
+    social Overlay Styles
+   ======================= */
+.social-buttons {
+    position: fixed;
+    /* Fixed position to stay in the same spot on the screen */
+    bottom: 20px;
+    /* Distance from the bottom of the screen */
+    right: 20px;
+    /* Distance from the right of the screen */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Space between buttons */
+    z-index: 1000;
+    /* Ensures the buttons render on top of other content */
+}
+
+.social-button {
+    width: 70px;
+    /* Width of the circular button */
+    height: 70px;
+    /* Height of the circular button */
+    border-radius: 50%;
+    /* Makes the button circular */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F1F1F;
+    /* Background color of the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* Adds a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation for hover effects */
+}
+
+/* Base styles for images */
+.social-button img {
+    width: 100%;
+    /* Make the image fill the button */
+    height: 100%;
+    border-radius: 50%;
+    /* Ensures the image itself is circular */
+    object-fit: cover;
+    /* Ensures the image aspect ratio is maintained */
+    transform-origin: center;
+    /* Ensure zooming happens from the center */
+}
+
+/* Individual crop and zoom adjustments */
+.linkedin-icon {
+    transform: scale(1.5);
+    /* Scale back up to fill the button */
+}
+
+.itch-icon {
+    transform: scale(1.2);
+    /* Scale slightly to match other icons */
+}
+
+.email-icon {
+    transform: scale(1.2);
+    /* Scale back up more to fill the button */
+}
+
+.social-button:hover {
+    transform: scale(1.15);
+    /* Slightly enlarges the button on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    /* Darker shadow on hover */
+}
+
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 480px) {
+    .social-button {
+        width: 50px; /* Adjust button width for smaller screens */
+        height: 50px; /* Adjust button height for smaller screens */
+    }
+
+}
+/* =======================
+    Introduction Styles
+   ======================= */
+
+
+/* introduction of featured content */
+.showcase {
+    position: relative;
+    z-index: 1;
+    /* Ensures a minimum height */
+    text-align: center;
+    /* Center aligns text */
+    margin: 0px;
+    /* Removes default margin */
+}
+.title {
+    font-size: clamp(34px, 6vw, 48px); /* Responsive font size */
+}
+
+.overlay-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    /* Enable flexbox */
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: center;
+    /* Center elements vertically */
+    align-items: center;
+    /* Centers content horizontally */
+    width: 100%;
+    height: 700px;
+    padding: 0px 0px 0px 0px;
+    margin: auto;
+    margin-bottom: -700px;
+    /* Negative margin to overlap the canvas */
+
+
+    border-radius: 10px;
+    /* Optional: Adds rounded corners */
+}
+
+.overlay-text h1 {
+    color: #03DAC5;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    /* Add shadow to text */
+    width: 70%;
+    font-size: clamp(32px, 5vw, 64px);
+    /* Minimum 32px, scales with viewport, maximum 64px */
+}
+
+/* Target the first div with class 'pane' inside overlay-text */
+.overlay-text .pane {
+    width: 70%;
+}
+
+#canvas-container {
+    width: 100%;
+    /* filter: blur(2px); Applies a slight blur to the canvas */
+    margin-top: 2px;
+    /*should be equal to blur size*/
+}
+
+#background-canvas {
+    height: 700px;
+}
+
+#particle-canvas {
+    position: relative;
+    height: 700px;
+    /* Match the height set in your sketches */
+    margin-bottom: -700px;
+    /* Negative margin to overlap the canvas */
+    z-index: 1;
+}
+
+/* Featured Game Section */
+.container #games h2 {
+    font-size: clamp(20px, 10vw, 100px);
+    /* Scales between 50px and 100px depending on the viewport */
+    margin: 20px 0px 50px 0px;
+    /* Margin adjustments */
+}
+
+/* Game Article */
+.container #games .game {
+    margin: 0px 0px 100px 0px;
+    /* Spacing around the game article */
+}
+/* Media query for screens smaller than 480px */
+@media (max-width: 480px) {
+    .container #games .game {
+        margin: 0px 0px 50px 0px; /* Reduce bottom margin for smaller screens */
+    }
+}
+/* Game Title */
+
+
+/* =======================
+   Main Body Styles
+   ======================= */
+/* Container for the main content */
+.container {
+    padding: 10px 0px;
+    /* Padding on top and bottom */
+    width: 85%;
+    /* Sets the container width */
+    margin: auto;
+    /* Centers the container horizontally */
+    /* overflow: hidden; */
+    /* Hides overflow content */
+    border-top: 2px solid #BB86FC;
+    /* Light purple top border */
+    height: auto;
+}
+
+/* Styles for content panels or sidebars */
+.pane {
+    background-color: rgba(31, 31, 31, 0.8); /* Dark Grey with transparency */
+    padding: clamp(10px, 4vw, 20px) clamp(20px, 8vw, 80px); 
+    /* Responsive padding: vertical and horizontal */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+/* General button styling */
+.button {
+    background-color: #03DAC5;
+    color: #fff;
+    /* White text */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    text-decoration: none;
+    /* Removes underline from links */
+    border-radius: 5px;
+    /* Rounded corners */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for background color change */
+}
+
+/* Hover state for buttons */
+.button:hover {
+    background-color: #03DAC5;
+    /* Light teal background on hover */
+}
+
+/* button to project page or to itch page */
+.game-link {
+    display: block;
+    /* Full-width */
+    background-color: #BB86FC;
+    /* Light purple background */
+    color: white;
+    /* White text */
+    padding: 15px 0;
+    /* Vertical padding */
+    width: 100%;
+    /* Full width */
+    margin: 20px auto;
+    /* Center the button with spacing */
+    font-size: 24px;
+    /* Slightly larger font size */
+    text-align: center;
+    /* Center text */
+    text-decoration: none;
+    /* Remove underline */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Smooth transition */
+}
+
+/* Hover state for game links */
+.game-link:hover {
+    background-color: #03DAC5;
+    transform: scale(1.05);
+    /* Slight size increase on hover */
+}
+
+/* =======================
+   Grids
+   ======================= */
+
+/* CSS for the grid layout */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns by default */
+    grid-auto-rows: minmax(150px, auto); /* Minimum height for rows, adjusts based on content */
+    gap: 20px; /* Space between grid items */
+    width: 100%;
+}
+
+
+
+.games-section {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+}
+
+.games-text {
+    flex: 1;
+    margin-right: 30px;
+    padding-left: 5%;
+}
+
+.games-text h2 {
+    font-size: clamp(24px, 5vw, 96px); /* Minimum, preferred, and maximum font size in pixels */
+}
+
+.games-text h3 {
+    font-size: clamp(14px, 3vw, 48px); /* Adjust these values based on your design */
+}
+
+.carousel {
+    position: relative;
+    width: 60%;
+    /* Full width of the parent container */
+    margin: 0 auto;
+    /* Center the carousel */
+    overflow: hidden;
+    /* Hide items outside of the carousel view */
+}
+
+.game-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    /* Hint to the browser for better rendering */
+
+
+}
+
+.carousel .game {
+    flex: 0 0 calc(47% - 20px);
+    /* Each game takes up one-third of the carousel's width minus margin */
+    margin-right: 20px;
+    /* Space between the games */
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width/height */
+}
+
+@media (max-width: 480px) {
+    .carousel .game {
+        flex: 0 0 calc(48%);
+        /* Each game takes up one-third of the carousel's width minus margin */
+        margin-right: 2px;
+        /* Space between the games */
+        box-sizing: border-box;
+        /* Ensure padding and border are included in the width/height */
+    }
+    
+}
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.prevButton,
+.nextButton,
+#prev-btn,
+#next-btn {
+    background-color: #03DAC5;
+    /* #BB86FC  */
+
+    color: white;
+    /* White text color */
+    border: none;
+    /* Remove default border */
+    padding: 10px;
+    /* Padding for clickable area */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    border-radius: 50%;
+    /* Make them circular */
+    width: 80px;
+    /* Set a fixed width */
+    height: 80px;
+    /* Set a fixed height */
+    display: flex;
+    /* Use flexbox for centering the arrow */
+    justify-content: center;
+    /* Center the arrow horizontally */
+    align-items: center;
+    /* Center the arrow vertically */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Smooth transition for background color and scale */
+    margin: 0 10px;
+    /* Add some space between the buttons */
+}
+
+.prevButton:hover,
+.nextButton:hover,
+#prev-btn:hover,
+#next-btn:hover {
+    transform: scale(1.2);
+    /* Increase size on hover */
+}
+
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 480px) {
+    .prevButton,
+    .nextButton,
+    #prev-btn,
+    #next-btn {
+        width: 60px; /* Adjust width for smaller screens */
+        height: 60px; /* Adjust height for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin: 0 5px; /* Reduce margin between buttons */
+    }
+
+    .carousel-buttons {
+        margin-top: 20px; /* Reduce top margin for smaller screens */
+        margin-bottom: 20px; /* Reduce bottom margin for smaller screens */
+    }
+}
+/* =======================
+   Game Card Styles
+   ======================= */
+
+/* Base style for each game card */
+.game {
+    background-color: #1F1F1F;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin-right: 20px;
+    position: relative;
+    flex: 1;
+    overflow: hidden; /* Prevent content overflow */
+}
+/* Adjust layout for tablets */
+@media (max-width: 768px) {
+
+    .game {
+        margin-right: 0 !important; /* Force apply to check if it's an override issue */
+        max-height: 20vh;
+    }
+}
+
+
+/* Style for game images */
+.game img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    /* Rounded corners */
+}
+
+/* Styling for paragraphs within the game card */
+.game p {
+    margin: 0;
+    /* Remove default margins */
+}
+
+/* Style for anchor tags within the game card */
+.game a {
+    height: 100%;
+    /* Full height */
+}
+
+
+
+/* Title inside the game card */
+.game h3 .title {
+    font-size: clamp(12px, 2vw, 24px);
+    font-weight: bold;
+    color: #03DAC5;
+    /* Light teal text color */
+    display: none;
+}
+
+/* Styling for game title's container */
+.game h3 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the title */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* Rounded corners */
+    z-index: 2;
+    display: none;
+    pointer-events: none;
+    /* Allow clicks to pass through */
+    font-size: clamp(12px, 2vw, 24px);
+    max-height: 80%;
+    width:70%
+}
+
+/* Hover state for showing the game title */
+.game:hover h3 .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hover state for showing the game title container */
+.game:hover h3 {
+    display:block;
+}
+/* On mobile, make sure the hover effect is not applied */
+@media (max-width: 768px) {
+    .game h3 .title {
+        display: none;
+    }
+
+    .game h3 {
+        display: none;
+        font-size: 0px;
+        
+    }
+}
+
+
+/* =======================
+   Effects Styles
+   ======================= */
+/* Increase font size and apply fade-in animation to elements with the "large-fade-in" class */
+.large-fade-in {
+    opacity: 0;
+    /* Initially set opacity to 0 to make them invisible */
+    animation: fadeIn 1.5s ease forwards;
+    /* Apply fade-in animation */
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+/* Increase font size for p elements with the "large-fade-in" class */
+.large-fade-in p {
+
+    font-size: clamp(18px, 2vw, 24px);
+    /* Adjust the font size as needed */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Start with opacity 0 (invisible) */
+        transform: translateY(20px);
+        /* Optional: Add a slight vertical translation */
+    }
+
+    to {
+        opacity: 1;
+        /* End with opacity 1 (fully visible) */
+        transform: translateY(0);
+        /* Optional: Reset vertical translation */
+    }
+}
+
+
+.image-effect {
+    position: relative;
+    /* Set positioning context for z-index */
+    z-index: 1;
+    /* Lower than the title */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.image-effect:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+        /* Start fully transparent */
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        /* End fully opaque */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =======================
+   Project Page Styles
+   ======================= */
+
+/* =======================
+   Project Sections & Documentation
+   ======================= */
+
+/* General section padding */
+.project-section {
+    padding-bottom: 20px;
+}
+.project-container {
+    padding-top: clamp(40px, 8vw, 80px);
+    /* Adjusts padding-top based on viewport width */
+}
+
+/* Styling for the project header */
+.project-header {
+     display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    gap: 10px; 
+    font-size: clamp(18px, 2vw, 24px); 
+    margin-bottom: 10px; 
+}
+
+.project-header h3 {
+    font-size: clamp(24px, 3vw, 32px); /* Responsive font size for title */
+    margin: 0; /* Remove default margins */
+    color: #03DAC5; /* Light teal color for title */
+    text-align: center;
+}
+
+.project-header span {
+    font-size: clamp(24px, 2vw, 32px); /* Responsive font size for the year */
+    color: #BB86FC; /* Light purple color for the year */
+}
+.mini-project-container {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+/* Child elements inside the container */
+.mini-project-container > .left-pane {
+    flex: 0 0 50%; /* Do not grow or shrink, occupy 60% width */
+}
+
+.mini-project-container > .right-pane {
+    flex: 0 0 50%; /* Do not grow or shrink, occupy 40% width */
+}
+
+
+@media (max-width: 1200px) {
+    .mini-project-container {
+        display: block;
+    }
+    .responsive-video {
+        margin-bottom: 10px;
+        padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    }
+    
+}
+.project-title {
+    padding: 0px; /* Left and right padding for the title */
+    font-size: clamp(24px, 3vw, 32px); /* Responsive font size for the title */
+    color: #03DAC5; /* Light teal color */
+}
+
+.project-year {
+    padding: 0 0px; /* Left and right padding for the year */
+    font-size: clamp(18px, 2vw, 24px); /* Responsive font size for the year */
+    color: #BB86FC; /* Light purple color */
+}
+
+.project-roles {
+    padding: 0 10px; /* Padding for roles section */
+    font-size: clamp(12px, 1.5vw, 22px); /*Responsive font size for the roles */
+    /* font-size: 12px; */
+    color: #03DAC5; /* Light teal color for title */
+    /* white-space: nowrap; */
+}
+.project-description{
+    font-size: clamp(16px, 1vw, 18px);
+}
+.project-list li{
+    font-size: clamp(16px, 1vw, 18px);
+    padding-left: 20px; /* Optional: Add spacing to align list items */
+    
+} 
+.project-team ul{
+    display: flex;
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Horizontal centering */
+}
+.composite-image {
+    width: 300px;
+    height: 300px;
+    
+    background-position: center, center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: contain, contain, contain;
+  }
+  
+.project-team {
+    padding-left: 30px; /* Padding for team member list */
+    white-space: nowrap;
+    font-size: clamp(16px, 1.8vw, 22px); /* Responsive font size for the team */
+    margin: 0; /* Remove default margin */
+
+}
+.responsive-video {
+    position: relative;
+    width: 100%; 
+}
+
+.responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Ensures the iframe inherits the border radius */
+}
+
+
+
+/* Video Section */
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* Optional: Background color while loading */
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Remove the default border */
+}
+
+
+/* Styling for list items in the "learned things" section */
+.learned-things ul li {
+    list-style-type: disc;
+    /* Disc bullet points */
+    margin-left: 20px;
+    /* Space between bullet points and text */
+}
+
+/* Documentation section styling */
+.documentation {
+    background-color: #121212;
+    /* Dark background for documentation */
+    color: #BB86FC;
+    /* Light purple text */
+    border-radius: 8px;
+    /* Rounded corners */
+}
+
+/* Link styles within the documentation section */
+.documentation a {
+    text-decoration: none;
+    color: #F59371;
+    /* Pastel orange for links */
+    font-weight: bold;
+}
+
+/* Hover effects for documentation links */
+.documentation a:hover {
+    color: #C25D8C;
+    /* Pink color on hover */
+}
+
+/* List styles within the documentation section */
+.documentation ul {
+    list-style-type: none;
+    padding: 0;
+    /* Remove default padding */
+}
+
+.documentation li {
+    margin-bottom: 10px;
+    /* Space between list items */
+}
+
+/* =======================
+   Project Thumbnails
+   ======================= */
+
+/* Grid for displaying screenshots */
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three equal-width columns */
+    gap: 10px;
+    /* Space between screenshots */
+}
+@media (max-width: 1200px) {
+    .screenshot-grid {
+        display: block;
+    }
+}
+/* Style for individual screenshot links */
+.screenshot-grid a {
+    display: block;
+}
+
+
+/* Style for images within screenshot grid */
+.screenshot-grid img {
+    width: 95%;
+    height: 100%;
+    object-fit: fill;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    /* Slightly rounded corners */
+    transition: transform 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+/* Hover effect for screenshots */
+.screenshot-grid img:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    border-color: #333;
+    /* Darker border on hover */
+}
+
+/* Style for images within screenshot grid */
+.screenshot-grid img {
+    width: 95%;
+    height: 100%;
+    object-fit: fill;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    /* Slightly rounded corners */
+    transition: transform 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+/* Hover effect for screenshots */
+.screenshot-grid img:hover {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    border-color: #333;
+    /* Darker border on hover */
+}
+
+
+/* Modal Styles for Project Page */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    /* Ensure the modal is on top */
+
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black with opacity */
+
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    width: 80%;
+    height: auto;
+}
+
+.modal img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Close button styles for the modal */
+.close {
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: clamp(100px, 2vw, 200px);
+    font-weight: bold;
+    line-height: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    /* Lighter color on hover/focus */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styles for slideshow elements within the modal */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons for the slideshow */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    font-size: clamp(12px, 2vw, 20px);
+    transition: 0.6s ease;
+    /* Smooth transition for hover */
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Positioning and style for the "next" button */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect for slideshow navigation buttons */
+.prev:hover,
+.next:hover {
+
+    transform: scale(1.05);
+    /* Darker background on hover */
+}
+
+/* =======================
+   Random Projects
+   ======================= */
+
+/* Grid for random projects */
+.random-projects .game-grid {
+    width: 100%;
+    /* Full width */
+    /* Add any additional styling as needed */
+}
+
+/* Individual game style within random projects */
+.random-projects .game-grid .game {
+    height: 300px;
+    /* Set a fixed height for each game card */
+    /* Add any additional styling as needed */
+}
+
+.game.empty-slot .image-placeholder {
+    width: 100%;
+    height: 200px;
+    /* Adjust height as necessary */
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

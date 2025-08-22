@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Project Title</title>
+    <!-- Link to your existing style.css file -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../loadHeader.js"></script>
+</head>
+
+<body>
+    <header id="header-container"></header>
+    <section class="showcase">
+        <div style="padding-top: 80px;">
+            <h1 class="large-fade-in title" >City Of Valdrada</h1>
+            <div class="pane" >
+                <h3 class="large-fade-in">Capturing the mysical wonder of light in a VR scene.</h3>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+
+
+
+        <!-- Demo Video -->
+        <section class="video">
+            <iframe width="980" height="550" src="https://youtube.com/embed/E0xxjMSWoyE" frameborder="0"
+                allowfullscreen></iframe>
+        </section>
+
+        <!-- Project Context -->
+        <section class="project-section">
+            <div class="pane project-header">
+                <h3>City of Valdrada</h3>
+                <span>(2022)</span>
+                <p><strong>Roles:</strong> Lead Developer</p>
+            </div>
+            <div class="pane project-description">
+                <p>
+                    Developed as part of an Immersive Media assignment, this VR experience was a collaborative effort by a team of three, inspired by Italo Calvino's *Invisible Cities*. Our group chose the ethereal city of Valdrada, known for its reflection in the waters below. Over the course of a week and a half, we transformed this concept into a 3D scene.
+                </p>
+                <ul>
+                    <li>Sketched out the basic layout for the map and decided on the necessary assets.</li>
+                    <li>Created seven distinct building types using the walls and verandas provided by teammates.</li>
+                    <li>Navigated challenges of integrating 2D assets into a 3D environment, addressing lighting and render
+                        order issues.</li>
+                    <li>Used Substance Designer to create textures for dirt, water, and sand.</li>
+                    <li>Utilized Blender and Shader Graph to create grass and water.</li>
+                    <li>Performed minor Photoshop work for particle effects.</li>
+                </ul>
+            </div>
+        </section>
+        
+
+        <!-- Things I Learned -->
+        <section class="project-section learned-things">
+            <h2>Things I Learned</h2>
+            <ul>
+                <li>Planned out the needed assets for the environement</li>
+                <li>Unity shader graph that go into effects such as vertex
+                    displacement, fresnel, camera depth, etc</li>
+                <li>Gained familiarity with Substance Designer and its node-based textures</li>
+                <li>Crafting environments with atmosphere</li>
+                <!-- Add more learning points as needed -->
+            </ul>
+        </section>
+
+
+        <!-- Screenshots Grid -->
+        <section class="project-section">
+            <h2>Screenshots</h2>
+            <div class="screenshot-grid">
+                <img src="./screenshots/3d_Valdrada (1).jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                <img src="./screenshots/3d_Valdrada (2).jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                <img src="./screenshots/3d_Valdrada (3).jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+        </section>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <img src="./screenshots/3d_Valdrada (1).jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/3d_Valdrada (2).jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/3d_Valdrada (3).jpg" style="width:100%">
+                </div>
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+
+        <!-- Notable Things I Did -->
+        <section class="project-section">
+            <h2>Highlight of the Project</h2>
+            <p class="pane">Working on this project was a chance for me to really dive into the visual side of game development,
+                something I hadn't focused on much before. It turned out to be a great learning experience, especially
+                in creating and using assets efficiently. I'm particularly proud of how I managed to use a few asset
+                variations to build the entire set of buildings in the scene. It was like solving a puzzle, figuring out
+                how to get the most out of each piece to create a diverse and engaging environment. What stands out to
+                me is how these choices in asset use really brought the whole scene together. It looked good, and it
+                felt right – it was just how I envisioned it. This project wasn't just about making things look pretty;
+                it was a practical lesson in making the most of what you have, and I think that's something that will
+                stick with me in my future projects.</p>
+        </section>
+        <section class="project-section">
+            <h2>Team Credits</h2>
+            <div class="pane">
+                <h5>Special thanks to my friends and classmates:</h5>
+                <ul>
+                    <li>Sophie Lu - Skybox</li>
+                    <li>Lois Kim - Building sprites</li>
+                    <!-- Add more teammates as necessary -->
+                </ul>
+            </div>
+        </section>
+    
+    </div>
+
+    <!-- Random Project Thumbnails Section -->
+    <div class="random-projects">
+        <div class="container">
+            <h2>Explore More Games</h2>
+
+            <div class="game-grid">
+
+            </div>
+            <div class="carousel-buttons">
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+            <section class="project-section">
+                <a href="../index.html" class="game-link">Back To Projects</a>
+            </section>
+        </div>
+    </div>
+
+
+    <footer id="footer-container"></footer>
+    <!-- Include the RandomGames.js script -->
+    <script src="RandomGame.js"></script>
+    <script src="Modal.js"></script>
+
+</body>
+
+</html>

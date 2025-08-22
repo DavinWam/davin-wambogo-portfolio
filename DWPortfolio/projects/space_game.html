@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Project Title</title>
+    <!-- Link to your existing style.css file -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../loadHeader.js"></script>
+</head>
+
+<body>
+    <header id="header-container"></header>
+
+    <div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center;">
+        <strong>Note:</strong> This project page is old and not updated actively
+    </div>
+
+    <section class="showcase">
+        <div style="padding-top: 80px;">
+            <h1 class="large-fade-in title" >Space Blitz</h1>
+            <div class="pane" >
+                <h3 class="large-fade-in">Summit of The Universe</h3>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+
+
+
+        <!-- Demo Video -->
+        <!-- <section class="video">
+            <iframe width="980" height="550" src="https://youtube.com/embed/hTnZgLzd_wU" frameborder="0"
+                allowfullscreen></iframe>
+        </section> -->
+
+
+
+        <!-- Project Context -->
+        <section class="project-section">
+            <div class="pane project-header">
+                <h3>Space Blitz</h3>
+                <span>(2022)</span>
+                <p><strong>Roles:</strong> Game and Level Designer</p>
+            </div>
+            <div class="pane project-description">
+                <p> A high-speed, movement shooter developed by a team of three during a
+                    dedicated game jam. This single-level space adventure challenges players to get to the end speedily
+                    using a jetpack, with the ultimate goal of reaching a towering summit. I crafted the initial expansive leap to introduce players to
+                    the jetpack mechanics. The game offers dual paths to add flexibility in the beginning I narrow the paths as well as add
+                    distinct upper and lower routes to reward skill differentiaiton. My work also included the aesthetic aspects, 
+                    such as background objects, and materials. My two other members handling the programming and modeling
+                    to create an atmospheric space platforming experience.</p>
+            </div>
+        </section>
+        
+
+
+        <!-- Screenshots Grid -->
+        <section class="project-section">
+            <h2>Screenshots</h2>
+            <div class="screenshot-grid">
+                <img src="./screenshots/3d_SpaceBlitz(1).png" onclick="openModal();currentSlide(1)"
+                    class="hover-shadow">
+                <img src="./screenshots/3d_SpaceBlitz(2).png" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow">
+
+            </div>
+        </section>
+
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <img src="./screenshots/3d_SpaceBlitz(1).png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/3d_SpaceBlitz(2).png" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+
+        <!-- Notable Things I Did -->
+
+        <section class="project-section">
+            <h2>Take Aways</h2>
+            <p class="pane">This was my Collaborative project outside of working with friends, It was interesting and a case study for me on getting
+                buy in, people having interest that don't quite align, among other things. Despite it all I'm proud of the layout I created
+                but I find it mostly on a case study, on that I want to be truly invested in the end product. As opposed to just doing my part.
+                After, I had been somewhat burned in the other direction</p>
+        </section>
+
+    </div>
+
+
+
+
+    <!-- Random Project Thumbnails Section -->
+    <div class="random-projects">
+        <div class="container">
+            <h2>Explore More Games</h2>
+
+            <div class="game-grid">
+
+            </div>
+            <div class="carousel-buttons">
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+            <section class="project-section">
+                <a href="../index.html" class="game-link">Back To Projects</a>
+            </section>
+        </div>
+    </div>
+
+    <footer id="footer-container"></footer>
+    <!-- Include the RandomGames.js script -->
+    <script src="RandomGame.js"></script>
+    <script src="Modal.js"></script>
+
+</body>
+
+</html>
