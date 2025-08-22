@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title</title>
+    <!-- Link to your existing style.css file -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <div id="branding">
+                <h1><span class="highlight">Davin Wambogo</span> Game Developer</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="nav-button">Projects</a></li>
+                    <li><a href="../about.html" class="nav-button">About</a></li>
+                    <li><a href="../resume.html" class="nav-button">Resume</a></li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <div class="container">
+
+        <section class="showcase">
+            <div style="padding-top: 80px;">
+                <h1 class="large-fade-in" style="font-size: 48px; ">Taxes and Tenacity</h1>
+                <div class="large-fade-in" style="background-color: #16324A; ">
+                    <h3>Number Go Up</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Video -->
+        <section class="video">
+            <iframe width="980" height="550" src="https://youtube.com/embed/kV3OGCEIvKs" frameborder="0"
+                allowfullscreen></iframe>
+        </section>
+
+        <!-- Game Download/Play Link -->
+        <section class="project-section">
+            <a href="https://deditch.itch.io/taxes-and-tenacity" target=”_blank” class="game-link">Play Now</a>
+        </section>
+
+        <!-- Project Context -->
+        <section class="project-section">
+            <p> <strong>Taxes and Tenacity (2023)</strong> Created by a duo during an 2 week gamejam, this
+                roguelite game weaves RPG elements with a life-and-tax system. In this world, the player embarks
+                on dungeon expeditions to collect gold from defeated monsters, facing a looming tax deadline.
+                Successfully paying
+                your taxes, means earning extra lives; failure leads to losing them all. With each dive, both the stakes
+                and the
+                character's capabilities escalate.
+                <br><br>
+                As the <Strong> Game Designer, Programmer, and Animator</Strong>, I developed the core mechanics, including player and
+                camera movement, character stats, enemy AI, and the overarching
+                game manager. Designing the attack patterns for enemies and the player's moveset was a particular
+                challenge, allowing for a dynamic combat experience. Balancing the economy, players can invest their
+                gold in permanent stat upgrades or temporary boosts, adding a strategic layer to each run. My partner
+                contributed by crafting intricate levels, the map that connects them, and devising the
+                final boss’s attack sequences.
+            </p>
+        </section>
+
+        <!-- Things I Learned -->
+        <section class="project-section learned-things">
+            <h2>Things I Learned</h2>
+            <ul>
+                <li>Data management across scenes</li>
+                <li>Implemented state machines for both AI behavior, player controls and animation</li>
+            </ul>
+        </section>
+
+        <!-- Screenshots Grid -->
+        <section class="project-section">
+            <h2>Screenshots</h2>
+            <div class="screenshot-grid">
+                <img src="./screenshots/TaxesAndTenacity(1).jpg" onclick="openModal();currentSlide(1)"
+                    class="hover-shadow">
+                <img src="./screenshots/TaxesAndTenacity(2).jpg" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow">
+                <img src="./screenshots/TaxesAndTenacity(3).jpg" onclick="openModal();currentSlide(3)"
+                    class="hover-shadow">
+                <img src="./screenshots/TaxesAndTenacity(4).jpg" onclick="openModal();currentSlide(4)"
+                    class="hover-shadow">
+                <img src="./screenshots/TaxesAndTenacity(5).jpg" onclick="openModal();currentSlide(5)"
+                    class="hover-shadow">
+            </div>
+        </section>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <img src="./screenshots/TaxesAndTenacity(1).jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/TaxesAndTenacity(2).jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/TaxesAndTenacity(3).jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/TaxesAndTenacity(4).jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/TaxesAndTenacity(5).jpg" style="width:100%">
+                </div>
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <!-- Notable Things I Did -->
+        <section class="project-section">
+            <h2>Highlight of the Project</h2>
+            <p>Reflecting on the project, the aspect that fills me with the most pride are the character controls. One of the 
+                focuses and ideas behind this project was simplifying things down, focuses in on content and feel. The
+                three hit sword animation has a satisfying timing to it. I find that moving around has the simple fun to it that
+                I was looking for in ways that some previous projects lacked. That said it this game is also a bit even-keeled,
+                one thing I wanted expand upon in the future is those moments of excitement.</p>
+        </section>
+
+        <!-- Teammate Credits and Thanks -->
+        <section class="project-section">
+            <h2>Team Credits</h2>
+            <p>Special thanks to:</p>
+            <ul>
+                <li>Cory Schiff - Level Design and Programming</li>
+                <!-- Add more teammates as necessary -->
+            </ul>
+        </section>
+
+    </div>
+
+
+
+
+    <!-- Random Project Thumbnails Section -->
+    <div class="random-projects">
+        <div class="container">
+            <h2>Explore More Games</h2>
+            <div class="game-grid">
+
+            </div>
+            <section class="project-section">
+                <a href="../index.html" class="game-link">Back To Projects</a>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>Davin Wambogo - Student Game Designer</p>
+    </footer>
+    <!-- Include the RandomGames.js script -->
+    <script src="RandomGame.js"></script>
+    <script src="Modal.js"></script>
+
+</body>
+
+</html>

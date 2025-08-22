@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Project Title</title>
+    <!-- Link to your existing style.css file -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../loadHeader.js"></script>
+</head>
+
+<body>
+    <header id="header-container"></header>
+
+    <div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center;">
+        <strong>Note:</strong> This project page is old and not updated actively
+    </div>
+
+    <section class="showcase">
+        <div style="padding-top: 80px;">
+            <h1 class="large-fade-in title"  >Penrose</h1>
+            <div class="pane">
+                <h3 class="large-fade-in">An Exploration in Descent.</h3>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+
+
+
+        <!-- Demo Video -->
+        <!-- <section class="video">
+            <iframe width="980" height="550" src="https://youtube.com/embed/hTnZgLzd_wU" frameborder="0"
+                allowfullscreen></iframe>
+        </section> -->
+
+        <section class="project-section">
+            <div class="pane project-header">
+                <h3>Penrose</h3>
+                <span>(2020)</span>
+                <p><strong>Roles:</strong> Level and Narrative Designer</p>
+            </div>
+            <div class="pane project-description">
+                <p> This was my first attempt at game development, realized over the span of
+                    junior year in high school during the pandemic. Our six-person team embarked on creating a puzzle
+                    exploration game that delved into the psychological themes of anxiety, insecurity, and depression,
+                    articulated through distinct environments like a prison, a foggy mountain, and an underwater ravine. The
+                    game drew inspiration from the Penrose stairs, embodying the endless cycle of these emotions. Our
+                    ambitious project extended just under a year, and we managed to complete the first environment before
+                    concluding that finishing the game wasn't feasible in a reasonable timeframe.
+                    <br><br>
+                    I was resposible for how the levels would visually and interactively communicate our message without using any dialogue. This
+                    foray into game development was foundational for me, as it was where I learned to navigate Unity's.
+                </p>
+            </div>
+        </section>
+        
+
+        <!-- Project Context -->
+
+
+        <!-- Things I Learned -->
+        <section class="project-section learned-things">
+            <h2>Things I Learned</h2>
+            <ul>
+                <li>Familiarized myself with the Unity editor.</li>
+                <li>Learned to design levels that were not just spaces, but storytellers.</li>
+                <li>Gained experience in translating abstract concepts into visual landscapes.</li>
+                <!-- Add more learning points as needed -->
+            </ul>
+        </section>
+
+        <!-- Screenshots Grid -->
+        <section class="project-section">
+            <h2>Screenshots</h2>
+            <div class="screenshot-grid">
+                <img src="./screenshots/3d_Penrose (1).png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                <img src="./screenshots/3d_Penrose (2).png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                <img src="./screenshots/3d_Penrose (3).png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                <img src="./screenshots/3d_Penrose (4).jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                <img src="./screenshots/3d_Penrose (5).png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+            </div>
+        </section>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <img src="./screenshots/3d_Penrose (1).png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/3d_Penrose (2).png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/3d_Penrose (3).png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/3d_Penrose (4).jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/3d_Penrose (5).png" style="width:100%">
+                </div>
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <!-- Notable Things I Did -->
+
+        <section class="project-section">
+            <h2>Highlight of the Project</h2>
+            <p class="pane">The essence of our work on "Penrose" lies in the detailed environments we created, particularly the
+                library and the prison, which we fully realized. Their visual distinction is something I'm genuinely
+                proud of. The terrain work for the mountain is another personal triumph, showcasing my growth in
+                environmental design. From rallying a team during the pandemic to meticulously planning and executing
+                our ideas, to the eventual completion of an immersive 3D environment, this journey was marked by
+                numerous learning curves and some amusing blunders.</p>
+        </section>
+
+        <!-- Teammate Credits and Thanks -->
+        <section class="project-section">
+            <h2>Team Credits</h2>
+            <div class="pane">
+                <h5>My friends who helped me start this journey:</h5>
+                <ul>
+                    <li>Daniel Grammar - Music</li>
+                    <li>Evan Powers - Art</li>
+                    <li>James Espericueta - Programming</li>
+                    <li>Jaxon Lee - Programming</li>
+                    <li> Isaac Hill - Sound Effects</li>
+                    <!-- Add more teammates as necessary -->
+                </ul>
+            </div>
+
+        </section>
+
+    </div>
+
+
+
+
+    <!-- Random Project Thumbnails Section -->
+    <div class="random-projects">
+        <div class="container">
+            <h2>Explore More Games</h2>
+
+            <div class="game-grid">
+
+            </div>
+            <div class="carousel-buttons">
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+            <section class="project-section">
+                <a href="../index.html" class="game-link">Back To Projects</a>
+            </section>
+        </div>
+    </div>
+
+    <footer id="footer-container"></footer>
+    <!-- Include the RandomGames.js script -->
+    <script src="RandomGame.js"></script>
+    <script src="Modal.js"></script>
+
+</body>
+
+</html>

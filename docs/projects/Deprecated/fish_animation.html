@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Project Title</title>
+    <!-- Link to your existing style.css file -->
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../loadHeader.js"></script>
+</head>
+
+<body>
+    <header id="header-container"></header>
+    <div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center;">
+        <strong>Note:</strong> This project page is old and not updated actively
+    </div>
+    <section class="showcase">
+        <div style="padding-top: 80px;">
+            <h1 class="large-fade-in title" >Luminaqua</h1>
+            <div class="pane" >
+                <h3 class="large-fade-in">A Light Show in the Fishbowl</h3>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+
+
+
+        <!-- Demo Video -->
+        <section class="video">
+            <iframe width="980" height="550" src="https://youtube.com/embed/vT1BjoQB7IU" frameborder="0"
+                allowfullscreen></iframe>
+        </section>
+        <section class="project-section">
+            <div class="pane project-header">
+                <h3>Luminaqua</h3>
+                <span>(2021)</span>
+                <p><strong>Roles:</strong> 3D Modeler and Animator</p>
+            </div>
+            <div class="pane project-description">
+                <p>In this project, I focused on getting to grips
+                    with Blender, creating a simple but lively animation. I modeled and textured a fish, experimented
+                    with node-based textures for the rocks and a volcano, and dipped into fluid and smoke simulations to
+                    add a touch of realism to the water and volcanic effects. The animation of the fish swimming through
+                    the scene brought everything together. This was a learning experience, a step in developing my
+                    skills in 3D animation.</p>
+            </div>
+        </section>
+    
+
+
+        <!-- Things I Learned -->
+        <section class="project-section learned-things">
+            <h2>Things I Learned</h2>
+            <ul>
+                <li>Developed a workflow in Blender from modeling, to UVs,to texturing and finally rigging</li>
+                <li>Explored node-based texturing techniques for realistic rock and volcano textures</li>
+                <li>Experimented with smoke and water simulation to add some dynamics to the scene</li>
+                <li>Learned some of wthe nuances of timing and movement in 3D animation to bring the fish to life</li>
+                <!-- Add more learning points as needed -->
+            </ul>
+        </section>
+
+
+        <!-- Screenshots Grid -->
+        <section class="project-section">
+            <h2>Screenshots</h2>
+            <div class="screenshot-grid">
+                <img src="./screenshots/3d_fishAnimation (1).jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                <img src="./screenshots/3d_fishAnimation (2).jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                <img src="./screenshots/3d_fishAnimation (3).jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+        </section>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <img src="./screenshots/3d_fishAnimation (1).jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/3d_fishAnimation (2).jpg" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/3d_fishAnimation (3).jpg" style="width:100%">
+                </div>
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+
+        <!-- Notable Things I Did -->
+        <section class="project-section">
+            <h2> What I'm most proud of about this project is...</h2>
+            <p class="pane">Tackling the texturing in this project was both a challenge and a joy, and it's definitely the aspect I'm
+                most proud of. The time and effort I poured into texturing were substantial, but seeing the final result
+                was immensely rewarding. The highlight for me is the glowing textures of the fish. They give it a
+                captivating, almost magical appearance that draws the eye. Interestingly, this glow effect, while
+                focused on the fish, also inadvertently lent a unique Pacific Islander aesthetic to the volcano. 
+                They add depth and character to the scene, as well helped me understand models better. This project was me
+                getting my feet wet with UV's and baking normals from a higher poly model and the processes of painting textures.</p>
+        </section>
+    </div>
+    <!-- Random Project Thumbnails Section -->
+    <div class="random-projects">
+        <div class="container">
+            <h2>Explore More Games</h2>
+
+            <div class="game-grid">
+
+            </div>
+            <div class="carousel-buttons">
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+            <section class="project-section">
+                <a href="../index.html" class="game-link">Back To Projects</a>
+            </section>
+        </div>
+    </div>
+
+    <footer id="footer-container"></footer>
+    <!-- Include the RandomGames.js script -->
+    <script src="RandomGame.js"></script>
+    <script src="Modal.js"></script>
+
+</body>
+
+</html>

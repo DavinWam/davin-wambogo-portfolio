@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Scale the Beast</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../loadHeader.js"></script>
+</head>
+
+<body>
+    <header id="header-container"></header>
+    <section class="showcase">
+        <div style="padding-top: 80px;">
+            <h1 class="large-fade-in title">Scale the Beast</h1>
+            <div class="pane">
+                <h3 class="large-fade-in">Ascend the Dragon.d</h3>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+
+        <!-- Demo Video -->
+        <section style="width: 40%; margin: auto;">
+            <a  href="https://deditch.itch.io/scale-the-beast"><img
+                    style="border-radius: 15px; width: 100%; aspect-ratio:1/1;" class="image-effect" src="../thumbnail_scale_the_beast.png"
+                    alt="SILENT CODES Thumbnail"></a>
+        </section>
+        <!-- Game Download/Play Link -->
+        <section class="project-section">
+            <a href="https://primeloop.itch.io/scale-the-beast" target="_blank" class="game-link">Play Now</a>
+        </section>
+
+        <!-- Project Context -->
+        <section class="project-section">
+            <div class="pane project-header">
+                <h3>Scale the Beast</h3>
+                <span>(2024)</span>
+                <p><strong>Roles:</strong> Programmer, Level Designer</p>
+            </div>
+            <div class="pane project-description">
+                <p>
+                    "Scale the Beast" is an action platformer developed during the GMTK Game Jam 2024 in just 4 days. Working with the same team as our previous project,
+                     we focused on implementing code that could be reused effectively. The game emphasizes separating the functionality of classes into distinct components 
+                     that aren't tightly coupled, ensuring flexibility and maintainability in the design.
+                </p>
+                <h4>What I Did</h4>
+                <ul>
+                    <li>Focused on programming with an emphasis on reusability and separation of concerns within the codebase.</li>
+                    <li>Designed levels to challenge players while providing a sense of progression and adventure.</li>
+                    <li>Created the intro scene on the cliff, featuring a dramatic dragon entrance that transitions seamlessly to the title screen.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Things I Learned -->
+        <section class="project-section learned-things">
+            <h2>Things I Learned</h2>
+            <ul>
+                <li>The importance of reusability in code, and how decoupling components enhances flexibility and maintainability.</li>
+                <li>The significance of playtesting, as a missing spike in the level design led to some players missing a crucial lesson for progression.</li>
+            </ul>
+        </section>
+        <section class="project-section documentation">
+            <h2>Project Documentation</h2>
+            <p>Below are links to the project's documentation:</p>
+            <ul>
+                <li><a href="https://github.com/DavinWam/gmtk2024" target="_blank">GitHub</a></li>
+            </ul>
+        </section>
+
+        <!-- Screenshots Grid -->
+        <section class="project-section">
+            <h2>Screenshots</h2>
+            <div class="screenshot-grid">
+                <img src="./screenshots/ScaleTheBeast (1).png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                <img src="./screenshots/ScaleTheBeast (2).png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                <img src="./screenshots/ScaleTheBeast (3).png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+
+            </div>
+        </section>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="mySlides">
+                    <img src="./screenshots/ScaleTheBeast (1).png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/ScaleTheBeast (2).png" style="width:100%">
+                </div>
+                <div class="mySlides">
+                    <img src="./screenshots/ScaleTheBeast (3).png" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <!-- Notable Things I Did -->
+        <section class="project-section">
+            <h2>Highlight of the Project</h2>
+            <p class="pane">
+                One of the highlights of working on "Scale the Beast" was crafting the intro scene. The moment when the dragon comes down and the game 
+                transitions to the title screen created a powerful and memorable impact for players. Seeing their reactions made all the effort worthwhile. 
+            </p>
+        </section>
+
+        <!-- Teammate Credits and Thanks -->
+        <section class="project-section">
+            <h2>Team Credits</h2>
+            <div class="pane">
+                <h5>Special thanks to:</h5>
+                <ul>
+                    <li>Cory Schiff - Pixel art and Programming</li>
+                    <!-- Add more teammates as necessary -->
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Random Project Thumbnails Section -->
+    <div class="random-projects">
+        <div class="container">
+            <h2>Explore More Games</h2>
+
+            <div class="game-grid">
+
+            </div>
+            <div class="carousel-buttons">
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+            <section class="project-section">
+                <a href="../index.html" class="game-link">Back To Projects</a>
+            </section>
+        </div>
+    </div>
+
+    <footer id="footer-container"></footer>
+    <!-- Include the RandomGames.js script -->
+    <script src="RandomGame.js"></script>
+    <script src="Modal.js"></script>
+
+</body>
+
+</html>
