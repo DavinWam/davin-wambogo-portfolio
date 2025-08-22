@@ -1,5 +1,7 @@
 from phases.phase_base import Phase
 from phases.game_carousel_setup import game_carousel_setup
+import pandas as pd
+from game_data import setup_game_dataframe
 
 
 def run_phases(phases):
@@ -10,6 +12,7 @@ def run_phases(phases):
         phase.exit()
 
 if __name__ == "__main__":
+    setup_game_dataframe()
     run_phases([
         game_carousel_setup()
     ])
