@@ -1,5 +1,27 @@
 from utils.image_utils import thumb_path
 
+# === HTML Templates ===
+header_template = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>{title}</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../loadHeader.js"></script>
+</head>
+<body>
+    <header id="header-container"></header>
+"""
+
+footer_template = """
+    <footer id="footer-container"></footer>
+    <script src="RandomGame.js"></script>
+    <script src="Modal.js"></script>
+</body>
+</html>
+"""
+
 def render_template(template_str, game_data, extra_data=None):
     context = {
         "title": game_data["title"],

@@ -1,0 +1,113 @@
+ [   
+    {
+        "title": "ENYA'S JOURNEY",
+        "roles": "Game Design, Programming, UI, Level Design, Art & Animation",
+        "filename": "enyas_journey",
+        "thumbnail": "thumbnail_enyas_journey.jpg",
+        "featured": true,
+        "visibility": "public",
+        "dates": "Oct 2023 – Dec 2023",
+        "start_date": "2023-10-01",
+        "end_date": "2023-12-31"
+    },
+    {
+        "title": "BABY STEPS",
+        "roles": "Game Designer, Games Programmer, Graphics Programmer",
+        "filename": "baby_steps",
+        "thumbnail": "thumbnail_baby_steps.jpg",
+        "visibility": "public",
+        "dates": "Apr 2024 – May 2024",
+        "start_date": "2024-04-01",
+        "end_date": "2024-05-31"
+    },
+    {
+        "title": "TAXES AND TENACITY",
+        "roles": "Game Design, Programming, Art & Animation",
+        "filename": "taxes_and_tenactity",
+        "thumbnail": "thumbnail_taxes_and_tenactity.png",
+        "visibility": "public",
+        "dates": "Oct 2023 – Oct 2023",
+        "start_date": "2023-10-01",
+        "end_date": "2023-10-31"
+    },
+    {
+        "title": "SILENT CODES",
+        "roles": "Game Design, Programming, Technical Art",
+        "filename": "silent_codes",
+        "thumbnail": "thumbnail_silent_codes.jpg",
+        "visibility": "public",
+        "dates": "Nov 2023 – Dec 2023",
+        "start_date": "2023-11-01",
+        "end_date": "2023-12-31"
+    },
+    {
+        "title": "GOT STEAM, PUNK?",
+        "roles": "Game Design, Level Design, Art & Animation",
+        "filename": "got_steam_punk",
+        "thumbnail": "thumbnail_got_steam_punk.jpg",
+        "visibility": "public",
+        "dates": "Sep 2021 – Nov 2021",
+        "start_date": "2021-09-01",
+        "end_date": "2021-11-30"
+    },
+    {
+        "title": "LAB BAT",
+        "roles": "Game Design, UI, Level Design, Art & Animation",
+        "filename": "lab_bat",
+        "thumbnail": "thumbnail_lab_bat.PNG",
+        "visibility": "public",
+        "dates": "Mar 2021 – Mar 2021",
+        "start_date": "2021-03-01",
+        "end_date": "2021-03-31"
+    },
+    {
+        "title": "SCALE THE BEAST",
+        "roles": "Programmer, Level Designer",
+        "filename": "scale_the_beast",
+        "thumbnail": "thumbnail_scale_the_beast.png",
+        "visibility": "public",
+        "dates": "Oct 2024 – Oct 2024",
+        "start_date": "2024-10-01",
+        "end_date": "2024-10-31"
+    },
+    {
+        "title": "SPACE BLITZ",
+        "roles": "Game Design, Level Design",
+        "filename": "space_game",
+        "thumbnail": "thumbnail_space_game.png",
+        "visibility": "private",
+        "dates": null,
+        "start_date": null,
+        "end_date": null
+    },
+    {
+        "title": "PENROSE",
+        "roles": "Level Design, Art",
+        "filename": "penrose",
+        "thumbnail": "thumbnail_penrose.PNG",
+        "visibility": "private",
+        "dates": null,
+        "start_date": null,
+        "end_date": null
+    },
+    {
+        "title": "BLADES ON ICE",
+        "roles": "Game Design, Programming, Animation",
+        "filename": "blades_on_ice",
+        "thumbnail": "thumbnail_blades_on_ice.jpg",
+        "visibility": "public",
+        "dates": "Oct 2024 – May 2025",
+        "start_date": "2024-10-01",
+        "end_date": "2025-05-31"
+    },
+    {
+        "title": "SYNTH DOG",
+        "roles": "Game Design & Audio Engineering",
+        "filename": "synth_dog",
+        "thumbnail": "thumbnail_synth_dog.png",
+        "visibility": "hidden",
+        "dates": "Nov 2024 – Dec 2024",
+        "start_date": "2024-11-01",
+        "end_date": "2024-12-31"
+    }
+]

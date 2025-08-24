@@ -7,7 +7,10 @@ from utils.template_utils import render_game, render_games
 
 class game_carousel_setup(Phase):
     def __init__(self):
-        super().__init__("GameCarouselSetup")
+        super().__init__(
+            name="GameCarouselSetup",
+            description="Injects the featured game and carousel list into the index.html page."
+        )
         self.html_files = {"index": os.path.join("..", "docs", "index.html")}
         self.games = get_game_dataframe()
         self.article_template = (

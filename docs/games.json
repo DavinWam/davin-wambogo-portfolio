@@ -1,4 +1,4 @@
- [   
+[
     {
         "title": "ENYA'S JOURNEY",
         "roles": "Game Design, Programming, UI, Level Design, Art & Animation",
@@ -8,67 +8,254 @@
         "visibility": "public",
         "dates": "Oct 2023 – Dec 2023",
         "start_date": "2023-10-01",
-        "end_date": "2023-12-31"
+        "end_date": "2023-12-31",
+        "tagline": "Of Flames and Ambition.",
+        "video_link": "https://youtube.com/embed/2vaj-whRG80",
+        "play_link": "https://deditch.itch.io/enyas-journey",
+        "project_description": "A 2D RPG that blends pixel-art characters with modeled environments, created for a Game Programming school project over two months by a five-person team. A fantasy adventure built around fire, in an unstable world. One where a hero is chosen periodically to refuel the world's flame, lest the monster population increase to apocalyptic levels. My teammates contributed music, narrative writing, sprite creation, pixel art animation, and story programming.",
+        "documentation": [
+            {
+                "name": "Game Design Document",
+                "link": "./pdfs/Project Structure.pdf"
+            },
+            {
+                "name": "Initial Brainstorming",
+                "link": "./pdfs/Game Design Doc.pdf"
+            },
+            {
+                "name": "GitHub",
+                "link": "https://github.com/DavinWam/Enya/tree/main/EnyaRPG"
+            }
+        ],
+        "highlight": "Working on Enya's Journey was significant to me as an avid fan of RPGs. This project was a testament to my growth as a developer, where time spent learning rather than making was less than in previous projects. I was truly immersed and excited in developing Enya's Journey for those two months. The battle system consumed much of the timeline, but the result represented a major leap forward in my ability to independently develop a game from scratch.",
+        "teammates": [
+            {
+                "name": "Ryan Brown",
+                "role": "Music and Writing"
+            },
+            {
+                "name": "Jessie Lian",
+                "role": "Pixel Art"
+            },
+            {
+                "name": "Faris Attallah",
+                "role": "Narrative Programming"
+            },
+            {
+                "name": "Rebecca Beyene",
+                "role": "Testing and Level Design"
+            }
+        ]
     },
     {
-        "title": "BABY STEPS",
-        "roles": "Game Designer, Games Programmer, Graphics Programmer",
+        "title": "Baby Steps",
+        "roles": "Game Design, Programming, Graphics Programming",
         "filename": "baby_steps",
         "thumbnail": "thumbnail_baby_steps.jpg",
+        "featured": false,
         "visibility": "public",
-        "dates": "Apr 2024 – May 2024",
-        "start_date": "2024-04-01",
-        "end_date": "2024-05-31"
+        "dates": "May 2024",
+        "start_date": "2024-05-01",
+        "end_date": "2024-05-31",
+        "tagline": "Baby's are a Joy, Baby's are a Terror.",
+        "video_link": "https://youtube.com/embed/bEJWRTk5IG0",
+        "play_link": "",
+        "project_description": "\"Baby Steps\" is a VR game where players care for a baby by fulfilling its needs such as being held, fed, and entertained over a 4.5-minute session. The game was created as part of a final project for IMDM290 by a six-person team. It focuses on multitasking gameplay inspired by titles like \"Overcooked\" and \"Tattletail.\" The game features a cartoon-style shader, various animations, and a fully modeled in-game environment.",
+        "documentation": [
+            {
+                "name": "GitHub",
+                "link": "https://github.com/DavinWam/DaBaby"
+            }
+        ],
+        "highlight": "One of the most rewarding parts was demystifying the render pipeline. By hooking into it and injecting custom render information, I gained a deeper understanding of how rendering works. Another highlight was crafting the baby AI—seeing players pick up the baby and laugh reminded me why I love game development.",
+        "teammates": [
+            {
+                "name": "Andrei Davydov",
+                "role": "Modeling and Rigging"
+            },
+            {
+                "name": "Astrid Da Costa",
+                "role": "Concept and Design"
+            },
+            {
+                "name": "Daniel Nolan",
+                "role": "Sound Design"
+            },
+            {
+                "name": "Erin Alsop",
+                "role": "Animation and UI Design"
+            },
+            {
+                "name": "Lois Kim",
+                "role": "Environment Design and Testing"
+            }
+        ]
     },
     {
-        "title": "TAXES AND TENACITY",
-        "roles": "Game Design, Programming, Art & Animation",
-        "filename": "taxes_and_tenactity",
-        "thumbnail": "thumbnail_taxes_and_tenactity.png",
+        "title": "Taxes and Tenacity",
+        "roles": "Game Designer, Programmer, Animator",
+        "filename": "taxes_and_tenacity",
+        "thumbnail": "thumbnail_taxes_and_tenacity.jpg",
+        "featured": false,
         "visibility": "public",
-        "dates": "Oct 2023 – Oct 2023",
-        "start_date": "2023-10-01",
-        "end_date": "2023-10-31"
+        "dates": "Nov 2023",
+        "start_date": "2023-11-01",
+        "end_date": "2023-11-30",
+        "tagline": "Number Go Up.",
+        "video_link": "https://youtube.com/embed/kV3OGCEIvKs",
+        "play_link": "https://deditch.itch.io/taxes-and-tenacity",
+        "project_description": "A roguelite game that weaves RPG elements with a life-and-tax system, created during a two-week game jam by a duo. In this world, the player embarks on dungeon expeditions to collect gold from defeated monsters, facing a looming tax deadline. Successfully paying your taxes means earning extra lives; failure leads to losing them all. With each dive, both the stakes and the character's capabilities escalate. My partner contributed by crafting the stages, the connecting map, and designing the floor bosses' attacks.",
+        "documentation": [
+            {
+                "name": "GitHub",
+                "link": "https://github.com/CoryScaf/TaxRPG"
+            }
+        ],
+        "highlight": "Reflecting on the project, the aspect that fills me with the most pride are the character controls. One of the focuses and ideas behind this project was simplifying things down, focusing in on content and feel. The three-hit sword animation has a satisfying timing to it. I find that moving around has the simple fun to it that I was looking for in ways that some previous projects lacked. That said, this game is also a bit even-keeled—one thing I wanted to expand upon in the future is those moments of excitement.",
+        "teammates": [
+            {
+                "name": "Cory Schiff",
+                "role": "Level Design and Programming"
+            }
+        ]
     },
     {
-        "title": "SILENT CODES",
-        "roles": "Game Design, Programming, Technical Art",
+        "title": "Silent Codes",
+        "roles": "Game Design, Graphics Programming, UI Design",
         "filename": "silent_codes",
         "thumbnail": "thumbnail_silent_codes.jpg",
+        "featured": false,
         "visibility": "public",
-        "dates": "Nov 2023 – Dec 2023",
-        "start_date": "2023-11-01",
-        "end_date": "2023-12-31"
+        "dates": "Oct 2023",
+        "start_date": "2023-10-01",
+        "end_date": "2023-10-31",
+        "tagline": "Master Work Place Laziness.",
+        "video_link": "",
+        "play_link": "https://deditch.itch.io/silent-codes",
+        "project_description": "An interactive two-player puzzle game developed over a two-week period, blending traditional escape room elements with digital puzzle-solving. Player 1 navigates a memory puzzle minigame to extract crucial code pieces, while Player 2 uses a physical cipher to decode the information. The game intensifies with the presence of a Boss character, forcing both players to remain quiet and avoid detection.",
+        "documentation": [
+            {
+                "name": "GitHub",
+                "link": "https://github.com/DavinWam/Silent-Codes"
+            }
+        ],
+        "highlight": "Working on Silent Codes offered me a profound opportunity to demystify Unity's rendering process. Interacting directly with how elements are drawn to the screen opened up new avenues for creative and efficient problem solving. I'm especially proud of implementing the CRT effects, which involved writing shader code and integrating it seamlessly within Unity's rendering system.",
+        "teammates": [
+            {
+                "name": "Andrei Davydov",
+                "role": "UI Programming"
+            },
+            {
+                "name": "Lois Kim",
+                "role": "UI Art"
+            },
+            {
+                "name": "Yooeun",
+                "role": "Programming"
+            }
+        ]
     },
     {
-        "title": "GOT STEAM, PUNK?",
-        "roles": "Game Design, Level Design, Art & Animation",
+        "title": "Got Steam, Punk?",
+        "roles": "Game and Level Designer",
         "filename": "got_steam_punk",
         "thumbnail": "thumbnail_got_steam_punk.jpg",
+        "featured": true,
         "visibility": "public",
-        "dates": "Sep 2021 – Nov 2021",
-        "start_date": "2021-09-01",
-        "end_date": "2021-11-30"
+        "dates": "Oct 2021",
+        "start_date": "2021-10-01",
+        "end_date": "2021-10-31",
+        "tagline": "A Comedic Adventure on the High Seas.",
+        "video": "https://youtube.com/embed/hTnZgLzd_wU",
+        "play_link": "https://tarrott.itch.io/got-steam-punk",
+        "project_description": "Developed during a game jam by a seven-member team, this game combines humor with a high-seas adventure on the world's most advanced, barely seaworthy steamship. Playing as a crew member, the goal is to keep the ship afloat by completing various repair tasks.",
+        "documentation": [],
+        "highlight": "On \"Got Steam, Punk?\", the real task was the interior of the ship—making it detailed and believable. Evan's solid models set the foundation, and together with Jeremy, we added some humor into the mix with the signs around the ship. My job was to figure out the best spots for grappling points for players to navigate quickly, keeping the gameplay smooth and engaging. I spent a good deal of time ensuring that every piece of the ship was placed just right, drawing from real-life references to get that authentic steamship feel. Somehow while working on it I never felt comfortable with how it looked but after having time to look at it now, I'm fonder of the work I did there.",
+        "teammates": [
+            {
+                "name": "Daniel Grammar",
+                "role": "Music"
+            },
+            {
+                "name": "Evan Powers",
+                "role": "Art"
+            },
+            {
+                "name": "James Espericueta",
+                "role": "Programming"
+            },
+            {
+                "name": "Jeremy Kuznetsov",
+                "role": "Art & Writing"
+            },
+            {
+                "name": "Jaxon Lee",
+                "role": "Programming"
+            },
+            {
+                "name": "Isaac Hill",
+                "role": "Voice Acting"
+            }
+        ]
     },
     {
-        "title": "LAB BAT",
-        "roles": "Game Design, UI, Level Design, Art & Animation",
+        "title": "Lab Bat",
+        "roles": "Game and Level Designer",
         "filename": "lab_bat",
-        "thumbnail": "thumbnail_lab_bat.PNG",
+        "thumbnail": "thumbnail_lab_bat.jpg",
+        "featured": true,
         "visibility": "public",
-        "dates": "Mar 2021 – Mar 2021",
-        "start_date": "2021-03-01",
-        "end_date": "2021-03-31"
+        "dates": "Oct 2021",
+        "start_date": "2021-10-01",
+        "end_date": "2021-10-31",
+        "tagline": "Fly and Deliver in a Bat's World.",
+        "video": "https://youtube.com/embed/oCgHkXPRw6k",
+        "play_link": "[Insert Game Link Here]",
+        "project_description": "Lab Bat is a Flash Game inspired puzzle platformer developed over a three-day game jam, inspired by a World War II story where bats were trained to drop bombs. In this game, the protagonist, a bat who originally could not fly, navigates a facility filled with hazards to deliver a bomb to its destination in exchange for flight.",
+        "documentation": [],
+        "highlight": "Within \"Lab Bat\", the fifth level stands out as my personal best. It's where the game starts to challenge the player's problem-solving skills. The setup involves placing the crate onto a moving platform, followed by the bomb. Most players instinctively cling to the bomb due to this order, only to find that the crate then obstructs the intended path. I found that the realization that they need to hold onto the crate instead was a satisfying moment from watching people play.",
+        "teammates": [
+            {
+                "name": "Daniel Grammar",
+                "role": "Music"
+            },
+            {
+                "name": "Evan Powers",
+                "role": "Art"
+            },
+            {
+                "name": "James Espericueta",
+                "role": "Programming"
+            }
+        ]
     },
     {
-        "title": "SCALE THE BEAST",
-        "roles": "Programmer, Level Designer",
+        "title": "Scale the Beast",
+        "roles": "Programming, Level Design",
         "filename": "scale_the_beast",
-        "thumbnail": "thumbnail_scale_the_beast.png",
+        "thumbnail": "thumbnail_scale_the_beast.jpg",
+        "featured": false,
         "visibility": "public",
-        "dates": "Oct 2024 – Oct 2024",
-        "start_date": "2024-10-01",
-        "end_date": "2024-10-31"
+        "dates": "Jul 2024",
+        "start_date": "2024-07-01",
+        "end_date": "2024-07-31",
+        "tagline": "Ascend the Dragon.",
+        "video_link": "",
+        "play_link": "https://primeloop.itch.io/scale-the-beast",
+        "project_description": "\"Scale the Beast\" is an action platformer developed during the GMTK Game Jam 2024 in just 4 days. Working with the same team as our previous project, we focused on implementing code that could be reused effectively. The game emphasizes separating the functionality of classes into distinct components that aren't tightly coupled, ensuring flexibility and maintainability in the design.",
+        "documentation": [
+            {
+                "name": "GitHub",
+                "link": "https://github.com/DavinWam/gmtk2024"
+            }
+        ],
+        "highlight": "One of the highlights of working on \"Scale the Beast\" was crafting the intro scene. The moment when the dragon comes down and the game transitions to the title screen created a powerful and memorable impact for players. Seeing their reactions made all the effort worthwhile.",
+        "teammates": [
+            {
+                "name": "Cory Schiff",
+                "role": "Pixel Art and Programming"
+            }
+        ]
     },
     {
         "title": "SPACE BLITZ",
@@ -98,7 +285,15 @@
         "visibility": "public",
         "dates": "Oct 2024 – May 2025",
         "start_date": "2024-10-01",
-        "end_date": "2025-05-31"
+        "end_date": "2025-05-31",
+        "team": "",
+        "tagline": "",
+        "video": "https://youtu.be/lR9p5lXZgyE",
+        "play_link": "",
+        "highlight": "",
+        "description": "",
+        "doc": "",
+        "credits": []
     },
     {
         "title": "SYNTH DOG",
@@ -108,6 +303,14 @@
         "visibility": "hidden",
         "dates": "Nov 2024 – Dec 2024",
         "start_date": "2024-11-01",
-        "end_date": "2024-12-31"
+        "end_date": "2024-12-31",
+        "team": "",
+        "tagline": "",
+        "video": "",
+        "play_link": "",
+        "highlight": "",
+        "description": "",
+        "doc": "",
+        "credits": []
     }
 ]

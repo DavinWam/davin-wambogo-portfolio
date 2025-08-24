@@ -3,16 +3,6 @@ const items = document.querySelectorAll('.game-carousel .game');
 const totalItems = items.length;
 const itemsPerView = 2; // Number of items you want to view at once
 
-fetch('roles.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log("Available Roles JSON:", data);
-    })
-    .catch(error => {
-        console.error("Failed to load roles.json:", error);
-    });
-
-
 document.querySelector('.next-button').addEventListener('click', () => {
     // Update by itemsPerView instead of one item
     if (currentIndex < totalItems - itemsPerView) {
@@ -53,13 +43,13 @@ function updateCarousel() {
     console.log('Total Scrollable Width:', carouselContainer.scrollWidth);
     console.log('Calculated Item Width:', itemWidth);
 
-    // Disable or enable the prev-button button
-    const prev-button = document.querySelector('.prev-button');
-    prev-button.disabled = currentIndex === 0;
+    // Disable or enable the prevButton button
+    const prevButton = document.querySelector('.prevButton');
+    prevButton.disabled = currentIndex === 0;
 
-    // Disable or enable the next-button button
-    const next-button = document.querySelector('.next-button');
-    next-button.disabled = currentIndex >= totalItems - itemsPerView;
+    // Disable or enable the nextButton button
+    const nextButton = document.querySelector('.nextButton');
+    nextButton.disabled = currentIndex >= totalItems - itemsPerView;
 }
 
 const carouselContainer = document.querySelector('.game-carousel');
@@ -116,5 +106,4 @@ window.addEventListener('resize', () => {
 });
 // Initialize button visibility
 updateCarousel();
-
 

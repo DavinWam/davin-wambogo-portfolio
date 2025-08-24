@@ -1,1525 +1,913 @@
-/* Old Colors
-    '#0E2440' // Dark blue
-    '#6A517D' // Purple
-    '#C25D8C' // Pink
-    '#F57382' // magenta
-    '#F57382' // light red
-    '#F59371' // pastel orange
-    '#FAC2AA' // Peach'
-*/
+/* === [01] Settings › Variables === */
+:root {
+  /* Colors */
+  --color-background: #121212;
+  --color-pane-background: #1F1F1F;
+  --color-primary-light-purple: #BB86FC;
+  --color-secondary-light-teal: #03DAC5;
+  --color-link-pastel-orange: #F59371;
+  --color-link-hover-pink: #C25D8C;
+  --color-overlay: rgb(31 31 31 / 70%);
+  --color-overlay-dark: rgb(0 0 0 / 70%);
+  --color-text-default: #FFF;
+  --color-border-light-purple: var(--color-primary-light-purple);
 
-/*  
-    #121212 // black - background
-    #1F1F1F // Dark Grey - pane
-    #BB86FC // light purple - Header/ primary Color
-    #03DAC5 // light teal - Secondary Color
-    #F59371 // pastel orange - links
-    #C25D8C // Pink - link hover
-       
-*/
-:root{
-    --color-background: #121212;
+  /* Typography */
+  --font-family-default: geneva, tahoma, sans-serif;
+  --font-size-heading-1: clamp(34px, 5vw, 48px);
+  --font-size-heading-2: clamp(18px, 4vw, 34px);
+  --font-size-heading-3: clamp(16px, 3.5vw, 32px);
+  --font-size-heading-4: clamp(14px, 3vw, 24px);
+  --font-size-heading-5: clamp(12px, 2.5vw, 20px);
+  --font-size-body-text: clamp(20px, 1vw, 24px);
+  --font-size-overlay-title: clamp(32px, 5vw, 64px);
+  --font-size-games-section-heading: clamp(20px, 10vw, 100px);
+  --line-height-default: 1.6;
+
+  /* Layout Sizes */
+  --container-width-default: 85%;
+  --header-height-at-top: 80px;
+  --header-height-when-scrolled: 60px;
+  --overlay-section-height: 700px;
+  --carousel-button-size: 80px;
+  --carousel-button-size-small: 60px;
+  --social-button-size: 70px;
+  --social-button-size-small: 50px;
+
+  /* Radius */
+  --border-radius-extra-extra-small: 2px;
+  --border-radius-extra-small: 5px;
+  --border-radius-small: 10px;
+  --border-radius-medium: 15px;
+  --border-radius-large: 20px;
+
+  /* Borders */
+  --border-width-thin: 2px;
+  --border-width-thick: 6px;
 }
 
 
-/* =======================
-   Global Styles
-   ======================= */
+/* === [02] Base › Reset & Elements === */
 
-/* Reset default margins and paddings for consistency across browsers */
-body,
-h1,
-ul,
-li {
-    margin: 0;
-    padding: 0;
+/* --- Reset --- */
+body, h1, ul, li { 
+  margin: 0; 
+  padding: 0; 
 }
 
-/* Base styles for the body element */
+/* --- Body --- */
 body {
-    background-color: var(--color-background);
-
-    /* Black background */
-    color: #BB86FC;
-    font-family: Geneva, Tahoma, sans-serif;
-
-    /* Light purple text color */
-    line-height: 1.6;
-
-    /* Improved readability */
+  background-color: var(--color-background);
+  color: var(--color-primary-light-purple);
+  font-family: var(--font-family-default);
+  line-height: var(--line-height-default);
 }
 
-/* =======================
-   Typography
-   ======================= */
+/* --- Headings & Text --- */
+h1 { font-size: var(--font-size-heading-1); }
 
-/* Main heading (h1) */
-h1 {
-    font-size: clamp(34px, 5vw, 48px);
-
-    /* Minimum 24px, scales with viewport, maximum 48px */
-}
-
-/* Secondary heading (h2) */
 h2 {
-    /* Allows centering */
-    border-bottom: 6px solid white;
-    display: inline-block;
-
-    /* Centers the h2 within its container */
-    font-size: clamp(18px, 4vw, 34px);
-
-    /* Controls the width of the underline */
-    margin: 20px auto;
-
-    /* Minimum 18px, scales with viewport, maximum 34px */
-    white-space: nowrap;
-
-    /* Thicker underline */
-    width: 80px;
-
-    /* Prevents text wrapping */
+  border-bottom: var(--border-width-thick) solid var(--color-text-default);
+  display: inline-block;
+  font-size: var(--font-size-heading-2);
+  margin: 20px auto;
+  white-space: nowrap;
+  width: 80px;
 }
 
-/* Tertiary heading (h3) */
-h3 {
-    /* Minimum 16px, scales with viewport, maximum 32px */
-    color: white;
-    font-size: clamp(16px, 3.5vw, 32px);
+h3 { 
+  color: var(--color-text-default); 
+  font-size: var(--font-size-heading-3); 
+}
+h4 { font-size: var(--font-size-heading-4); }
 
-    /* White text for readability */
+h5 { 
+  color: var(--color-secondary-light-teal); 
+  font-size: var(--font-size-heading-5); 
 }
 
-h4 {
-    font-size: clamp(14px, 3vw, 24px);
-
-    /* Minimum 14px, scales with viewport, maximum 24px */
+p, li { 
+  color: var(--color-text-default); 
+  font-size: var(--font-size-body-text); 
 }
 
-h5 {
-    /* Minimum 12px, scales with viewport, maximum 20px */
-    color: #03DAC5;
-    font-size: clamp(12px, 2.5vw, 20px);
-}
-
-/* Paragraphs and list items */
-p,
-li {
-    /* Minimum 14px, scales with viewport, maximum 18px */
-    color: white;
-    font-size: clamp(20px, 1vw, 24px);
-
-    /* White text for readability */
-}
-
-
-/* =======================
-   Footer
-   ======================= */
-
-/* Styles for the footer element */
+/* --- Footer --- */
 footer {
-    background-color: #1F1F1F;
-
-    /* Center aligns text */
-    padding: 10px 0;
-
-    /* Dark Grey background */
-    text-align: center;
-
-    /* Adds padding for better spacing */
+  background-color: var(--color-pane-background);
+  padding: 10px 0;
+  text-align: center;
 }
 
 
+/* === [03] Layout › Structure === */
 
-/* =======================
-   Header Styles
-   ======================= */
+/* --- Container & Pane --- */
+.container {
+  border-top: var(--border-width-thin) solid var(--color-primary-light-purple);
+  height: auto;
+  margin: auto;
+  padding: 10px 0;
+  width: var(--container-width-default);
+}
 
-/* Initial styles for the header */
+.pane {
+  background-color: var(--color-overlay);
+  border-radius: var(--border-radius-small);
+  padding: clamp(10px, 4vw, 20px) clamp(20px, 8vw, 80px);
+}
+
+/* === [04] Components === */
+
+/* --- Header --- */
 header {
-    /* Space out content */
-    align-items: center;
-    background-color: #1F1F1F;
-
-    /* Dark Grey background */
-    color: #fff;
-
-    /* White text */
-    display: flex;
-
-    /* Flexbox layout for positioning */
-    justify-content: space-between;
-
-    /* Vertically center items */
-    padding: 20px;
-
-    /* Smooth transition for padding and height changes */
-    position: relative;
-
-    /* Padding around the content */
-    transition: padding 0.3s, height 0.3s;
-    z-index: 1000;
-
-    /* Positioning context for pseudo-element */
+  align-items: center;
+  background-color: var(--color-pane-background);
+  color: var(--color-text-default);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  transition: padding 0.3s, height 0.3s;
+  z-index: 1000;
 }
 
-/* Pseudo-element for a bottom border in the header */
 header::after {
-    /* Thickness of the border */
-    background-color: #BB86FC;
-    bottom: 0;
-    content: "";
-    display: block;
-
-    /* Adjusts the width of the border */
-    height: 2px;
-    left: 10%;
-
-    /* Light purple border color */
-    position: absolute;
-    width: 80%;
-
-    /* Centers the border */
+  background-color: var(--color-primary-light-purple);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: var(--border-width-thin);
+  left: 10%;
+  position: absolute;
+  width: 80%;
 }
 
-.text-container {
-    display: inline-block; /* Allows the div to scale with the content */
-    max-width: 100%; /* Ensures it doesn't exceed the container's width */
-    min-height: 20px;
-    white-space: nowrap; /* Prevents text wrapping */
-    width: 100%; /* Adjusts width based on content */
+header > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-/* Blinking pipe animation for text cursor effects */
-.blinking-pipe {
-    animation: blink 1s step-start infinite;
+header a, header a:visited { color: var(--color-text-default); }
+header a:hover { color: var(--color-secondary-light-teal); }
+
+header.at-top { 
+  height: var(--header-height-at-top); 
+  padding: 20px; }
+
+header.scrolled { 
+  height: var(--header-height-when-scrolled); 
+  padding: 10px 20px; }
+
+header ul { 
+  list-style: none; 
+  padding: 0; 
 }
 
-@keyframes blink {
-    50% {
-        opacity: 0;
+header li { display: inline; }
 
-        /* Makes the pipe disappear halfway through the animation */
-    }
-}
-
-/* Links in the header, including visited links */
-header a,
-header a:visited {
-    color: #fff;
-
-    /* White text for links */
-}
-
-/* Header when at the top of the page */
-header.at-top {
-    height: 80px;
-
-    /* Increased height */
-    padding: 20px;
-
-    /* Additional padding */
-}
-
-/* Header when scrolling down */
-header.scrolled {
-    height: 60px;
-
-    /* Reduced height */
-    padding: 10px 20px;
-
-    /* Less padding */
-}
-
-/* Container inside the header, ensuring full width usage */
-header>div {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-/* Hover state for links in the header */
-header a:hover {
-    color: #03DAC5;
-
-    /* Light teal color on hover */
-}
-
-/* Removes default padding and list styles for the header navigation */
-header ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Inline display for navigation items in the header */
-header li {
-    display: inline;
-}
-
-/* Header text styles */
 header h1 {
-    color: #03DAC5;
-    font-size: clamp(16px, 3.5vw, 32px); 
+  color: var(--color-secondary-light-teal);
+  font-size: clamp(16px, 3.5vw, 32px);
+  transition: font-size 0.3s ease;
+}
+header.at-top h1 { font-size: clamp(24px, 6vw, 38px); }
+header h1 .highlight { color: var(--color-primary-light-purple); }
 
-    /* Adjust the minimum size if needed */
-    transition: font-size 0.3s ease;
+/* --- Header: Utilities --- */
+.text-container {
+  display: inline-block;
+  max-width: 100%;
+  min-height: 20px;
+  white-space: nowrap;
+  width: 100%;
 }
 
+/* --- Header: Effects --- */
+.blinking-pipe { animation: blink 1s step-start infinite; }
 
-/* Highlighted text within the header h1 */
-header h1 .highlight {
-    color: #BB86FC;
+@keyframes blink { 50% { opacity: 0; } }
 
-    /* Light purple for emphasized text */
+/* --- Header: Responsive (≤932px) --- */
+@media (width <= 932px) {
+  header {
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 10px;
+    z-index: 1000;
+  }
+  header h1 { text-align: center; }
+  
+  nav { 
+    justify-content: center; 
+    width: 100%; 
+  }
+  header::after { display: none; }
 }
 
-/* Font size adjustment for the header text when at the top of the page */
-header.at-top h1 {
-    font-size: clamp(24px, 6vw, 38px);
-
-}
-
-
-
-/* =======================
-   Navigation
-   ======================= */
-   nav {
-    align-items: center; /* Center the navigation buttons vertically */
-    display: flex;
-    justify-content: flex-end; /* Align the navigation to the right */
-    min-width: 380;
-    width: 80%;
+/* --- Navigation --- */
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  min-width: 380px;
+  width: 80%;
 }
 
 nav ul {
-    display: flex;
-    gap: 10px; /* Add gap between buttons */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-left: 20px;
-    width: 100%; /* Ensure the ul spans the full width of the nav */
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 20px;
+  width: 100%;
 }
 
-nav ul li {
-    flex-grow: 1; /* Make each li element grow to fill available space */
-    margin: 0; /* Remove margin from li to prevent extra spacing */
+nav ul li { 
+  flex-grow: 1; 
+  margin: 0; 
 }
 
 .nav-button {
-    align-items: center; /* Center the button content vertically */
-    background-color: #BB86FC; /* Purple background for buttons */
-    border-radius: 2px;
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
-    color: #fff; /* White text */
-    display: flex;
-    font-size: 18px;
-    justify-content: center; /* Center the button content horizontally */
-    margin: 0; /* Remove margin from the button itself */
-    min-width: 100px;
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s, width 0.3s;
-    width: 100%; /* Ensure buttons fill their li containers */
+  align-items: center;
+  background-color: var(--color-primary-light-purple);
+  border-radius: var(--border-radius-extra-extra-small);
+  box-sizing: border-box;
+  color: var(--color-text-default);
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  margin: 0;
+  min-width: 100px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s, width 0.3s;
+  width: 100%;
 }
 
-.nav-button:hover {
-    background-color: #C25D8C; /* Pink background for hover */
-}
+.nav-button:hover { background-color: var(--color-link-hover-pink); }
 
 .nav-button.current-page,
 .nav-button:hover {
-    background-color: #03DAC5; /* Teal color for current page or hover state */
-    color: #fff;
+  background-color: var(--color-secondary-light-teal);
+  color: var(--color-text-default);
 }
 
-.current-page {
-    background-color: #C25D8C; /* Pink background for hover or current page */
-}
+.current-page { background-color: var(--color-link-hover-pink); }
 
-/* =======================
-   Responsive Styles for Header
-   ======================= */
-   @media (width <= 932px) {
-    /* Adjust header padding and layout for smaller screens */
-    header{
-        /* Stack items vertically */
-        align-items: center;
-        flex-direction: column;
-
-        /* Center items horizontally */
-        padding: 15px 10px;
-
-        /* Reduce padding */
-        z-index: 1000;
-
-        /* Ensure header stays on top */
-    }
-
-    /* Adjust header text size for smaller screens */
-    header h1 {
-        text-align: center;
-
-        /* Center the text horizontally */
-    }
-
-    /* Responsive Navigation Button Styles */
-    .nav-button {
-        /* Further reduce padding on smaller screens */
-        font-size: clamp(12px, 2vw, 16px);
-
-        /* Ensure buttons take up full width */
-        max-width: none;
-        padding: 10px 15px;
-        text-align: center;
-
-        /* Slightly reduce font size for better fit */
-        width: 80%;
-
-        /* Center text within the button */
-    }
-
-    /* Adjust navigation layout for smaller screens */
-    nav ul {
-        /* Add spacing */
-        align-items: center;
-        flex-direction: column;
-
-        /* Full width */
-        margin-top: 10px;
-
-        /* Center the navigation items */
-        padding: 0;
-
-        /* Stack navigation items vertically */
-        width: 100%;
-    }
-
-    nav ul li {
-        /* Space between navigation items */
-        display: flex;
-        justify-content: center;
-
-        /* Ensure li elements take up full width */
-        margin-bottom: 10px;
-        width: 100%;
-
-        /* Center the li elements */
-    }
-
-    /* Adjust header navigation for mobile */
-    nav {
-        justify-content: center;
-
-        /* Center navigation horizontally */
-        width: 100%;
-
-        /* Full width */
-    }
-
-    /* Hide the border on smaller screens */
-    header::after {
-        display: none;
-    }
-}
-
-/* =======================
-    social Overlay Styles
-   ======================= */
-.social-buttons {
-    /* Fixed position to stay in the same spot on the screen */
-    bottom: 20px;
-
-    /* Distance from the right of the screen */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    position: fixed;
-
-    /* Distance from the bottom of the screen */
-    right: 20px;
-
-    /* Space between buttons */
-    z-index: 1000;
-
-    /* Ensures the buttons render on top of other content */
-}
-
-.social-button {
-    align-items: center;
-    background-color: #1F1F1F;
-
-    /* Height of the circular button */
-    border-radius: 50%;
-
-    /* Background color of the button */
-    box-shadow: 0 4px 10px rgb(0 0 0 / 30%);
-    display: flex;
-
-    /* Width of the circular button */
-    height: 70px;
-    justify-content: center;
-
-    /* Makes the button circular */
-    overflow: hidden;
-
-    /* Adds a subtle shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 70px;
-
-    /* Animation for hover effects */
-}
-
-/* Base styles for images */
-.social-button img {
-    border-radius: 50%;
-
-    /* Make the image fill the button */
-    height: 100%;
-
-    /* Ensures the image itself is circular */
-    object-fit: cover;
-
-    /* Ensures the image aspect ratio is maintained */
-    transform-origin: center;
-    width: 100%;
-
-    /* Ensure zooming happens from the center */
-}
-
-/* Individual crop and zoom adjustments */
-.linkedin-icon {
-    transform: scale(1.5);
-
-    /* Scale back up to fill the button */
-}
-
-.itch-icon {
-    transform: scale(1.2);
-
-    /* Scale slightly to match other icons */
-}
-
-.email-icon {
-    transform: scale(1.2);
-
-    /* Scale back up more to fill the button */
-}
-
-.social-button:hover {
-    /* Slightly enlarges the button on hover */
-    box-shadow: 0 6px 15px rgb(0 0 0 / 50%);
-    transform: scale(1.15);
-
-    /* Darker shadow on hover */
-}
-
-
-/* Media query for screens smaller than 480px */
-@media (width <= 480px) {
-    .social-button {
-        height: 50px; /* Adjust button height for smaller screens */
-        width: 50px; /* Adjust button width for smaller screens */
-    }
-
-}
-
-/* =======================
-    Introduction Styles
-   ======================= */
-
-
-/* introduction of featured content */
-.showcase {
-    /* Center aligns text */
-    margin: 0;
-    position: relative;
-
-    /* Ensures a minimum height */
+/* --- Navigation: Responsive (≤932px) --- */
+@media (width <= 932px) {
+  .nav-button {
+    font-size: clamp(12px, 2vw, 16px);
+    max-width: none;
+    padding: 10px 15px;
     text-align: center;
-    z-index: 1;
+    width: 80%;
+  }
 
-    /* Removes default margin */
-}
-
-.title {
-    font-size: clamp(34px, 6vw, 48px); /* Responsive font size */
-}
-
-.overlay-text {
-    /* Center elements vertically */
+  nav ul {
     align-items: center;
-
-    /* Negative margin to overlap the canvas */
-
-
-    border-radius: 10px;
-    display: flex;
-
-    /* Enable flexbox */
     flex-direction: column;
-    height: 700px;
-
-    /* Stack elements vertically */
-    justify-content: center;
-    margin: auto;
-    margin-bottom: -700px;
+    margin-top: 10px;
     padding: 0;
-    position: relative;
-
-    /* Centers content horizontally */
     width: 100%;
-    z-index: 2;
+  }
 
-    /* Optional: Adds rounded corners */
-}
-
-.overlay-text h1 {
-    color: #03DAC5;
-    font-size: clamp(32px, 5vw, 64px);
-    text-shadow: 4px 4px 8px rgb(0 0 0 / 80%);
-
-    /* Add shadow to text */
-    width: 70%;
-
-    /* Minimum 32px, scales with viewport, maximum 64px */
-}
-
-/* Target the first div with class 'pane' inside overlay-text */
-.overlay-text .pane {
-    width: 70%;
-}
-
-#canvas-container {
-    /* filter: blur(2px); Applies a slight blur to the canvas */
-    margin-top: 2px;
-    width: 100%;
-
-    /* should be equal to blur size */
-}
-
-#background-canvas {
-    height: 700px;
-}
-
-#particle-canvas {
-    height: 700px;
-
-    /* Match the height set in your sketches */
-    margin-bottom: -700px;
-    position: relative;
-
-    /* Negative margin to overlap the canvas */
-    z-index: 1;
-}
-
-/* Featured Game Section */
-.container #games h2 {
-    font-size: clamp(20px, 10vw, 100px);
-
-    /* Scales between 50px and 100px depending on the viewport */
-    margin: 20px 0 50px;
-
-    /* Margin adjustments */
-}
-
-/* Game Article */
-.container #games .game {
-    margin: 0 0 100px;
-
-    /* Spacing around the game article */
-}
-
-/* Media query for screens smaller than 480px */
-@media (width <= 480px) {
-    .container #games .game {
-        margin: 0 0 50px; /* Reduce bottom margin for smaller screens */
-    }
-}
-
-/* Game Title */
-
-
-/* =======================
-   Main Body Styles
-   ======================= */
-
-/* Container for the main content */
-.container {
-    /* Centers the container horizontally */
-
-    /* overflow: hidden; */
-
-    /* Hides overflow content */
-    border-top: 2px solid #BB86FC;
-
-    /* Light purple top border */
-    height: auto;
-
-    /* Sets the container width */
-    margin: auto;
-    padding: 10px 0;
-
-    /* Padding on top and bottom */
-    width: 85%;
-}
-
-/* Styles for content panels or sidebars */
-.pane {
-    background-color: rgb(31 31 31 / 80%); /* Dark Grey with transparency */ 
-
-    /* Responsive padding: vertical and horizontal */
-    border-radius: 10px; /* Rounded corners */
-    padding: clamp(10px, 4vw, 20px) clamp(20px, 8vw, 80px);
-}
-
-
-/* General button styling */
-.button {
-    background-color: #03DAC5;
-
-    /* Removes underline from links */
-    border-radius: 5px;
-    color: #fff;
-
-    /* White text */
-    padding: 10px 20px;
-
-    /* Padding inside the button */
-    text-decoration: none;
-
-    /* Rounded corners */
-    transition: background-color 0.3s ease;
-
-    /* Smooth transition for background color change */
-}
-
-/* Hover state for buttons */
-.button:hover {
-    background-color: #03DAC5;
-
-    /* Light teal background on hover */
-}
-
-/* button to project page or to itch page */
-.game-link {
-    /* Full-width */
-    background-color: #BB86FC;
-
-    /* Light purple background */
-    color: white;
-    display: block;
-
-    /* Center the button with spacing */
-    font-size: 24px;
-
-    /* Full width */
-    margin: 20px auto;
-
-    /* White text */
-    padding: 15px 0;
-
-    /* Slightly larger font size */
-    text-align: center;
-
-    /* Center text */
-    text-decoration: none;
-
-    /* Remove underline */
-    transition: background-color 0.3s, transform 0.3s;
-
-    /* Vertical padding */
-    width: 100%;
-
-    /* Smooth transition */
-}
-
-/* Hover state for game links */
-.game-link:hover {
-    background-color: #03DAC5;
-    transform: scale(1.05);
-
-    /* Slight size increase on hover */
-}
-
-/* =======================
-   Grids
-   ======================= */
-
-/* CSS for the grid layout */
-.game-grid {
-    display: grid;
-    gap: 20px; /* Space between grid items */
-    grid-auto-rows: minmax(150px, auto); /* Minimum height for rows, adjusts based on content */
-    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns by default */
-    width: 100%;
-}
-
-
-
-.games-section {
-    align-items: center;
+  nav ul li {
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    margin-bottom: 10px;
     width: 100%;
+  }
 }
 
-.games-text {
-    flex: 1;
-    margin-right: 30px;
-    padding-left: 5%;
+/* --- Buttons & Links --- */
+.button {
+  background-color: var(--color-secondary-light-teal);
+  border-radius: var(--border-radius-extra-small);
+  color: var(--color-text-default);
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.button:hover { background-color: var(--color-secondary-light-teal); }
+
+.game-link {
+  background-color: var(--color-primary-light-purple);
+  color: var(--color-text-default);
+  display: block;
+  font-size: 24px;
+  margin: 20px auto;
+  padding: 15px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 100%;
 }
 
-.games-text h2 {
-    font-size: clamp(24px, 5vw, 96px); /* Minimum, preferred, and maximum font size in pixels */
+.game-link:hover { 
+  background-color: var(--color-secondary-light-teal); 
+  transform: scale(1.05); 
 }
 
-.games-text h3 {
-    font-size: clamp(14px, 3vw, 48px); /* Adjust these values based on your design */
+/* --- Cards (Game) --- */
+.game {
+  background-color: var(--color-pane-background);
+  border-radius: var(--border-radius-large);
+  color: var(--color-text-default);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-right: 20px;
+  overflow: hidden;
+  position: relative;
 }
 
+.game img {
+  border-radius: var(--border-radius-medium);
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.game p { margin: 0; }
+
+/* stylelint-disable-next-line no-descending-specificity */
+.game a { height: 100%; }
+
+.game h3 {
+  background-color: var(--color-overlay-dark);
+  border-radius: var(--border-radius-extra-small);
+  display: none;
+  font-size: clamp(12px, 2vw, 24px);
+  left: 50%;
+  max-height: 80%;
+  padding: 5px 10px;
+  pointer-events: none;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  z-index: 2;
+}
+
+.title { 
+  font-size: clamp(34px, 6vw, 48px); 
+}
+
+.game h3 .title {
+  color: var(--color-secondary-light-teal);
+  display: none;
+  font-size: clamp(12px, 2vw, 24px);
+  font-weight: bold;
+}
+
+.game:hover h3 { display: block; }
+
+.game:hover h3 .title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Cards (Game): Responsive (≤768px) */
+@media (width <= 768px) {
+  .game { 
+    margin-right: 0 !important; 
+    max-height: 20vh; 
+  }
+
+  .game h3, .game h3 .title { 
+    display: none; 
+    font-size: 0; 
+  }
+}
+
+/* --- Carousel --- */
 .carousel {
-    /* Full width of the parent container */
-    margin: 0 auto;
-
-    /* Center the carousel */
-    overflow: hidden;
-    position: relative;
-    width: 60%;
-
-    /* Hide items outside of the carousel view */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 60%;
 }
 
 .game-carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    will-change: transform;
-
-    /* Hint to the browser for better rendering */
-
-
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .carousel .game {
-    /* Space between the games */
-    box-sizing: border-box;
-    flex: 0 0 calc(47% - 20px);
-
-    /* Each game takes up one-third of the carousel's width minus margin */
-    margin-right: 20px;
-
-    /* Ensure padding and border are included in the width/height */
+  box-sizing: border-box;
+  flex: 0 0 calc(47% - 20px);
+  margin-right: 20px;
 }
 
-@media (width <= 480px) {
-    .carousel .game {
-        /* Space between the games */
-        box-sizing: border-box;
-        flex: 0 0 calc(48%);
-
-        /* Each game takes up one-third of the carousel's width minus margin */
-        margin-right: 2px;
-
-        /* Ensure padding and border are included in the width/height */
-    }
-    
-}
-
+/* Carousel: Controls */
 .carousel-buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .prev-button,
 .next-button,
 #prev-btn,
 #next-btn {
-    /* Center the arrow horizontally */
-    align-items: center;
-    background-color: #03DAC5;
-
-    /* White text color */
-    border: none;
-
-    /* Pointer cursor on hover */
-    border-radius: 50%;
-
-    /* #BB86FC  */
-
-    color: white;
-
-    /* Padding for clickable area */
-    cursor: pointer;
-
-    /* Set a fixed height */
-    display: flex;
-
-    /* Set a fixed width */
-    height: 80px;
-
-    /* Use flexbox for centering the arrow */
-    justify-content: center;
-
-    /* Smooth transition for background color and scale */
-    margin: 0 10px;
-
-    /* Remove default border */
-    padding: 10px;
-
-    /* Center the arrow vertically */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-
-    /* Make them circular */
-    width: 80px;
-
-    /* Add some space between the buttons */
+  align-items: center;
+  background-color: var(--color-secondary-light-teal);
+  border: none;
+  border-radius: 50%;
+  color: var(--color-text-default);
+  cursor: pointer;
+  display: flex;
+  height: var(--carousel-button-size);
+  justify-content: center;
+  margin: 0 10px;
+  padding: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: var(--carousel-button-size);
 }
 
 .prev-button:hover,
 .next-button:hover,
 #prev-btn:hover,
-#next-btn:hover {
-    transform: scale(1.2);
+#next-btn:hover { transform: scale(1.2); }
 
-    /* Increase size on hover */
-}
-
-
-/* Media query for screens smaller than 480px */
+/* Carousel: Responsive (≤480px) */
 @media (width <= 480px) {
-    .prev-button,
-    .next-button,
-    #prev-btn,
-    #next-btn {
-        font-size: 14px; /* Adjust font size for smaller screens */
-        height: 60px; /* Adjust height for smaller screens */
-        margin: 0 5px; /* Reduce margin between buttons */
-        width: 60px; /* Adjust width for smaller screens */
-    }
-
-    .carousel-buttons {
-        margin-bottom: 20px; /* Reduce bottom margin for smaller screens */
-        margin-top: 20px; /* Reduce top margin for smaller screens */
-    }
-}
-
-/* =======================
-   Game Card Styles
-   ======================= */
-
-/* Base style for each game card */
-.game {
-    background-color: #1F1F1F;
-    border-radius: 20px;
-    color: white;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    flex-shrink: 0;
-    margin-right: 20px;
-    overflow: hidden; /* Prevent content overflow */
-    position: relative;
-}
-
-/* Adjust layout for tablets */
-@media (width <= 768px) {
-    .game {
-        margin-right: 0 !important; /* Force apply to check if it's an override issue */
-        max-height: 20vh;
-    }
-}
-
-
-/* Style for game images */
-.game img {
-    border-radius: 15px;
-    display: block;
-    height: 100%;
-    width: 100%;
-
-    /* Rounded corners */
-}
-
-/* Styling for paragraphs within the game card */
-.game p {
-    margin: 0;
-
-    /* Remove default margins */
-}
-
-/* Style for anchor tags within the game card */
-.game a {
-    height: 100%;
-
-    /* Full height */
-}
-
-
-
-/* Title inside the game card */
-.game h3 .title {
-    color: #03DAC5;
-
-    /* Light teal text color */
-    display: none;
-    font-size: clamp(12px, 2vw, 24px);
-    font-weight: bold;
-}
-
-/* Styling for game title's container */
-.game h3 {
-    /* Center the title */
-    background-color: rgb(0 0 0 / 70%);
-    border-radius: 5px;
-    display: none;
-
-    /* Allow clicks to pass through */
-    font-size: clamp(12px, 2vw, 24px);
-    left: 50%;
-    max-height: 80%;
-
-    /* Semi-transparent background */
-    padding: 5px 10px;
-    pointer-events: none;
-    position: absolute;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    width:70%;
-
-    /* Rounded corners */
-    z-index: 2
-}
-
-/* Hover state for showing the game title */
-.game:hover h3 .title {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Hover state for showing the game title container */
-.game:hover h3 {
-    display:block;
-}
-
-/* On mobile, make sure the hover effect is not applied */
-@media (width <= 768px) {
-    .game h3 .title {
-        display: none;
-    }
-
-    .game h3 {
-        display: none;
-        font-size: 0;
-        
-    }
-}
-
-
-/* =======================
-   Effects Styles
-   ======================= */
-
-/* Increase font size and apply fade-in animation to elements with the "large-fade-in" class */
-.large-fade-in {
-    /* Initially set opacity to 0 to make them invisible */
-    animation: fade-in 1.5s ease forwards;
-    margin: 0;
-    opacity: 0;
-
-    /* Apply fade-in animation */
-    padding: 0;
-    white-space: nowrap;
-}
-
-
-/* Increase font size for p elements with the "large-fade-in" class */
-.large-fade-in p {
-    font-size: clamp(18px, 2vw, 24px);
-
-    /* Adjust the font size as needed */
-}
-
-/* Keyframes for fade-in animation */
-@keyframes fade-in {
-    from {
-        opacity: 0;
-
-        /* Start with opacity 0 (invisible) */
-        transform: translateY(20px);
-
-        /* Optional: Add a slight vertical translation */
-    }
-
-    to {
-        opacity: 1;
-
-        /* End with opacity 1 (fully visible) */
-        transform: translateY(0);
-
-        /* Optional: Reset vertical translation */
-    }
-}
-
-
-.image-effect {
-    animation: 1s ease-out 0s 1 slide-in-from-left;
-    position: relative;
-
-    /* Lower than the title */
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-
-    /* Set positioning context for z-index */
-    z-index: 1;
-}
-
-.image-effect:hover {
-    filter: brightness(1.1);
-    transform: scale(1.05);
-}
-
-@keyframes slide-in-from-left {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-
-        /* Start fully transparent */
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-
-        /* End fully opaque */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-/* =======================
-   Project Page Styles
-   ======================= */
-
-/* =======================
-   Project Sections & Documentation
-   ======================= */
-
-/* General section padding */
-.project-section {
-    padding-bottom: 20px;
-}
-
-.project-container {
-    padding-top: clamp(40px, 8vw, 80px);
-
-    /* Adjusts padding-top based on viewport width */
-}
-
-/* Styling for the project header */
-.project-header {
-    align-items: center;
-     display: flex; 
-    font-size: clamp(18px, 2vw, 24px);   
-    gap: 10px;
-    justify-content: space-between; 
-    margin-bottom: 10px; 
-}
-
-.project-header h3 {
-    color: #03DAC5; /* Light teal color for title */
-    font-size: clamp(24px, 3vw, 32px); /* Responsive font size for title */
-    margin: 0; /* Remove default margins */
-    text-align: center;
-}
-
-.project-header span {
-    color: #BB86FC; /* Light purple color for the year */
-    font-size: clamp(24px, 2vw, 32px); /* Responsive font size for the year */
-}
-
-.mini-project-container {
-    display: flex;
-    gap: 10px;
-    padding-bottom: 10px;
-}
-
-/* Child elements inside the container */
-.mini-project-container > .left-pane {
-    flex: 0 0 50%; /* Do not grow or shrink, occupy 60% width */
-}
-
-.mini-project-container > .right-pane {
-    flex: 0 0 50%; /* Do not grow or shrink, occupy 40% width */
-}
-
-
-@media (width <= 1200px) {
-    .mini-project-container {
-        display: block;
-    }
-
-    .responsive-video {
-        margin-bottom: 10px;
-        padding-top: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
-    }
-    
-}
-
-.project-title {
-    color: #03DAC5; /* Light teal color */
-    font-size: clamp(24px, 3vw, 32px); /* Responsive font size for the title */
-    padding: 0; /* Left and right padding for the title */
-}
-
-.project-year {
-    color: #BB86FC; /* Light purple color */
-    font-size: clamp(18px, 2vw, 24px); /* Responsive font size for the year */
-    padding: 0; /* Left and right padding for the year */
-}
-
-.project-roles {
-    /* font-size: 12px; */
-    color: #03DAC5; /* Light teal color for title */
-    font-size: clamp(12px, 1.5vw, 22px); /* Responsive font size for the roles */
-    padding: 0 10px; /* Padding for roles section */
-
-    /* white-space: nowrap; */
-}
-
-.project-description{
-    font-size: clamp(16px, 1vw, 18px);
-}
-
-.project-list li{
-    font-size: clamp(16px, 1vw, 18px);
-    padding-left: 20px; /* Optional: Add spacing to align list items */
-    
-} 
-
-.project-team ul{
-    align-items: center; /* Vertical centering */
-    display: flex;
-    justify-content: center; /* Horizontal centering */
-}
-
-.composite-image {
-    background-position: center, center, center;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: contain, contain, contain;
-    height: 300px;
-    width: 300px;
+  .carousel .game { 
+    box-sizing: border-box; 
+    flex: 0 0 calc(48%); 
+    margin-right: 2px; 
   }
-  
-.project-team {
-    font-size: clamp(16px, 1.8vw, 22px); /* Responsive font size for the team */
-    margin: 0; /* Remove default margin */
-    padding-left: 30px; /* Padding for team member list */
-    white-space: nowrap;
 
+  .prev-button,
+  .next-button,
+  #prev-btn,
+  #next-btn {
+    font-size: 14px;
+    height: var(--carousel-button-size-small);
+    margin: 0 5px;
+    width: var(--carousel-button-size-small);
+  }
+
+  .carousel-buttons { 
+    margin-bottom: 20px; 
+    margin-top: 20px; 
+  }
 }
 
-.responsive-video {
-    position: relative;
-    width: 100%; 
+/* --- Social Buttons --- */
+.social-buttons {
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: fixed;
+  right: 20px;
+  z-index: 1000;
 }
 
-.responsive-video iframe {
-    border-radius: 10px; /* Ensures the iframe inherits the border radius */
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+.social-button {
+  align-items: center;
+  background-color: var(--color-pane-background);
+  border-radius: 50%;
+  box-shadow: 0 4px 10px var(--color-overlay-dark);
+  display: flex;
+  height: var(--social-button-size);
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: var(--social-button-size);
 }
 
-
-
-/* Video Section */
-.video {
-    background: #000; /* Optional: Background color while loading */
-    height: 0;
-    max-width: 100%;
-    overflow: hidden;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    position: relative;
+.social-button img {
+  border-radius: 50%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  width: 100%;
 }
 
-.video iframe {
-    border: 0; /* Remove the default border */
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+.linkedin-icon { transform: scale(1.5); }
+.itch-icon { transform: scale(1.2); }
+.email-icon { transform: scale(1.2); }
+
+.social-button:hover {
+  box-shadow: 0 6px 15px rgb(0 0 0 / 50%);
+  transform: scale(1.15);
 }
 
-
-/* Styling for list items in the "learned things" section */
-.learned-things ul li {
-    list-style-type: disc;
-
-    /* Disc bullet points */
-    margin-left: 20px;
-
-    /* Space between bullet points and text */
+/* Social Buttons: Responsive (≤480px) */
+@media (width <= 480px) {
+  .social-button {
+    height: var(--social-button-size-small);
+    width: var(--social-button-size-small);
+  }
 }
 
-/* Documentation section styling */
-.documentation {
-    background-color: #121212;
-
-    /* Light purple text */
-    border-radius: 8px;
-
-    /* Dark background for documentation */
-    color: #BB86FC;
-
-    /* Rounded corners */
-}
-
-/* Link styles within the documentation section */
-.documentation a {
-    color: #F59371;
-
-    /* Pastel orange for links */
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* Hover effects for documentation links */
-.documentation a:hover {
-    color: #C25D8C;
-
-    /* Pink color on hover */
-}
-
-/* List styles within the documentation section */
-.documentation ul {
-    list-style-type: none;
-    padding: 0;
-
-    /* Remove default padding */
-}
-
-.documentation li {
-    margin-bottom: 10px;
-
-    /* Space between list items */
-}
-
-/* =======================
-   Project Thumbnails
-   ======================= */
-
-/* Grid for displaying screenshots */
-.screenshot-grid {
-    display: grid;
-
-    /* Three equal-width columns */
-    gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
-
-    /* Space between screenshots */
-}
-
-@media (width <= 1200px) {
-    .screenshot-grid {
-        display: block;
-    }
-}
-
-/* Style for individual screenshot links */
-.screenshot-grid a {
-    display: block;
-}
-
-
-/* Style for images within screenshot grid */
-.screenshot-grid img {
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    height: 100%;
-    object-fit: fill;
-
-    /* Slightly rounded corners */
-    transition: transform 0.3s ease;
-    width: 95%;
-
-    /* Smooth transition on hover */
-}
-
-/* Hover effect for screenshots */
-.screenshot-grid img:hover {
-    /* Slight zoom on hover */
-    border-color: #333;
-    transform: scale(1.05);
-
-    /* Darker border on hover */
-}
-
-/* Style for images within screenshot grid */
-.screenshot-grid img {
-    border: 2px solid #ddd;
-    border-radius: 4px;
-    height: 100%;
-    object-fit: fill;
-
-    /* Slightly rounded corners */
-    transition: transform 0.3s ease;
-    width: 95%;
-
-    /* Smooth transition on hover */
-}
-
-/* Hover effect for screenshots */
-.screenshot-grid img:hover {
-    /* Slight zoom on hover */
-    border-color: #333;
-    transform: scale(1.05);
-
-    /* Darker border on hover */
-}
-
-
-/* Modal Styles for Project Page */
+/* --- Modal --- */
 .modal {
-    align-items: center;
-    background-color: rgb(0 0 0 / 90%);
-    display: none;
-    height: 100%;
-
-    /* Black with opacity */
-
-    justify-content: space-between;
-
-    /* Ensure the modal is on top */
-
-    left: 0;
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  align-items: center;
+  background-color: rgb(0 0 0 / 90%);
+  display: none;
+  height: 100%;
+  justify-content: space-between;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    height: auto;
-    margin: auto;
-    position: relative;
-    width: 80%;
+  background-color: #fefefe;
+  height: auto;
+  margin: auto;
+  position: relative;
+  width: 80%;
 }
 
 .modal img {
-    display: block;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
 }
 
-/* Close button styles for the modal */
 .close {
-    color: white;
-    font-size: clamp(100px, 2vw, 200px);
-    font-weight: bold;
-    line-height: 1;
-    position: absolute;
-    right: 25px;
-    top: 0;
+  color: var(--color-text-default);
+  font-size: clamp(100px, 2vw, 200px);
+  font-weight: bold;
+  line-height: 1;
+  position: absolute;
+  right: 25px;
+  top: 0;
 }
 
 .close:hover,
 .close:focus {
-    color: #999;
-    cursor: pointer;
-
-    /* Lighter color on hover/focus */
-    text-decoration: none;
+  color: #999;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-/* Styles for slideshow elements within the modal */
-.my-slides {
-    display: none;
+.my-slides { 
+  display: none; 
 }
 
-/* Next & previous buttons for the slideshow */
 .prev,
 .next {
-    background-color: rgb(0 0 0 / 80%);
-
-    /* Smooth transition for hover */
-    border-radius: 0 3px 3px 0;
-    color: white;
-    cursor: pointer;
-    font-size: clamp(12px, 2vw, 20px);
-    font-weight: bold;
-    margin-top: -50px;
-    padding: 16px;
-    position: absolute;
-    top: 50%;
-    transition: 0.6s ease;
-    user-select: none;
-    width: auto;
+  background-color: rgb(0 0 0 / 80%);
+  border-radius: 0 3px 3px 0;
+  color: var(--color-text-default);
+  cursor: pointer;
+  font-size: clamp(12px, 2vw, 20px);
+  font-weight: bold;
+  margin-top: -50px;
+  padding: 16px;
+  position: absolute;
+  top: 50%;
+  transition: 0.6s ease;
+  user-select: none;
+  width: auto;
 }
 
-/* Positioning and style for the "next" button */
-.next {
-    border-radius: 3px 0 0 3px;
-    right: 0;
+.next { 
+  border-radius: 3px 0 0 3px; 
+  right: 0; 
+}
+.prev:hover, .next:hover { transform: scale(1.05); }
+
+/* --- Media (Video) --- */
+.responsive-video { 
+  position: relative; 
+  width: 100%; 
 }
 
-/* Hover effect for slideshow navigation buttons */
-.prev:hover,
-.next:hover {
-    transform: scale(1.05);
-
-    /* Darker background on hover */
+.responsive-video iframe {
+  border-radius: var(--border-radius-small);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
-/* =======================
-   Random Projects
-   ======================= */
-
-/* Grid for random projects */
-.random-projects .game-grid {
-    width: 100%;
-
-    /* Full width */
-
-    /* Add any additional styling as needed */
+.video {
+  background: #000;
+  height: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
 }
 
-/* Individual game style within random projects */
-.random-projects .game-grid .game {
-    height: 300px;
-
-    /* Set a fixed height for each game card */
-
-    /* Add any additional styling as needed */
+.video iframe {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
-.game.empty-slot .image-placeholder {
-    height: 200px;
-    width: 100%;
 
-    /* Adjust height as necessary */
+/* === [05] Sections === */
+
+/* --- Intro / Showcase --- */
+.showcase {
+  margin: 0;
+  position: relative;
+  text-align: center;
+  z-index: 1;
 }
 
-button:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
+
+
+
+/* --- Games / Grid & Text --- */
+.game-grid {
+  display: grid;
+  gap: 20px;
+  grid-auto-rows: minmax(150px, auto);
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.games-section {
+  align-items: center;
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.games-text {
+  flex: 1;
+  margin-right: 30px;
+  padding-left: 5%;
+}
+.games-text h2 { font-size: clamp(24px, 5vw, 96px); }
+/* stylelint-disable-next-line no-descending-specificity */
+.games-text h3 { font-size: clamp(14px, 3vw, 48px); }
+
+
+/* --- Overlay --- */
+
+.overlay-text {
+  align-items: center;
+  border-radius: var(--border-radius-small);
+  display: flex;
+  flex-direction: column;
+  height: var(--overlay-section-height);
+  justify-content: center;
+  margin: auto;
+  margin-bottom: calc(var(--overlay-section-height) * -1);
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.overlay-text h1 {
+  color: var(--color-secondary-light-teal);
+  font-size: var(--font-size-overlay-title);
+  text-shadow: 4px 4px 8px rgb(0 0 0 / 80%);
+  width: 70%;
+}
+
+.overlay-text .pane { width: 70%; }
+
+#canvas-container { 
+  margin-top: 2px; 
+  width: 100%; 
+}
+#background-canvas { height: var(--overlay-section-height); }
+
+#particle-canvas {
+  height: var(--overlay-section-height);
+  margin-bottom: calc(var(--overlay-section-height) * -1);
+  position: relative;
+  z-index: 1;
+}
+
+.container #games h2 {
+  font-size: var(--font-size-games-section-heading);
+  margin: 20px 0 50px;
+}
+
+.container #games .game { margin: 0 0 100px; }
+
+@media (width <= 480px) {
+  .container #games .game { margin: 0 0 50px; }
+}
+
+
+/* --- Projects --- */
+.project-section { padding-bottom: 20px; }
+
+.project-container {
+  padding-top: clamp(40px, 8vw, 80px);
+}
+
+.project-header {
+  align-items: center;
+  display: flex;
+  font-size: clamp(18px, 2vw, 24px);
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.project-header h3 {
+  color: var(--color-secondary-light-teal);
+  font-size: clamp(24px, 3vw, 32px);
+  margin: 0;
+  text-align: center;
+}
+
+.project-header span {
+  color: var(--color-primary-light-purple);
+  font-size: clamp(24px, 2vw, 32px);
+}
+
+.mini-project-container {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.mini-project-container > .left-pane { flex: 0 0 50%; }
+.mini-project-container > .right-pane { flex: 0 0 50%; }
+
+@media (width <= 1200px) {
+  .mini-project-container { display: block; }
+  
+  .responsive-video { 
+    margin-bottom: 10px; 
+    padding-top: 56.25%; 
+  }
+}
+
+.project-title {
+  color: var(--color-secondary-light-teal);
+  font-size: clamp(24px, 3vw, 32px);
+  padding: 0;
+}
+
+.project-year {
+  color: var(--color-primary-light-purple);
+  font-size: clamp(18px, 2vw, 24px);
+  padding: 0;
+}
+
+.project-roles {
+  color: var(--color-secondary-light-teal);
+  font-size: clamp(12px, 1.5vw, 22px);
+  padding: 0 10px;
+}
+
+.project-description { font-size: clamp(16px, 1vw, 18px); }
+
+.project-list li {
+  font-size: clamp(16px, 1vw, 18px);
+  padding-left: 20px;
+}
+
+.project-team ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.composite-image {
+  background-position: center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: contain, contain, contain;
+  height: 300px;
+  width: 300px;
+}
+
+.project-team {
+  font-size: clamp(16px, 1.8vw, 22px);
+  margin: 0;
+  padding-left: 30px;
+  white-space: nowrap;
+}
+
+.documentation {
+  background-color: var(--color-background);
+  border-radius: var(--border-radius-small);
+  color: var(--color-primary-light-purple);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.documentation a {
+  color: var(--color-link-pastel-orange);
+  font-weight: bold;
+  text-decoration: none;
+}
+.documentation a:hover { color: var(--color-link-hover-pink); }
+
+.documentation ul { 
+  list-style-type: none; 
+  padding: 0; 
+}
+.documentation li { margin-bottom: 10px; }
+
+/* --- Thumbnails --- */
+.screenshot-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (width <= 1200px) { .screenshot-grid { display: block; } }
+
+/* stylelint-disable-next-line no-descending-specificity */
+.screenshot-grid a { display: block; }
+
+.screenshot-grid img {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  height: 100%;
+  transition: transform 0.3s ease;
+  width: 95%;
+}
+
+.screenshot-grid img:hover { 
+  border-color: #333; 
+  transform: scale(1.05); 
+}
+
+/* --- Random Projects --- */
+.random-projects .game-grid { width: 100%; }
+
+/* stylelint-disable-next-line no-descending-specificity */
+.random-projects .game-grid .game { height: 300px; }
+
+.game.empty-slot .image-placeholder { 
+  height: 200px; 
+  width: 100%; }
+
+
+/* === [06] Utilities === */
+
+/* --- Effects & Animations --- */
+.large-fade-in {
+  animation: fade-in 1.5s ease forwards;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+.large-fade-in p { font-size: clamp(18px, 2vw, 24px); }
+
+@keyframes fade-in {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.image-effect {
+  animation: 1s ease-out 0s 1 slide-in-from-left;
+  position: relative;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.image-effect:hover {
+   filter: brightness(1.1); 
+   transform: scale(1.05); 
+  }
+
+@keyframes slide-in-from-left {
+  0% { 
+    opacity: 0; 
+    transform: translateX(-100%); 
+  }
+  
+  100% { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+/* --- States --- */
+button:disabled { 
+  cursor: not-allowed; 
+  opacity: 0.5; 
 }

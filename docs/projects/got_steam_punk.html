@@ -1,114 +1,98 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
-    <title>Project Title</title>
-    <!-- Link to your existing style.css file -->
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../loadHeader.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=1024" name="viewport"/>
+<title>Project Title</title>
+<!-- Link to your existing style.css file -->
+<link href="../css/style.css" rel="stylesheet"/>
+<script src="../loadHeader.js"></script>
 </head>
-
 <body>
-    <header id="header-container"></header>
-    <section class="showcase">
-        <div style="padding-top: 80px;">
-            <h1 class="large-fade-in title" >Got Steam, Punk?</h1>
-            <div class="pane">
-                <h3 class="large-fade-in">A Comedic Adventure on the High Seas.</h3>
-            </div>
-        </div>
-    </section>
-
-    <div class="container">
-
-
-        <!-- Demo Video -->
-        <section class="video">
-            <iframe width="980" height="550" src="https://youtube.com/embed/hTnZgLzd_wU" frameborder="0"
-                allowfullscreen></iframe>
-        </section>
-
-        <!-- Game Download/Play Link -->
-        <section class="project-section">
-            <a href="https://tarrott.itch.io/got-steam-punk" target=”_blank” class="game-link">Play Now</a>
-        </section>
-
-        <section class="project-section">
-            <div class="pane project-header">
-                <h3>Got Steam, Punk?</h3>
-                <span>(2021)</span>
-                <p><strong>Roles:</strong> Game and Level Designer</p>
-            </div>
-            <div class="pane project-description">
-                <p>
+<header id="header-container"></header>
+<section class="showcase">
+<div style="padding-top: 80px;">
+<h1 class="large-fade-in title">Got Steam, Punk?</h1>
+<div class="pane">
+<h3 class="large-fade-in">A Comedic Adventure on the High Seas.</h3>
+</div>
+</div>
+</section>
+<div class="container">
+<!-- Demo Video -->
+<section class="video">
+<iframe allowfullscreen="" frameborder="0" height="550" src="https://youtube.com/embed/hTnZgLzd_wU" width="980"></iframe>
+</section>
+<!-- Game Download/Play Link -->
+<section class="project-section">
+<a class="game-link" href="https://tarrott.itch.io/got-steam-punk" target="”_blank”">Play Now</a>
+</section>
+<section class="project-section">
+<div class="pane project-header">
+<h3>Got Steam, Punk?</h3>
+<span>(2021)</span>
+<p><strong>Roles:</strong> Game and Level Designer</p>
+</div>
+<div class="pane project-description">
+<p>
                     Developed during a game jam by a seven-member team, this game combines humor with a high-seas
                     adventure on the world's most advanced, barely seaworthy steamship. Playing as a crew member, the
                     goal is to keep the ship afloat by completing various repair tasks.
                 </p>
-                <ul>
-                    <li>Designed the ship’s layout, the order of repair tasks</li>
-                    <li>the player’s moveset, including a steam-powered grappling hook.</li>
-                    <li>Contributed to modeling and decorated the ship's interior with assets created by two teammates
+<ul>
+<li>Designed the ship’s layout, the order of repair tasks</li>
+<li>the player’s moveset, including a steam-powered grappling hook.</li>
+<li>Contributed to modeling and decorated the ship's interior with assets created by two teammates
                         and myself.</li>
-                    <li>Created a class document for the game's code.</li>
-                    <li>Optimized a low-poly water script, enhancing performance from 80 to a smoother 160 on my
+<li>Created a class document for the game's code.</li>
+<li>Optimized a low-poly water script, enhancing performance from 80 to a smoother 160 on my
                         computer.</li>
-                </ul>
-            </div>
-        </section>
-
-
-        <!-- Things I Learned -->
-        <section class="project-section learned-things">
-            <h2>Things I Learned</h2>
-            <ul>
-                <li>Developed project management skills, by acting as the central point for the game's overall
+</ul>
+</div>
+</section>
+<!-- Things I Learned -->
+<section class="project-section learned-things">
+<h2>Things I Learned</h2>
+<ul>
+<li>Developed project management skills, by acting as the central point for the game's overall
                     vision and coordination.</li>
-                <li>Explored the principles of interior architecture, learning how to create immersive and functional
+<li>Explored the principles of interior architecture, learning how to create immersive and functional
                     game spaces.</li>
-                <li>The importance of player feedback mechanisms, like sound cues and particle animations, to reinforce player achievements and progress.</li>
-            </ul>
-        </section>
-        <!-- Screenshots Grid -->
-        <section class="project-section">
-            <h2>Screenshots</h2>
-            <div class="screenshot-grid">
-                <img src="./screenshots/3d_GotSteamPunk (1).png" onclick="openModal();currentSlide(1)"
-                    class="hover-shadow">
-                <img src="./screenshots/3d_GotSteamPunk (2).png" onclick="openModal();currentSlide(2)"
-                    class="hover-shadow">
-                <img src="./screenshots/3d_GotSteamPunk (3).png" onclick="openModal();currentSlide(3)"
-                    class="hover-shadow">
-            </div>
-        </section>
-
-        <!-- The Modal/Lightbox -->
-        <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-                <div class="my-slides">
-                    <img src="./screenshots/3d_GotSteamPunk (1).png" style="width:100%">
-                </div>
-                <div class="my-slides">
-                    <img src="./screenshots/3d_GotSteamPunk (2).png" style="width:100%">
-                </div>
-                <div class="my-slides">
-                    <img src="./screenshots/3d_GotSteamPunk (3).png" style="width:100%">
-                </div>
-                <!-- Next/previous controls -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-        </div>
-
-
-        <!-- Notable Things I Did -->
-
-        <section class="project-section">
-            <h2>Highlight of the Project</h2>
-            <p class="pane">On "Got Steam, Punk?", the real task was the interior of the ship—making it detailed and
+<li>The importance of player feedback mechanisms, like sound cues and particle animations, to reinforce player achievements and progress.</li>
+</ul>
+</section>
+<!-- Screenshots Grid -->
+<section class="project-section">
+<h2>Screenshots</h2>
+<div class="screenshot-grid">
+<img class="hover-shadow" onclick="openModal();currentSlide(1)" src="./screenshots/3d_GotSteamPunk (1).png"/>
+<img class="hover-shadow" onclick="openModal();currentSlide(2)" src="./screenshots/3d_GotSteamPunk (2).png"/>
+<img class="hover-shadow" onclick="openModal();currentSlide(3)" src="./screenshots/3d_GotSteamPunk (3).png"/>
+</div>
+</section>
+<!-- The Modal/Lightbox -->
+<div class="modal" id="myModal">
+<span class="close cursor" onclick="closeModal()">×</span>
+<div class="modal-content">
+<div class="my-slides">
+<img src="./screenshots/3d_GotSteamPunk (1).png" style="width:100%"/>
+</div>
+<div class="my-slides">
+<img src="./screenshots/3d_GotSteamPunk (2).png" style="width:100%"/>
+</div>
+<div class="my-slides">
+<img src="./screenshots/3d_GotSteamPunk (3).png" style="width:100%"/>
+</div>
+<!-- Next/previous controls -->
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+</div>
+<!-- Notable Things I Did -->
+<section class="project-section">
+<h2>Highlight of the Project</h2>
+<p class="pane">On "Got Steam, Punk?", the real task was the interior of the ship—making it detailed and
                 believable.
                 Evan's solid models set the foundation, and together with Jeremy, we added some humor into the mix with
                 the signs around the ship. My job was to figure out the best spots for grappling points for players to
@@ -116,54 +100,43 @@
                 every piece of the ship was placed just right, drawing from real-life references to get that authentic
                 steamship feel. Somehow while working on it I never felt confortable with how it looked but
                 after having time to look at it now, I'm fonder of the work I did there.</p>
-        </section>
-
-        <!-- Teammate Credits and Thanks -->
-        <section class="project-section">
-            <h2>Team Credits</h2>
-            <div class="pane">
-                <h5>I am immensely grateful for the opportunity to work with a talented and dedicated team. Special
+</section>
+<!-- Teammate Credits and Thanks -->
+<section class="project-section">
+<h2>Team Credits</h2>
+<div class="pane">
+<h5>I am immensely grateful for the opportunity to work with a talented and dedicated team. Special
                     thanks to:</h5>
-                <ul>
-                    <li>Daniel Grammar - Music</li>
-                    <li>Evan Powers - Art</li>
-                    <li>James Espericueta - Programming</li>
-                    <li>Jeremy Kuznetsov - Art & Writing</li>
-                    <li>Jaxon Lee - Programming</li>
-                    <li> Isaac Hill - Voice Acting</li>
-                    <!-- Add more teammates as necessary -->
-                </ul>
-            </div>
-
-        </section>
-
-    </div>
-
-
-
-
-    <!-- Random Project Thumbnails Section -->
-    <div class="random-projects">
-        <div class="container">
-            <h2>Explore More Games</h2>
-
-            <div class="game-grid">
-
-            </div>
-            <div class="carousel-buttons">
-                <button id="prev-btn">Previous</button>
-                <button id="next-btn">Next</button>
-            </div>
-            <section class="project-section">
-                <a href="../index.html" class="game-link">Back To Projects</a>
-            </section>
-        </div>
-    </div>
-    <footer id="footer-container"></footer>
-    <!-- Include the RandomGames.js script -->
-    <script src="RandomGame.js"></script>
-    <script src="Modal.js"></script>
-
+<ul>
+<li>Daniel Grammar - Music</li>
+<li>Evan Powers - Art</li>
+<li>James Espericueta - Programming</li>
+<li>Jeremy Kuznetsov - Art &amp; Writing</li>
+<li>Jaxon Lee - Programming</li>
+<li> Isaac Hill - Voice Acting</li>
+<!-- Add more teammates as necessary -->
+</ul>
+</div>
+</section>
+</div>
+<!-- Random Project Thumbnails Section -->
+<div class="random-projects">
+<div class="container">
+<h2>Explore More Games</h2>
+<div class="game-grid">
+</div>
+<div class="carousel-buttons">
+<button id="prev-btn">Previous</button>
+<button id="next-btn">Next</button>
+</div>
+<section class="project-section">
+<a class="game-link" href="../index.html">Back To Projects</a>
+</section>
+</div>
+</div>
+<footer id="footer-container"></footer>
+<!-- Include the RandomGames.js script -->
+<script src="RandomGame.js"></script>
+<script src="Modal.js"></script>
 </body>
-
 </html>

@@ -16,7 +16,7 @@ def load_games():
 def setup_game_dataframe() -> pd.DataFrame:
     """Initializes the main game DataFrame with processed fields."""
     global _game_df
-    print(get_games())
+    #print(get_games())
 
     df = pd.DataFrame(get_games())
 

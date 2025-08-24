@@ -1,156 +1,136 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
-    <title>Project Title</title>
-    <!-- Link to your existing style.css file -->
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../loadHeader.js"></script>
+<meta charset="utf-8"/>
+<meta content="width=1024" name="viewport"/>
+<title>Project Title</title>
+<!-- Link to your existing style.css file -->
+<link href="../css/style.css" rel="stylesheet"/>
+<script src="../loadHeader.js"></script>
 </head>
-
 <body>
-    <header id="header-container"></header>
-    <section class="showcase">
-        <div style="padding-top: 80px;">
-            <h1 class="large-fade-in title" >Silent Codes</h1>
-            <div class="pane" >
-                <h3 class="large-fade-in">Master Work Place Laziness.</h3>
-            </div>
-        </div>
-    </section>
-    <div class="container">
-
-
-
-        <!-- Demo Video -->
-        <section style="width: 40%; margin: auto;">
-            <a  href="https://deditch.itch.io/silent-codes"><img
-                    style="border-radius: 15px; width: 100%; aspect-ratio:1/1;" class="image-effect" src="../thumbnail_silent_codes.jpg"
-                    alt="SILENT CODES Thumbnail"></a>
-        </section>
-        <!-- Game Download/Play Link -->
-        <section class="project-section">
-            <a href="https://deditch.itch.io/silent-codes" target=”_blank” class="game-link">Play Now</a>
-        </section>
-        <!-- Project Context -->
-        <section class="project-section">
-            <div class="pane project-header">
-                <h3>Silent Codes</h3>
-                <span>(2023)</span>
-                <p><strong>Roles:</strong> Game Design, Graphics Programming, UI Design</p>
-            </div>
-            <div class="pane project-description">
-                <p>
+<header id="header-container"></header>
+<section class="showcase">
+<div style="padding-top: 80px;">
+<h1 class="large-fade-in title">Silent Codes</h1>
+<div class="pane">
+<h3 class="large-fade-in">Master Work Place Laziness.</h3>
+</div>
+</div>
+</section>
+<div class="container">
+<!-- Demo Video -->
+<section style="width: 40%; margin: auto;">
+<a href="https://deditch.itch.io/silent-codes"><img alt="SILENT CODES Thumbnail" class="image-effect" src="../thumbnail_silent_codes.jpg" style="border-radius: 15px; width: 100%; aspect-ratio:1/1;"/></a>
+</section>
+<!-- Game Download/Play Link -->
+<section class="project-section">
+<a class="game-link" href="https://deditch.itch.io/silent-codes" target="”_blank”">Play Now</a>
+</section>
+<!-- Project Context -->
+<section class="project-section">
+<div class="pane project-header">
+<h3>Silent Codes</h3>
+<span>(2023)</span>
+<p><strong>Roles:</strong> Game Design, Graphics Programming, UI Design</p>
+</div>
+<div class="pane project-description">
+<p>
                     An interactive two-player puzzle game developed over a two-week period, blending traditional escape room elements with digital puzzle-solving. Player 1 navigates a memory puzzle minigame to extract crucial code pieces, while Player 2 uses a physical cipher to decode the information. The game intensifies with the presence of a Boss character, forcing both players to remain quiet and avoid detection.
                 </p>
-                <ul>
-                    <li><strong>Wrote a CRT shader in HLSL</strong> simulating scanlines, lens distortion, screen blinking, and other effects to enhance the game's thematic setting.</li>
-                    <li>Designed the pretend-to-work gameplay loop, and the minigame for obtaining code pieces.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Things I Learned -->
-        <section class="project-section learned-things">
-            <h2>Things I Learned</h2>
-            <ul>
-                <li>Writing shader code directly in HLSL.</li>
-                <li>Hooking into Unity's rendering system to apply materials across multiple UI elements as a texture
+<ul>
+<li><strong>Wrote a CRT shader in HLSL</strong> simulating scanlines, lens distortion, screen blinking, and other effects to enhance the game's thematic setting.</li>
+<li>Designed the pretend-to-work gameplay loop, and the minigame for obtaining code pieces.</li>
+</ul>
+</div>
+</section>
+<!-- Things I Learned -->
+<section class="project-section learned-things">
+<h2>Things I Learned</h2>
+<ul>
+<li>Writing shader code directly in HLSL.</li>
+<li>Hooking into Unity's rendering system to apply materials across multiple UI elements as a texture
                 </li>
-            </ul>
-        </section>
-        <section class="project-section documentation">
-            <h2>Project Documentation</h2>
-            <p>Below are links to the project's documentation:</p>
-            <ul>
-                <li><a href="https://github.com/DavinWam/Silent-Codes" target="_blank">GitHub</a></li>
-            </ul>
-        </section>
-
-        <!-- Screenshots Grid -->
-        <section class="project-section">
-            <h2>Screenshots</h2>
-            <div class="screenshot-grid">
-                <img src="./screenshots/SilentCodes (3).png" onclick="openModal();currentSlide(3)" class="hover-shadow">
-                <img src="./screenshots/SilentCodes (1).png" onclick="openModal();currentSlide(1)" class="hover-shadow">
-                <img src="./screenshots/SilentCodes (2).png" onclick="openModal();currentSlide(2)" class="hover-shadow">
-
-            </div>
-        </section>
-
-        <!-- The Modal/Lightbox -->
-        <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-                <div class="my-slides">
-                    <img src="./screenshots/SilentCodes (3).png" style="width:100%">
-                </div>
-                <div class="my-slides">
-                    <img src="./screenshots/SilentCodes (1).png" style="width:100%">
-                </div>
-                <div class="my-slides">
-                    <img src="./screenshots/SilentCodes (2).png" style="width:100%">
-                </div>
-
-                <!-- Next/previous controls -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-        </div>
-
-
-
-        <!-- Notable Things I Did -->
-        <section class="project-section">
-            <h2>Highlight of the Project</h2>
-            <p class="pane">Working on <strong>Silent Codes</strong> offered me a profound opportunity to demystify Unity's rendering process. 
+</ul>
+</section>
+<section class="project-section documentation">
+<h2>Project Documentation</h2>
+<p>Below are links to the project's documentation:</p>
+<ul>
+<li><a href="https://github.com/DavinWam/Silent-Codes" target="_blank">GitHub</a></li>
+</ul>
+</section>
+<!-- Screenshots Grid -->
+<section class="project-section">
+<h2>Screenshots</h2>
+<div class="screenshot-grid">
+<img class="hover-shadow" onclick="openModal();currentSlide(3)" src="./screenshots/SilentCodes (3).png"/>
+<img class="hover-shadow" onclick="openModal();currentSlide(1)" src="./screenshots/SilentCodes (1).png"/>
+<img class="hover-shadow" onclick="openModal();currentSlide(2)" src="./screenshots/SilentCodes (2).png"/>
+</div>
+</section>
+<!-- The Modal/Lightbox -->
+<div class="modal" id="myModal">
+<span class="close cursor" onclick="closeModal()">×</span>
+<div class="modal-content">
+<div class="my-slides">
+<img src="./screenshots/SilentCodes (3).png" style="width:100%"/>
+</div>
+<div class="my-slides">
+<img src="./screenshots/SilentCodes (1).png" style="width:100%"/>
+</div>
+<div class="my-slides">
+<img src="./screenshots/SilentCodes (2).png" style="width:100%"/>
+</div>
+<!-- Next/previous controls -->
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+</div>
+<!-- Notable Things I Did -->
+<section class="project-section">
+<h2>Highlight of the Project</h2>
+<p class="pane">Working on <strong>Silent Codes</strong> offered me a profound opportunity to demystify Unity's rendering process. 
                 Interacting directly with how elements are drawn to the screen opened up new avenues for creative and efficient 
                 problem solving. I'm especially proud of implementing the CRT effects, which involved writing shader code and integrating it seamlessly
                 within Unity's rendering system. This hands-on experience not only enhanced the game's visual appeal but
                 also deepened my understanding of graphical programming and asset optimization. This project has empowered me with the knowledge and 
                 confidence to intervene and extend the engine's capabilities where necessary, ensuring that I can always align the technology with my 
                 creative vision in future projects.</p>
-        </section>
-        <!-- Teammate Credits and Thanks -->
-        <section class="project-section">
-            <h2>Team Credits</h2>
-            <div class="pane">
-                <h5>Special thanks to my friends and classmates:</h5>
-                <ul>
-                    <li>Andrei Davydov - UI Programming</li>
-                    <li>Lois Kim - UI Art</li>
-                    <li>Yooeun - Programming</li>
-                    <!-- Add more teammates as necessary -->
-                </ul>
-            </div>
-        </section>
-    </div>
-
-
-    <!-- Random Project Thumbnails Section -->
-    <div class="random-projects">
-        <div class="container">
-            <h2>Explore More Games</h2>
-
-            <div class="game-grid">
-
-            </div>
-            <div class="carousel-buttons">
-                <button id="prev-btn">Previous</button>
-                <button id="next-btn">Next</button>
-            </div>
-            <section class="project-section">
-                <a href="../index.html" class="game-link">Back To Projects</a>
-            </section>
-        </div>
-    </div>
-    <footer id="footer-container"></footer>
-    <!-- Include the RandomGames.js script -->
-    <script src="RandomGame.js"></script>
-    <script src="Modal.js"></script>
-
+</section>
+<!-- Teammate Credits and Thanks -->
+<section class="project-section">
+<h2>Team Credits</h2>
+<div class="pane">
+<h5>Special thanks to my friends and classmates:</h5>
+<ul>
+<li>Andrei Davydov - UI Programming</li>
+<li>Lois Kim - UI Art</li>
+<li>Yooeun - Programming</li>
+<!-- Add more teammates as necessary -->
+</ul>
+</div>
+</section>
+</div>
+<!-- Random Project Thumbnails Section -->
+<div class="random-projects">
+<div class="container">
+<h2>Explore More Games</h2>
+<div class="game-grid">
+</div>
+<div class="carousel-buttons">
+<button id="prev-btn">Previous</button>
+<button id="next-btn">Next</button>
+</div>
+<section class="project-section">
+<a class="game-link" href="../index.html">Back To Projects</a>
+</section>
+</div>
+</div>
+<footer id="footer-container"></footer>
+<!-- Include the RandomGames.js script -->
+<script src="RandomGame.js"></script>
+<script src="Modal.js"></script>
 </body>
-
 </html>
