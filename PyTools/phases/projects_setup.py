@@ -29,16 +29,16 @@ fallback_image_link_template = """
 
 
 PROJECT_HTML_BODY_TEMPLATE = """
-<div class="container">
-    <section class="game-header">
-    <div class="project-container">
-        <h1 class="large-fade-in game-header__title">{title}</h1>
-        <div class="pane">
-        <h3 class="large-fade-in game-header__tagline">Project game-header__tagline goes here.</h3>
-        </div>
+<section class="game-header">
+<div class="project-container">
+    <h1 class="large-fade-in game-header__title">{title}</h1>
+    <div class="pane">
+    <h3 class="large-fade-in game-header__tagline">Project game-header__tagline goes here.</h3>
     </div>
-    </section>
-    
+</div>
+</section>
+<div class="container">
+
     
     <section class="page-section" id="game-showcase"></section>
 

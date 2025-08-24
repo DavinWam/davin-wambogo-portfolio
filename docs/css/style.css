@@ -124,6 +124,7 @@ footer {
   border-radius: var(--border-radius-small);
   padding: clamp(10px, 4vw, 20px) clamp(20px, 8vw, 80px);
 }
+.page-section { padding-bottom: 20px; }
 
 /* === [04] Components === */
 
