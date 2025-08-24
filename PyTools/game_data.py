@@ -97,6 +97,8 @@ def get_unique(df_or_list, column: str) -> list:
     )
 
 # === Utilities ===
+def is_empty(value) -> bool:
+    return not value or str(value).strip() == ""
 
 def split_roles(game_row) -> list:
     """Splits the 'roles' string into a list. Compatible with dict or Series input."""

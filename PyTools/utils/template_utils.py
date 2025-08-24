@@ -24,12 +24,18 @@ footer_template = """
 
 def render_template(template_str, game_data, extra_data=None):
     context = {
-        "title": game_data["title"],
+        "title": game_data.get("title", ""),
         "roles": game_data.get("roles", ""),
-        "filename": game_data["filename"],
-        "alt": game_data["title"],
+        "filename": game_data.get("filename", ""),
+        "alt": game_data.get("title", ""),
         "style": "",
+        "dates": game_data.get("dates", ""),
+        "tagline": game_data.get("tagline", ""),
+        "highlight": game_data.get("highlight", ""),
+        "play_link": game_data.get("play_link", ""),
+        "video_link": game_data.get("video_link") or game_data.get("video", ""),
     }
+
 
     img_funcs = _validate_and_get_img_funcs(template_str, extra_data)
 
@@ -83,7 +89,10 @@ def _validate_and_get_img_funcs(template_str, extra_data):
     img_funcs = _get_img_funcs(extra_data)
 
     if not img_funcs:
-        raise ValueError("No image function(s) provided to render_template.")
+        if _extract_img_placeholders(template_str) > 0:
+            raise ValueError("No image function(s) provided to render_template.")
+        return []
+
 
     if len(img_funcs) != num_placeholders:
         raise ValueError(

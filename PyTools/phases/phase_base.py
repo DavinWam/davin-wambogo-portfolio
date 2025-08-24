@@ -43,6 +43,18 @@ class Phase:
             raise ValueError(f"[{self.name}] Could not find element with id='{element_id}'")
         target.append(BeautifulSoup(html_string, "html.parser"))
 
+    def set_text_by_class(self, soup: BeautifulSoup, class_name: str, text: str) -> bool:
+        """
+        Finds the first element with the given class and replaces its inner content with text.
+        Returns True if successful, False if element not found.
+        """
+        tag = soup.select_one(f".{class_name}")
+        if tag:
+            tag.clear()
+            tag.append(text)
+            return True
+        return False
+
     def report(self) -> str:
         return "No report available."
 

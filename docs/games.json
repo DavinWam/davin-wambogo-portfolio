@@ -1,6 +1,26 @@
 [
     {
-        "title": "ENYA'S JOURNEY",
+        "title": "Space Blitz",
+        "roles": "Game Design, Level Design",
+        "filename": "space_game",
+        "thumbnail": "thumbnail_space_game.png",
+        "visibility": "private",
+        "dates": null,
+        "start_date": null,
+        "end_date": null
+    },
+    {
+        "title": "Penrose",
+        "roles": "Level Design, Art",
+        "filename": "penrose",
+        "thumbnail": "thumbnail_penrose.PNG",
+        "visibility": "private",
+        "dates": null,
+        "start_date": null,
+        "end_date": null
+    },
+    {
+        "title": "Enya's Journey",
         "roles": "Game Design, Programming, UI, Level Design, Art & Animation",
         "filename": "enyas_journey",
         "thumbnail": "thumbnail_enyas_journey.jpg",
@@ -166,7 +186,7 @@
         "start_date": "2021-10-01",
         "end_date": "2021-10-31",
         "tagline": "A Comedic Adventure on the High Seas.",
-        "video": "https://youtube.com/embed/hTnZgLzd_wU",
+        "video_link": "https://youtube.com/embed/hTnZgLzd_wU",
         "play_link": "https://tarrott.itch.io/got-steam-punk",
         "project_description": "Developed during a game jam by a seven-member team, this game combines humor with a high-seas adventure on the world's most advanced, barely seaworthy steamship. Playing as a crew member, the goal is to keep the ship afloat by completing various repair tasks.",
         "documentation": [],
@@ -209,7 +229,7 @@
         "start_date": "2021-10-01",
         "end_date": "2021-10-31",
         "tagline": "Fly and Deliver in a Bat's World.",
-        "video": "https://youtube.com/embed/oCgHkXPRw6k",
+        "video_link": "https://youtube.com/embed/oCgHkXPRw6k",
         "play_link": "[Insert Game Link Here]",
         "project_description": "Lab Bat is a Flash Game inspired puzzle platformer developed over a three-day game jam, inspired by a World War II story where bats were trained to drop bombs. In this game, the protagonist, a bat who originally could not fly, navigates a facility filled with hazards to deliver a bomb to its destination in exchange for flight.",
         "documentation": [],
@@ -258,59 +278,57 @@
         ]
     },
     {
-        "title": "SPACE BLITZ",
-        "roles": "Game Design, Level Design",
-        "filename": "space_game",
-        "thumbnail": "thumbnail_space_game.png",
-        "visibility": "private",
-        "dates": null,
-        "start_date": null,
-        "end_date": null
-    },
-    {
-        "title": "PENROSE",
-        "roles": "Level Design, Art",
-        "filename": "penrose",
-        "thumbnail": "thumbnail_penrose.PNG",
-        "visibility": "private",
-        "dates": null,
-        "start_date": null,
-        "end_date": null
-    },
-    {
-        "title": "BLADES ON ICE",
-        "roles": "Game Design, Programming, Animation",
+        "title": "Blades on Ice",
+        "roles": "Game Design, Programming",
         "filename": "blades_on_ice",
         "thumbnail": "thumbnail_blades_on_ice.jpg",
+        "featured": false,
         "visibility": "public",
         "dates": "Oct 2024 – May 2025",
         "start_date": "2024-10-01",
         "end_date": "2025-05-31",
-        "team": "",
-        "tagline": "",
-        "video": "https://youtu.be/lR9p5lXZgyE",
+        "tagline": "Teams are made on the ice.",
+        "video_link": "https://youtube.com/embed/lR9p5lXZgyE",
         "play_link": "",
         "highlight": "",
-        "description": "",
-        "doc": "",
-        "credits": []
+        "project_description": "Blades on Ice is a cooperative figure skating game where two players embody a pair ice dancing team. Switch between Practice, Performance, and Story Mode as you master iconic dance elements like twizzles, spins, and lifts. Gameplay blends rhythm timing, synchronized movement, and expressive presentation to capture the artistry of ice dance. Each performance is graded on musicality, connection, and precision.",
+        "documentation": [
+            {
+                "name": "Game Design Document",
+                "link": "./pdfs/Blades on Ice Design Doc.pdf"
+            }
+        ],
+        "teammates": [
+            {
+                "name": "Andrei Davydov",
+                "role": "Level Design and character modeling"
+            },
+            {
+                "name": "Lois Kim",
+                "role": "Character and Background Art"
+            },
+            {
+                "name": "Astrid Da Costa",
+                "role": "Narrative Programming"
+            }
+        ]
     },
     {
-        "title": "SYNTH DOG",
+        "title": "Synth Dog",
         "roles": "Game Design & Audio Engineering",
         "filename": "synth_dog",
         "thumbnail": "thumbnail_synth_dog.png",
+        "featured": false,
         "visibility": "hidden",
         "dates": "Nov 2024 – Dec 2024",
         "start_date": "2024-11-01",
         "end_date": "2024-12-31",
-        "team": "",
         "tagline": "",
-        "video": "",
+        "video_link": "",
         "play_link": "",
         "highlight": "",
-        "description": "",
-        "doc": "",
-        "credits": []
+        "project_description": "",
+        "documentation": [],
+        "teammates": []
     }
 ]

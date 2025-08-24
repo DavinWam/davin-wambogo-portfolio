@@ -26,7 +26,8 @@ def find_image_path(pattern: str) -> str:
         abs_candidate = os.path.join(THUMBNAIL_DIR, filename)
         if os.path.isfile(abs_candidate):
             # Return a web-safe relative path (no backslashes, no leading ../)
-            return _web_rel(os.path.join("thumbnails", filename))
+            return _web_rel(os.path.join("..", "thumbnails", filename))
+
 
     print(f"[WARN] No image found for pattern '{pattern}' in {THUMBNAIL_DIR}")
     return ""  # Safe fallback so HTML still renders

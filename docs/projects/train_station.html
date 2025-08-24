@@ -11,23 +11,24 @@
 
 <body>
     <header id="header-container"></header>
-    
-    <section class="showcase">
+
+    <section class="game-header">
         <div style="padding-top: 80px;">
-            <h1 class="large-fade-in title">Analog Horror Project</h1>
+            <h1 class="large-fade-in game-header__title">Analog Horror Project</h1>
             <div class="pane">
-                <h3 class="large-fade-in">Exploring the eerie and unsettling world of analog horror.</h3>
+                <h3 class="large-fade-in game-header__tagline">Exploring the eerie and unsettling world of analog
+                    horror.</h3>
             </div>
         </div>
     </section>
 
     <div class="container">
-        <section class="video">
+        <section class="game-showcase__video">
             <iframe width="980" height="550" src="https://youtube.com/embed/xbISa-Xdq6w" frameborder="0"
                 allowfullscreen></iframe>
         </section>
         <!-- Project Context -->
-        <section class="project-section">
+        <section class="page-section">
             <div class="pane project-header">
                 <h3>Analog Horror Project</h3>
                 <span>(2024)</span>
@@ -35,17 +36,22 @@
             </div>
             <div class="pane project-description">
                 <p>
-                    This project is a collaborative effort in creating an analog horror experience set in a train station. The liminal space setting enhances the eerie and unsettling nature of analog horror, making the viewer question the reality of the environment. I was responsible for designing the forest and train station terrains, placing assets, setting up post-processing effects, and implementing shader UI and controls.
+                    This project is a collaborative effort in creating an analog horror experience set in a train
+                    station. The liminal space setting enhances the eerie and unsettling nature of analog horror, making
+                    the viewer question the reality of the environment. I was responsible for designing the forest and
+                    train station terrains, placing assets, setting up post-processing effects, and implementing shader
+                    UI and controls.
                 </p>
                 <ul>
                     <li>Implemented post-processing effects shader to emulate an analog camera in HLSL.</li>
-                    <li>Experimented with displacement maps for terrain, adding an extra layer of detail not typically available in Unity.</li>
+                    <li>Experimented with displacement maps for terrain, adding an extra layer of detail not typically
+                        available in Unity.</li>
                 </ul>
             </div>
         </section>
-        
+
         <!-- Things I Learned -->
-        <section class="project-section learned-things">
+        <section class="page-section learned-things">
             <h2>Things I Learned</h2>
             <ul>
                 <li>Packing data into color channels to manipulate the height map localized to the texture.</li>
@@ -53,19 +59,26 @@
         </section>
 
         <!-- Screenshots Grid -->
-        <section class="project-section">
+        <section class="page-section">
             <h2>Screenshots</h2>
             <div class="screenshot-grid">
-                <img src="./screenshots/train_station (1).jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
-                <img src="./screenshots/train_station (2).jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
-                <img src="./screenshots/train_station (3).jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
-                <img src="./screenshots/train_station (4).jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
-                <img src="./screenshots/train_station (5).jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
-                <img src="./screenshots/train_station (6).jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
-                <img src="./screenshots/train_station (7).jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+                <img src="./screenshots/train_station (1).jpg" onclick="openModal();currentSlide(1)"
+                    class="hover-shadow">
+                <img src="./screenshots/train_station (2).jpg" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow">
+                <img src="./screenshots/train_station (3).jpg" onclick="openModal();currentSlide(3)"
+                    class="hover-shadow">
+                <img src="./screenshots/train_station (4).jpg" onclick="openModal();currentSlide(4)"
+                    class="hover-shadow">
+                <img src="./screenshots/train_station (5).jpg" onclick="openModal();currentSlide(5)"
+                    class="hover-shadow">
+                <img src="./screenshots/train_station (6).jpg" onclick="openModal();currentSlide(6)"
+                    class="hover-shadow">
+                <img src="./screenshots/train_station (7).jpg" onclick="openModal();currentSlide(7)"
+                    class="hover-shadow">
             </div>
         </section>
-        
+
         <!-- The Modal/Lightbox -->
         <div id="myModal" class="modal">
             <span class="close cursor" onclick="closeModal()">&times;</span>
@@ -95,12 +108,15 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </div>
-        
+
 
         <!-- Highlight of the Project -->
-        <section class="project-section">
+        <section class="page-section">
             <h2>Highlight of the Project</h2>
-            <p class="pane">Working on this project was a chance to empower the artists around me to bring their vision to life. Over the course of this year, I've honed my ability to add functionality as needed for the project. Engaging in various roles allowed me to not only create but also enhance the eerie atmosphere of the scene, making it an immersive experience.</p>
+            <p class="pane">Working on this project was a chance to empower the artists around me to bring their vision
+                to life. Over the course of this year, I've honed my ability to add functionality as needed for the
+                project. Engaging in various roles allowed me to not only create but also enhance the eerie atmosphere
+                of the scene, making it an immersive experience.</p>
         </section>
     </div>
 

@@ -621,8 +621,8 @@ nav ul li {
 
 /* === [05] Sections === */
 
-/* --- Intro / Showcase --- */
-.showcase {
+/* --- Intro / game-header --- */
+.game-header {
   margin: 0;
   position: relative;
   text-align: center;
