@@ -19,7 +19,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementsByClassName("my-slides");
   if (n > slides.length) { slideIndex = 1; } // Loop to the first slide
   if (n < 1) { slideIndex = slides.length; } // Loop to the last slide
   for (i = 0; i < slides.length; i++) {

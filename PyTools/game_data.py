@@ -1,6 +1,6 @@
 import json
 import pandas as pd
-from config import GAMES_JSON_PATH
+from config import GAMES_JSON_PATH, ROLES_JSON_PATH
 
 # === Globals ===
 _game_df = None
@@ -33,6 +33,8 @@ def setup_game_dataframe() -> pd.DataFrame:
     print(df[["title", "roles_list"]].head())
 
     _game_df = df
+
+    write_roles_json()
     return _game_df
 
 def get_game_dataframe() -> pd.DataFrame:
@@ -103,3 +105,12 @@ def split_roles(game_row) -> list:
     else:  # pandas Series
         roles = game_row["roles"] if "roles" in game_row else ""
     return [r.strip() for r in roles.split(",") if r.strip()]
+
+def write_roles_json():
+    df = get_game_dataframe()
+    all_roles = sorted(set(role for roles in df["roles_list"] for role in roles))
+
+    with open(ROLES_JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(all_roles, f, indent=2)
+
+    print(f"[Info] Wrote {len(all_roles)} unique roles to {ROLES_JSON_PATH}")

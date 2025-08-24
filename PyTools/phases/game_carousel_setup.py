@@ -28,11 +28,12 @@ class game_carousel_setup(Phase):
 
         soup = self.open_htmls(["index"])[0]
 
+        # Get all games and filter out private ones
+        all_games = get_non_featured_games()
+        visible_games = all_games[all_games["visibility"] == "public"]
+        games_to_show = visible_games.sort_values("end_date", ascending=False).to_dict("records")
+
         featured_game = get_featured_game(self.games)
-        games_to_show = get_non_featured_games().sort_values("end_date", ascending=False).to_dict("records")
-
-
-
 
         carousel_html = render_games(games_to_show, self.article_template, {"img_func": thumb_path})
         featured_html = render_game(featured_game, self.featured_template, {

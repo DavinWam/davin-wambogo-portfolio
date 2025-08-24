@@ -1,0 +1,27 @@
+{
+  "name": "davin-wambogo-portfolio",
+  "version": "1.0.0",
+  "description": "This repo hosts my game dev portfolio site (served via GitHub Pages), and Python tools I use to manage it.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavinWam/davinwam.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavinWam/davinwam.github.io/issues"
+  },
+  "homepage": "https://github.com/DavinWam/davinwam.github.io#readme",
+  "devDependencies": {
+    "stylelint": "^16.23.1",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-order": "^7.0.0"
+  }
+}
