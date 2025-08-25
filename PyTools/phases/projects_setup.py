@@ -135,7 +135,7 @@ class projects_setup(Phase):
             self.insert_showcase(soup, game)  # just testing this
             self.insert_project_header(soup,game)
             self.insert_project_description(soup,game)
-            # self.insert_documentation(soup,game)
+            self.insert_documentation(soup,game)
             # self.insert_screenshots(soup,game)
             # self.insert_highlight(soup,game)
             self.insert_team_credits(soup,game)
@@ -268,8 +268,15 @@ class projects_setup(Phase):
         docs = game.get("documentation", [])
         if not docs:
             return
-        rendered = render_template_list(docs, doc_link_template, game_data=game, join_with="\n", wrap_tag="li")
-        self.insert_html_into_ul(soup, "project-documentation", rendered)
+        rendered = render_template_list(
+            data_list=docs,
+            template=doc_link_template,
+            game_data=game,
+            join_with="\n",
+            wrap_tag="li",
+            index_names=["documentation_index"]
+        )
+        self.overwrite_html_by_class(soup, "project-documentation", rendered)
     
     
     def insert_screenshots(self, soup, game):

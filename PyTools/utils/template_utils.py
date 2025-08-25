@@ -66,6 +66,17 @@ def render_template(template_str, game_data, extra_data=None):
             else:
                 context["contribution"] = ""    
 
+        if "documentation_index" in extra_data:
+            index = extra_data["documentation_index"]
+            docs = game_data.get("documentation", [])
+            if isinstance(index, int) and 0 <= index < len(docs):
+                doc = docs[index]
+                context["link"] = doc.get("link", "")
+                context["link_name"] = doc.get("name", "")
+            else:
+                context["link"] = ""
+                context["link_name"] = ""
+
     img_funcs = _validate_and_get_img_funcs(template_str, extra_data)
 
     result = template_str
