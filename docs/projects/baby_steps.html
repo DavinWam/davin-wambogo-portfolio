@@ -4,8 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=1024" name="viewport"/>
-<title>Project Title</title>
-<!-- Link to your existing style.css file -->
+<title>Baby Steps</title>
 <link href="../css/style.css" rel="stylesheet"/>
 <script src="../loadHeader.js"></script>
 </head>
@@ -15,126 +14,65 @@
 <div class="project-container">
 <h1 class="large-fade-in game-header__title">Baby Steps</h1>
 <div class="pane">
-<h3 class="large-fade-in">Baby's are a Joy, Baby's are a Terror.</h3>
+<h3 class="large-fade-in game-header__tagline">Baby's are a Joy, Baby's are a Terror.</h3>
 </div>
 </div>
 </section>
 <div class="container">
-<!-- Demo Video -->
+<section class="page-section" id="game-showcase">
 <section class="game-showcase__video">
-<iframe allowfullscreen="" frameborder="0" height="550" src="https://youtube.com/embed/bEJWRTk5IG0" width="980"></iframe>
+<iframe allowfullscreen="" class="game-showcase__iframe" frameborder="0" height="550" src="https://youtube.com/embed/bEJWRTk5IG0" width="980"></iframe>
 </section>
-<!-- Game Download/Play Link -->
-<!-- <section class="page-section">
-            <a href="https://deditch.itch.io/enyas-journey" target=”_blank” class="page-section__button">Play Now</a>
-        </section>
-
- -->
-<!-- Project Context -->
+</section>
 <section class="page-section">
 <div class="pane project-header">
 <h3>Baby Steps</h3>
 <span>(2024)</span>
-<p><strong>Roles:</strong> Game Designer, Games Programmer, and Graphics Programmer</p>
+<p><strong>Roles:</strong> Game Design, Programming, Graphics Programming</p>
 </div>
-<div class="pane project-description">
-<p>
-                    "Baby Steps" is a VR game where players care for a baby by fulfilling its needs such as being held,
-                    fed, and entertained over a 4.5-minute session. The game was created as part of a final project for
-                    IMDM290 by a six-person team. It focuses on multitasking gameplay inspired by titles like
-                    "Overcooked" and "Tattletail." The game features a cartoon-style shader, various animations, and a
-                    fully modeled in-game environment.
-                </p>
+<div class="pane project-description"><p class="project-description__text"><strong>Baby Steps</strong> is a VR game where players care for a baby by fulfilling its needs such as being held, fed, and entertained over a 4.5-minute session. The game was created as part of a final project for IMDM290 by a six-person team. It focuses on multitasking gameplay inspired by titles like Overcooked and Tattletail. The game features a cartoon-style shader, various animations, and a fully modeled in-game environment.</p>
 <h4>What I Did</h4>
 <ul>
-<li>Wrote the cel-shading shader in <strong>HLSL</strong> and implemented the reverse hull technique
-                        for outlines.</li>
-<li>Painted and detailed the <strong>terrain</strong> for the in-game environment.</li>
-<li>Coded the <strong>baby AI</strong>, managing its various states such as Idle, Roaming, and
-                        Hungry.</li>
-<li>Programmed about half of the <strong>interactable objects</strong>, enhancing gameplay
-                        interaction.</li>
-</ul>
-</div>
-</section>
-<section class="page-section">
-<h2>Baby Steps - Screenshots</h2>
-<div class="screenshot-grid">
-<img class="hover-shadow" onclick="openModal();currentSlide(1)" src="./screenshots/BabySteps (1).png"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(2)" src="./screenshots/BabySteps (2).png"/>
-</div>
+<li>Developed the baby AI, with various states such as Idle, Roaming, and Hungry.</li>
+<li>Implemented the cel-shading shader using HLSL and wrote code to apply reverse hull technique onto objects.</li>
+<li>Programmed interactions, such as the cooking process and feeding mechanics.</li>
+</ul></div>
 </section>
 <section class="page-section documentation">
 <h2>Project Documentation</h2>
-<p>Below are links to the project's documentation:</p>
-<ul>
-<li><a href="https://github.com/DavinWam/DaBaby" target="_blank">GitHub</a></li>
-</ul>
+<ul class="project-documentation"><li><a href="https://github.com/DavinWam/DaBaby" target="_blank">GitHub</a></li></ul>
 </section>
-<!-- The Modal/Lightbox -->
-<div class="modal" id="myModal">
-<span class="close cursor" onclick="closeModal()">×</span>
-<div class="modal-content">
-<div class="my-slides">
-<img src="./screenshots/BabySteps (1).png" style="width:100%"/>
+<section class="page-section">
+<h2>Screenshots</h2>
+<div class="screenshot-grid">
+<!-- Add <img> here -->
 </div>
-<div class="my-slides">
-<img src="./screenshots/BabySteps (2).png" style="width:100%"/>
-</div>
-<!-- Next/previous controls -->
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-</div>
-</div>
-<!-- Notable Things I Did -->
+</section>
 <section class="page-section">
 <h2>Highlight of the Project</h2>
-<p class="pane">
-                Working on <strong>Baby Steps</strong> was an incredible learning experience for me, especially in terms
-                of becoming more hyper-focused on specific aspects of game development. One of the most rewarding parts
-                was demystifying the render pipeline. By hooking into it and injecting custom render information, I
-                gained a deeper understanding of how rendering works and how to manipulate it to achieve the desired
-                visual effects.
-                <br/><br/>
-                Another highlight was having the opportunity to hone in on the baby as an entity. Crafting the AI and
-                behaviors to make the baby feel alive and fun was a challenge I thoroughly enjoyed. Seeing players pick
-                up the baby as soon as the game started and hearing their laughter was incredibly satisfying. It was a
-                wonderful reminder of why I love game development—creating moments of joy and engagement for players.
-            </p>
+<p class="pane highlights">One of the most rewarding parts was demystifying the render pipeline. By hooking into it and injecting custom render information, I gained a deeper understanding of how rendering works. For me this porject was another step in chipping away at the 'untouchable' parts of game development, stepping away from tutorial land.</p>
 </section>
-<!-- Teammate Credits and Thanks -->
 <section class="page-section">
 <h2>Team Credits</h2>
-<div class="pane">
-<h5>I am immensely grateful for the opportunity to work with a talented and dedicated team. Special
-                    thanks to:</h5>
-<ul>
-<li>Andrei Davydov - Modeling and Rigging</li>
+<ul class="teamate-list"><li>Andrei Davydov - Modeling and Rigging</li>
 <li>Astrid Da Costa - Concept and Design</li>
 <li>Daniel Nolan - Sound Design</li>
 <li>Erin Alsop - Animation and UI Design</li>
-<li>Lois Kim - Environment Design and Testing</li>
-</ul>
-</div>
+<li>Lois Kim - Environment Design and Testing</li></ul>
 </section>
-</div>
-<!-- Random Project Thumbnails Section -->
 <div class="random-projects">
-<div class="container">
 <h2>Explore More Games</h2>
-<div class="game-grid">
-</div>
+<div class="game-grid"></div>
 <div class="carousel-buttons">
 <button id="prev-btn">Previous</button>
 <button id="next-btn">Next</button>
 </div>
-<section class="page-section">
-<a class="page-section__button" href="../index.html">Back To Projects</a>
+<section>
+<a class="page-section__button game-link" href="../index.html">Back To Projects</a>
 </section>
 </div>
 </div>
 <footer id="footer-container"></footer>
-<!-- Include the RandomGames.js script -->
 <script src="RandomGame.js"></script>
 <script src="Modal.js"></script>
 </body>

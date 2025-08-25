@@ -4,29 +4,26 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=1024" name="viewport"/>
-<title>Project Title</title>
-<!-- Link to your existing style.css file -->
+<title>Lab Bat</title>
 <link href="../css/style.css" rel="stylesheet"/>
 <script src="../loadHeader.js"></script>
 </head>
 <body>
 <header id="header-container"></header>
 <section class="game-header">
-<div style="padding-top: 80px;">
+<div class="project-container">
 <h1 class="large-fade-in game-header__title">Lab Bat</h1>
 <div class="pane">
-<h3 class="large-fade-in">Fly and Deliver in a Bat's World.</h3>
+<h3 class="large-fade-in game-header__tagline">Fly and Deliver in a Bat's World.</h3>
 </div>
 </div>
 </section>
 <div class="container">
-<!-- Demo Video -->
+<section class="page-section" id="game-showcase">
 <section class="game-showcase__video">
-<iframe allowfullscreen="" frameborder="0" height="550" src="https://youtube.com/embed/oCgHkXPRw6k" width="980"></iframe>
+<iframe allowfullscreen="" class="game-showcase__iframe" frameborder="0" height="550" src="https://youtube.com/embed/oCgHkXPRw6k" width="980"></iframe>
 </section>
-<!-- Game Download/Play Link -->
-<section class="page-section">
-<a class="page-section__button" href="[Insert Game Link Here]" target="_blank">Play Lab Bat Now</a>
+<a class="page-section__button" href="[Insert Game Link Here]" target="_blank">Play Now</a>
 </section>
 <section class="page-section">
 <div class="pane project-header">
@@ -34,107 +31,48 @@
 <span>(2021)</span>
 <p><strong>Roles:</strong> Game and Level Designer</p>
 </div>
-<div class="pane project-description">
-<p>
-                         Lab Bat is a Flash Game inspired puzzle platformer developed over a three-day game jam,
-                         inspired by a World War II story where bats were trained to drop bombs.
-                         In this game, the protagonist, a bat who originally could not fly, navigates a facility filled
-                         with hazards to deliver a bomb to its destination in exchange for flight.
-                    </p>
+<div class="pane project-description"><p class="project-description__text">Lab Bat is a puzzle platformer inspired by flash game era developed over a three-day game jam. Based on the odd World War II story where they tested using bats as a way to deliver bomvs. In this game, the protagonist, a bat who originally could not fly, navigates a facility filled with hazards to deliver a bomb to its destination in exchange for flight. The player controls the bat's movement to solve puzzles delivering the bomb to the end of the level while avoiding challenges like acid pools and lasers.</p>
+<h4>What I Did</h4>
 <ul>
-<li>Designed and programmed the puzzles, from the bomb, platform, acid, </li>
-<li>Designed the bat's moveset and the traps encountered throughout the game.</li>
-<li>Helped develop the story scenario.</li>
-<li>Designed and implemented the UI including the intro animation.</li>
-<li>Contributed to the pixel art.</li>
-</ul>
-</div>
+<li>Designed all 6 puzzle levels, the players moveset and the level hazards.</li>
+<li>Placed the level assets and contributed to pixel art like the ooze containers.</li>
+<li>Designed and implemented the UI, including the intro animation.</li>
+</ul></div>
 </section>
-<section class="page-section learned-things">
-<h2>Things I Learned</h2>
-<ul>
-<li>Grasped the basics of working with sprites, from animation to implementation within the game
-                         environment.</li>
-<li>Developed a workflow for animating characters and objects, enhancing the visual storytelling of
-                         the
-                         game.</li>
-<li>Learnt the intricacies of environmental design and how to use the game space to guide player
-                         learning.</li>
-<li>Gained experience in UI design, focusing on smooth transitions.</li>
-<!-- Add more learning points as needed -->
+<section class="page-section documentation">
+<h2>Project Documentation</h2>
+<ul class="project-documentation">
 </ul>
 </section>
-<!-- Screenshots Grid -->
 <section class="page-section">
 <h2>Screenshots</h2>
 <div class="screenshot-grid">
-<img class="hover-shadow" onclick="openModal();currentSlide(1)" src="./screenshots/LabBat (1).png"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(2)" src="./screenshots/LabBat (2).png"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(3)" src="./screenshots/LabBat (3).png"/>
+<!-- Add <img> here -->
 </div>
 </section>
-<!-- The Modal/Lightbox -->
-<div class="modal" id="myModal">
-<span class="close cursor" onclick="closeModal()">×</span>
-<div class="modal-content">
-<div class="my-slides">
-<img src="./screenshots/LabBat (1).png" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/LabBat (2).png" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/LabBat (3).png" style="width:100%"/>
-</div>
-<!-- Next/previous controls -->
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-</div>
-</div>
-<!-- Notable Things I Did -->
 <section class="page-section">
 <h2>Highlight of the Project</h2>
-<p class="pane">Within "Lab Bat", the fifth level stands out as my personal best. It's where the game
-                    starts to
-                    challenge the player's problem-solving skills. The setup involves placing the crate onto a moving
-                    platform,
-                    followed by the bomb. Most players instinctively cling to the bomb due to this order, only to find
-                    that the crate then
-                    obstructs the intended path. I found that the realization that they need to hold onto
-                    the crate instead was a satifying moment from watching people play. </p>
+<p class="pane highlights">Within Lab Bat, the fifth level stands out as my personal best. It's where the game starts to truly challenge the player's problem-solving skills. The setup involves placing the crate onto a moving platform, followed by the bomb. Most players instinctively cling to the bomb due to this order, only to find that the crate then obstructs the intended path. I found that the realization that they need to hold onto the crate instead was a satisfying ah-hah moment from watching players in this level.</p>
 </section>
-<!-- Teammate Credits and Thanks -->
 <section class="page-section">
 <h2>Team Credits</h2>
-<div class="pane">
-<h5>I am immensely grateful for the opportunity to work with a talented and dedicated team. Special
-                         thanks to:</h5>
-<ul>
-<li>Daniel Grammar - Music</li>
+<ul class="teamate-list"><li>Daniel Grammar - Music</li>
 <li>Evan Powers - Art</li>
-<li>James Espericueta - Programming</li>
-<!-- Add more teammates as necessary -->
-</ul>
-</div>
+<li>James Espericueta - Programming</li></ul>
 </section>
-</div>
-<!-- Random Project Thumbnails Section -->
 <div class="random-projects">
-<div class="container">
 <h2>Explore More Games</h2>
-<div class="game-grid">
-</div>
+<div class="game-grid"></div>
 <div class="carousel-buttons">
 <button id="prev-btn">Previous</button>
 <button id="next-btn">Next</button>
 </div>
-<section class="page-section">
-<a class="page-section__button" href="../index.html">Back To Projects</a>
+<section>
+<a class="page-section__button game-link" href="../index.html">Back To Projects</a>
 </section>
 </div>
 </div>
 <footer id="footer-container"></footer>
-<!-- Include the RandomGames.js script -->
 <script src="RandomGame.js"></script>
 <script src="Modal.js"></script>
 </body>

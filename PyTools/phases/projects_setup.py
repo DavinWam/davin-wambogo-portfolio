@@ -86,18 +86,16 @@ PROJECT_HTML_BODY_TEMPLATE = """
     </section>
 
     <div class="random-projects">
-    <div class="container">
         <h2>Explore More Games</h2>
         <div class="game-grid"></div>
         <div class="carousel-buttons">
         <button id="prev-btn">Previous</button>
         <button id="next-btn">Next</button>
         </div>
-        <section class="page-section">
-        <a href="../index.html" class="game-link">Back To Projects</a>
+        <section>
+        <a href="../index.html" class="page-section__button game-link">Back To Projects</a>
         </section>
-    </div>
-    </div>
+    </div> 
 </div>
 """
 

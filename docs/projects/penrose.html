@@ -1,147 +1,76 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=1024" name="viewport"/>
-<title>Project Title</title>
-<!-- Link to your existing style.css file -->
-<link href="../css/style.css" rel="stylesheet"/>
-<script src="../loadHeader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Penrose</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../loadHeader.js"></script>
 </head>
 <body>
-<header id="header-container"></header>
-<div style="background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center;">
-<strong>Note:</strong> This project page is old and not updated actively
-    </div>
+    <header id="header-container"></header>
+
 <section class="game-header">
-<div style="padding-top: 80px;">
-<h1 class="large-fade-in game-header__title">Penrose</h1>
-<div class="pane">
-<h3 class="large-fade-in">An Exploration in Descent.</h3>
-</div>
+<div class="project-container">
+    <h1 class="large-fade-in game-header__title">Penrose</h1>
+    <div class="pane">
+    <h3 class="large-fade-in game-header__tagline">Project game-header__tagline goes here.</h3>
+    </div>
 </div>
 </section>
 <div class="container">
-<!-- Demo Video -->
-<!-- <section class="game-showcase__video">
-            <iframe width="980" height="550" src="https://youtube.com/embed/hTnZgLzd_wU" frameborder="0"
-                allowfullscreen></iframe>
-        </section> -->
-<section class="page-section">
-<div class="pane project-header">
-<h3>Penrose</h3>
-<span>(2020)</span>
-<p><strong>Roles:</strong> Level and Narrative Designer</p>
+
+    
+    <section class="page-section" id="game-showcase"></section>
+
+    <section class="page-section">
+    <div class="pane project-header">
+    </div>
+    <div class="pane project-description">
+        <p class="project-description__text">Description goes here.</p>
+    </div>
+    </section>
+
+    <section class="page-section documentation">
+    <h2>Project Documentation</h2>
+    <ul class="project-documentation">
+    </ul>
+    </section>
+
+    <section class="page-section">
+    <h2>Screenshots</h2>
+    <div class="screenshot-grid">
+        <!-- Add <img> here -->
+    </div>
+    </section>
+
+    <section class="page-section">
+    <h2>Highlight of the Project</h2>
+    <p class="pane highlights">Highlight paragraph goes here.</p>
+    </section>
+
+    <section class="page-section">
+    <h2>Team Credits</h2>
+    <ul class="teamate-list">
+
+    </ul>
+    </section>
+
+    <div class="random-projects">
+        <h2>Explore More Games</h2>
+        <div class="game-grid"></div>
+        <div class="carousel-buttons">
+        <button id="prev-btn">Previous</button>
+        <button id="next-btn">Next</button>
+        </div>
+        <section>
+        <a href="../index.html" class="page-section__button game-link">Back To Projects</a>
+        </section>
+    </div> 
 </div>
-<div class="pane project-description">
-<p> This was my first attempt at game development, realized over the span of
-                    junior year in high school during the pandemic. Our six-person team embarked on creating a puzzle
-                    exploration game that delved into the psychological themes of anxiety, insecurity, and depression,
-                    articulated through distinct environments like a prison, a foggy mountain, and an underwater ravine.
-                    The
-                    game drew inspiration from the Penrose stairs, embodying the endless cycle of these emotions. Our
-                    ambitious project extended just under a year, and we managed to complete the first environment
-                    before
-                    concluding that finishing the game wasn't feasible in a reasonable timeframe.
-                    <br/><br/>
-                    I was resposible for how the levels would visually and interactively communicate our message without
-                    using any dialogue. This
-                    foray into game development was foundational for me, as it was where I learned to navigate Unity's.
-                </p>
-</div>
-</section>
-<!-- Project Context -->
-<!-- Things I Learned -->
-<section class="page-section learned-things">
-<h2>Things I Learned</h2>
-<ul>
-<li>Familiarized myself with the Unity editor.</li>
-<li>Learned to design levels that were not just spaces, but storytellers.</li>
-<li>Gained experience in translating abstract concepts into visual landscapes.</li>
-<!-- Add more learning points as needed -->
-</ul>
-</section>
-<!-- Screenshots Grid -->
-<section class="page-section">
-<h2>Screenshots</h2>
-<div class="screenshot-grid">
-<img class="hover-shadow" onclick="openModal();currentSlide(1)" src="./screenshots/3d_Penrose (1).png"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(2)" src="./screenshots/3d_Penrose (2).png"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(3)" src="./screenshots/3d_Penrose (3).png"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(4)" src="./screenshots/3d_Penrose (4).jpg"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(5)" src="./screenshots/3d_Penrose (5).png"/>
-</div>
-</section>
-<!-- The Modal/Lightbox -->
-<div class="modal" id="myModal">
-<span class="close cursor" onclick="closeModal()">×</span>
-<div class="modal-content">
-<div class="my-slides">
-<img src="./screenshots/3d_Penrose (1).png" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/3d_Penrose (2).png" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/3d_Penrose (3).png" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/3d_Penrose (4).jpg" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/3d_Penrose (5).png" style="width:100%"/>
-</div>
-<!-- Next/previous controls -->
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-</div>
-</div>
-<!-- Notable Things I Did -->
-<section class="page-section">
-<h2>Highlight of the Project</h2>
-<p class="pane">The essence of our work on "Penrose" lies in the detailed environments we created,
-                particularly the
-                library and the prison, which we fully realized. Their visual distinction is something I'm genuinely
-                proud of. The terrain work for the mountain is another personal triumph, showcasing my growth in
-                environmental design. From rallying a team during the pandemic to meticulously planning and executing
-                our ideas, to the eventual completion of an immersive 3D environment, this journey was marked by
-                numerous learning curves and some amusing blunders.</p>
-</section>
-<!-- Teammate Credits and Thanks -->
-<section class="page-section">
-<h2>Team Credits</h2>
-<div class="pane">
-<h5>My friends who helped me start this journey:</h5>
-<ul>
-<li>Daniel Grammar - Music</li>
-<li>Evan Powers - Art</li>
-<li>James Espericueta - Programming</li>
-<li>Jaxon Lee - Programming</li>
-<li> Isaac Hill - Sound Effects</li>
-<!-- Add more teammates as necessary -->
-</ul>
-</div>
-</section>
-</div>
-<!-- Random Project Thumbnails Section -->
-<div class="random-projects">
-<div class="container">
-<h2>Explore More Games</h2>
-<div class="game-grid">
-</div>
-<div class="carousel-buttons">
-<button id="prev-btn">Previous</button>
-<button id="next-btn">Next</button>
-</div>
-<section class="page-section">
-<a class="page-section__button" href="../index.html">Back To Projects</a>
-</section>
-</div>
-</div>
-<footer id="footer-container"></footer>
-<!-- Include the RandomGames.js script -->
-<script src="RandomGame.js"></script>
-<script src="Modal.js"></script>
+
+    <footer id="footer-container"></footer>
+    <script src="RandomGame.js"></script>
+    <script src="Modal.js"></script>
 </body>
 </html>

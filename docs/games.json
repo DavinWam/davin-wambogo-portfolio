@@ -313,7 +313,7 @@
         "tagline": "Teams are made on the ice.",
         "video_link": "https://youtube.com/embed/lR9p5lXZgyE",
         "play_link": "",
-        "project_description": "Blades on Ice is a cooperative figure skating game where two players embody a pair ice dancing team. Switch between Practice, Performance, and Story Mode as you master iconic dance elements like twizzles, spins, and lifts. Gameplay blends rhythm timing, synchronized movement, and expressive presentation to capture the artistry of ice dance. Each performance is graded on musicality, connection, and precision.",
+        "project_description": "Blades on Ice is a cooperative figure skating game, with visual novel narrative elements. Players make use of motions on the left stick to perform twizzles, spins, and lifts. Gameplay blends rhythm timing, synchronized movement, and expressive presentation to capture the artistry of ice dance. Each performance is graded on musicality, connection, and precision. Players will spend they in practices where they can try different challenges and get tested on the next section of there performance, while improving both there character and there own skills",
         "project_contributions": [
             "Authored the Game Design document, and made documentation for various tools.",
             "Designed the skating mechanics and the overall gameplay loop.",

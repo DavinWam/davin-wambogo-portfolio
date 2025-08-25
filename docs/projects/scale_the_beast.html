@@ -11,131 +11,68 @@
 <body>
 <header id="header-container"></header>
 <section class="game-header">
-<div style="padding-top: 80px;">
+<div class="project-container">
 <h1 class="large-fade-in game-header__title">Scale the Beast</h1>
 <div class="pane">
-<h3 class="large-fade-in">Ascend the Dragon.d</h3>
+<h3 class="large-fade-in game-header__tagline">Ascend the Dragon.</h3>
 </div>
 </div>
 </section>
 <div class="container">
-<!-- Demo Video -->
-<section style="width: 40%; margin: auto;">
-<a href="https://deditch.itch.io/scale-the-beast"><img alt="SILENT CODES Thumbnail" class="image-effect" src="../thumbnail_scale_the_beast.png" style="border-radius: 15px; width: 100%; aspect-ratio:1/1;"/></a>
+<section class="page-section" id="game-showcase">
+<section class="game-showcase__image-link">
+<a href="https://primeloop.itch.io/scale-the-beast">
+<img alt="Scale the Beast Thumbnail" class="game-showcase__thumbnail image-effect" src="../thumbnails/thumbnail_scale_the_beast.png"/>
+</a>
 </section>
-<!-- Game Download/Play Link -->
-<section class="page-section">
-<a class="page-section__button" href="https://primeloop.itch.io/scale-the-beast" target="_blank">Play
-                Now</a>
+<a class="page-section__button" href="https://primeloop.itch.io/scale-the-beast" target="_blank">Play Now</a>
 </section>
-<!-- Project Context -->
 <section class="page-section">
 <div class="pane project-header">
 <h3>Scale the Beast</h3>
 <span>(2024)</span>
-<p><strong>Roles:</strong> Programmer, Level Designer</p>
+<p><strong>Roles:</strong> Programming, Level Design</p>
 </div>
-<div class="pane project-description">
-<p>
-                    "Scale the Beast" is an action platformer developed during the GMTK Game Jam 2024 in just 4 days.
-                    Working with the same team as our previous project,
-                    we focused on implementing code that could be reused effectively. The game emphasizes separating the
-                    functionality of classes into distinct components
-                    that aren't tightly coupled, ensuring flexibility and maintainability in the design.
-                </p>
+<div class="pane project-description"><p class="project-description__text">Scale the Beast is an action platformer developed during the GMTK Game Jam 2024 in just 4 days. Working with the same team Taxes and Tenacity. We imagined an action platformer where you scale a dragon so large that it doesn't fit onto the screen. The player scales the dragon chipping away at it's week points, and dealing with the various hazards of it's body.</p>
 <h4>What I Did</h4>
 <ul>
-<li>Focused on programming with an emphasis on reusability and separation of concerns within the
-                        codebase.</li>
-<li>Designed levels to challenge players while providing a sense of progression and adventure.</li>
-<li>Created the intro scene on the cliff, featuring a dramatic dragon entrance that transitions
-                        seamlessly to the title screen.</li>
-</ul>
-</div>
-</section>
-<!-- Things I Learned -->
-<section class="page-section learned-things">
-<h2>Things I Learned</h2>
-<ul>
-<li>The importance of reusability in code, and how decoupling components enhances flexibility and
-                    maintainability.</li>
-<li>The significance of playtesting, as a missing spike in the level design led to some players missing
-                    a crucial lesson for progression.</li>
-</ul>
+<li>Implemented the character controller, animation and attack system.</li>
+<li>Implemented the event based progression system.</li>
+<li>Designed the level placing the assets for the main level was split 50/50.</li>
+<li>Created the intro scene featuring a dramatic dragon entrance.</li>
+</ul></div>
 </section>
 <section class="page-section documentation">
 <h2>Project Documentation</h2>
-<p>Below are links to the project's documentation:</p>
-<ul>
-<li><a href="https://github.com/DavinWam/gmtk2024" target="_blank">GitHub</a></li>
-</ul>
+<ul class="project-documentation"><li><a href="https://github.com/DavinWam/gmtk2024" target="_blank">GitHub</a></li></ul>
 </section>
-<!-- Screenshots Grid -->
 <section class="page-section">
 <h2>Screenshots</h2>
 <div class="screenshot-grid">
-<img class="hover-shadow" onclick="openModal();currentSlide(1)" src="./screenshots/ScaleTheBeast (1).png"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(2)" src="./screenshots/ScaleTheBeast (2).png"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(3)" src="./screenshots/ScaleTheBeast (3).png"/>
+<!-- Add <img> here -->
 </div>
 </section>
-<!-- The Modal/Lightbox -->
-<div class="modal" id="myModal">
-<span class="close cursor" onclick="closeModal()">×</span>
-<div class="modal-content">
-<div class="my-slides">
-<img src="./screenshots/ScaleTheBeast (1).png" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/ScaleTheBeast (2).png" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/ScaleTheBeast (3).png" style="width:100%"/>
-</div>
-<!-- Next/previous controls -->
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-</div>
-</div>
-<!-- Notable Things I Did -->
 <section class="page-section">
 <h2>Highlight of the Project</h2>
-<p class="pane">
-                One of the highlights of working on "Scale the Beast" was crafting the intro scene. The moment when the
-                dragon comes down and the game
-                transitions to the title screen created a powerful and memorable impact for players. Seeing their
-                reactions made all the effort worthwhile.
-            </p>
+<p class="pane highlights">One of the highlights of working on Scale the Beast was crafting the intro scene. The moment when the dragon comes down and the game transitions to the title screen created a powerful and memorable impact for players. Seeing their reactions made all the effort worthwhile. The games architecture emphasizes flexibility and maintainability. I adopted an event-driven approach where systems communicate through signals rather than direct dependencies. Using patterns inspired by the Observer and Component designs. The progression through the level and the traps are largely defined by events, allowing us to quickly setup level progression logic and make traps responsive to the player.</p>
 </section>
-<!-- Teammate Credits and Thanks -->
 <section class="page-section">
 <h2>Team Credits</h2>
-<div class="pane">
-<h5>Special thanks to:</h5>
-<ul>
-<li>Cory Schiff - Pixel art and Programming</li>
-<!-- Add more teammates as necessary -->
-</ul>
-</div>
+<ul class="teamate-list"><li>Cory Schiff - Pixel Art and Programming</li></ul>
 </section>
-</div>
-<!-- Random Project Thumbnails Section -->
 <div class="random-projects">
-<div class="container">
 <h2>Explore More Games</h2>
-<div class="game-grid">
-</div>
+<div class="game-grid"></div>
 <div class="carousel-buttons">
 <button id="prev-btn">Previous</button>
 <button id="next-btn">Next</button>
 </div>
-<section class="page-section">
-<a class="page-section__button" href="../index.html">Back To Projects</a>
+<section>
+<a class="page-section__button game-link" href="../index.html">Back To Projects</a>
 </section>
 </div>
 </div>
 <footer id="footer-container"></footer>
-<!-- Include the RandomGames.js script -->
 <script src="RandomGame.js"></script>
 <script src="Modal.js"></script>
 </body>

@@ -4,155 +4,73 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=1024" name="viewport"/>
-<title>Project Title</title>
-<!-- Link to your existing style.css file -->
+<title>Taxes and Tenacity</title>
 <link href="../css/style.css" rel="stylesheet"/>
 <script src="../loadHeader.js"></script>
 </head>
 <body>
 <header id="header-container"></header>
 <section class="game-header">
-<div style="padding-top: 80px;">
+<div class="project-container">
 <h1 class="large-fade-in game-header__title">Taxes and Tenacity</h1>
 <div class="pane">
-<h3 class="large-fade-in">Number Go Up.</h3>
+<h3 class="large-fade-in game-header__tagline">Number Go Up.</h3>
 </div>
 </div>
 </section>
 <div class="container">
-<!-- Demo Video -->
+<section class="page-section" id="game-showcase">
 <section class="game-showcase__video">
-<iframe allowfullscreen="" frameborder="0" height="550" src="https://youtube.com/embed/kV3OGCEIvKs" width="980"></iframe>
+<iframe allowfullscreen="" class="game-showcase__iframe" frameborder="0" height="550" src="https://youtube.com/embed/kV3OGCEIvKs" width="980"></iframe>
 </section>
-<!-- Game Download/Play Link -->
-<section class="page-section">
-<a class="page-section__button" href="https://deditch.itch.io/taxes-and-tenacity" target="”_blank”">Play
-                Now</a>
+<a class="page-section__button" href="https://deditch.itch.io/taxes-and-tenacity" target="_blank">Play Now</a>
 </section>
-<!-- Project Context -->
 <section class="page-section">
 <div class="pane project-header">
 <h3>Taxes and Tenacity</h3>
 <span>(2023)</span>
 <p><strong>Roles:</strong> Game Designer, Programmer, Animator</p>
 </div>
-<div class="pane project-description">
-<p>
-                    A roguelite game that weaves RPG elements with a life-and-tax system, created during a two-week game
-                    jam by a duo.
-                    In this world, the player embarks on dungeon expeditions to collect gold from defeated monsters,
-                    facing a looming tax deadline.
-                    Successfully paying your taxes means earning extra lives; failure leads to losing them all. With
-                    each dive, both the stakes and the character's capabilities escalate.
-                    My partner contributed by crafting the stages, the connecting map, and designing the floor bosses
-                    attacks.
-                </p>
+<div class="pane project-description"><p class="project-description__text">A roguelite game that weaves RPG elements with a life-and-tax system, created during a two-week game jam by a duo. In this world, the player embarks on dungeon expeditions to collect gold from defeated monsters, facing a looming tax deadline. Successfully paying your taxes means earning extra lives; failure leads to losing them all. My partner contributed by crafting the stages, the connecting map, and designing the floor bosses' attacks.</p>
 <h4>What I Did</h4>
 <ul>
-<li>Developed the core mechanics, including player and camera movement, character stats, enemy AI,
-                        and the overarching game manager.</li>
-<li>Designed attack patterns for enemies and the player's moveset, ensuring a dynamic combat
-                        experience.</li>
-<li>Balanced the in-game economy, allowing players to invest gold in permanent stat upgrades or
-                        temporary boosts.</li>
-</ul>
-</div>
-</section>
-<!-- Things I Learned -->
-<section class="page-section learned-things">
-<h2>Things I Learned</h2>
-<ul>
-<li>Data management across scenes</li>
-<li>Implemented state machines for both AI behavior, player controls and animation</li>
-</ul>
+<li>programmed player, camera movement, stats and enemy ai.</li>
+<li>Developed the enemy waves on each of the nodes</li>
+<li>Balanced the in-game economy for upgrades and boosts.</li>
+<li>Designed the tax based lives system.</li>
+</ul></div>
 </section>
 <section class="page-section documentation">
 <h2>Project Documentation</h2>
-<p>Below are links to the project's documentation:</p>
-<ul>
-<li><a href="https://github.com/CoryScaf/TaxRPG" target="_blank">GitHub</a></li>
-</ul>
+<ul class="project-documentation"><li><a href="https://github.com/CoryScaf/TaxRPG" target="_blank">GitHub</a></li></ul>
 </section>
-<!-- Screenshots Grid -->
 <section class="page-section">
 <h2>Screenshots</h2>
 <div class="screenshot-grid">
-<img class="hover-shadow" onclick="openModal();currentSlide(1)" src="./screenshots/TaxesAndTenacity(1).jpg"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(2)" src="./screenshots/TaxesAndTenacity(2).jpg"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(3)" src="./screenshots/TaxesAndTenacity(3).jpg"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(4)" src="./screenshots/TaxesAndTenacity(4).jpg"/>
-<img class="hover-shadow" onclick="openModal();currentSlide(5)" src="./screenshots/TaxesAndTenacity(5).jpg"/>
+<!-- Add <img> here -->
 </div>
 </section>
-<!-- The Modal/Lightbox -->
-<div class="modal" id="myModal">
-<span class="close cursor" onclick="closeModal()">×</span>
-<div class="modal-content">
-<div class="my-slides">
-<img src="./screenshots/TaxesAndTenacity(1).jpg" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/TaxesAndTenacity(2).jpg" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/TaxesAndTenacity(3).jpg" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/TaxesAndTenacity(4).jpg" style="width:100%"/>
-</div>
-<div class="my-slides">
-<img src="./screenshots/TaxesAndTenacity(5).jpg" style="width:100%"/>
-</div>
-<!-- Next/previous controls -->
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-</div>
-</div>
-<!-- Notable Things I Did -->
 <section class="page-section">
 <h2>Highlight of the Project</h2>
-<p class="pane">Reflecting on the project, the aspect that fills me with the most pride are the character
-                controls. One of the
-                focuses and ideas behind this project was simplifying things down, focuses in on content and feel. The
-                three hit sword animation has a satisfying timing to it. I find that moving around has the simple fun to
-                it that
-                I was looking for in ways that some previous projects lacked. That said it this game is also a bit
-                even-keeled,
-                one thing I wanted expand upon in the future is those moments of excitement.</p>
+<p class="pane highlights">Reflecting on the project, the aspect that fills me with the most pride are the character controls. One of the focuses and ideas behind this project was simplifying things down, focusing in on content and feel. The three-hit sword animation has a satisfying timing to it. I find that moving around has the simple fun to it that I was looking for in ways that some previous projects lacked. That said, this game is also a bit even-keeled—one thing I wanted to expand upon in the future is those moments of excitement.</p>
 </section>
-<!-- Teammate Credits and Thanks -->
 <section class="page-section">
 <h2>Team Credits</h2>
-<div class="pane">
-<h5>Special thanks to:</h5>
-<ul>
-<li>Cory Schiff - Level Design and Programming</li>
-<!-- Add more teammates as necessary -->
-</ul>
-</div>
+<ul class="teamate-list"><li>Cory Schiff - Level Design and Programming</li></ul>
 </section>
-</div>
-
-
-
-    https://github.com/DavinWam/DaBaby
-    <!-- Random Project Thumbnails Section -->
 <div class="random-projects">
-<div class="container">
 <h2>Explore More Games</h2>
-<div class="game-grid">
-</div>
+<div class="game-grid"></div>
 <div class="carousel-buttons">
 <button id="prev-btn">Previous</button>
 <button id="next-btn">Next</button>
 </div>
-<section class="page-section">
-<a class="page-section__button" href="../index.html">Back To Projects</a>
+<section>
+<a class="page-section__button game-link" href="../index.html">Back To Projects</a>
 </section>
 </div>
 </div>
 <footer id="footer-container"></footer>
-<!-- Include the RandomGames.js script -->
 <script src="RandomGame.js"></script>
 <script src="Modal.js"></script>
 </body>
