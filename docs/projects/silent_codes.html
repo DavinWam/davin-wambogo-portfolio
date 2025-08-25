@@ -1,80 +1,120 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=1024" name="viewport"/>
-<title>Silent Codes</title>
-<link href="../css/style.css" rel="stylesheet"/>
-<script src="../loadHeader.js"></script>
+    <meta charset="utf-8" />
+    <meta content="width=1024" name="viewport" />
+    <title>Silent Codes</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../loadHeader.js"></script>
 </head>
+
 <body>
-<header id="header-container"></header>
-<section class="game-header">
-<div class="project-container">
-<h1 class="large-fade-in game-header__title">Silent Codes</h1>
-<div class="pane">
-<h3 class="large-fade-in game-header__tagline">Master Work Place Laziness.</h3>
-</div>
-</div>
-</section>
-<div class="container">
-<section class="page-section" id="game-showcase">
-<section class="game-showcase__image-link">
-<a href="https://deditch.itch.io/silent-codes">
-<img alt="Silent Codes Thumbnail" class="game-showcase__thumbnail image-effect" src="../thumbnails/thumbnail_silent_codes.jpg"/>
-</a>
-</section>
-<a class="page-section__button" href="https://deditch.itch.io/silent-codes" target="_blank">Play Now</a>
-</section>
-<section class="page-section">
-<div class="pane project-header">
-<h3>Silent Codes</h3>
-<span>(2023)</span>
-<p><strong>Roles:</strong> Game Design, Graphics Programming, UI Design</p>
-</div>
-<div class="pane project-description"><p class="project-description__text">An interactive two-player puzzle game developed over a two-week period, blending traditional escape room elements with digital puzzle-solving. Player 1 navigates a memory puzzle minigame to extract crucial code pieces, while Player 2 uses a physical cipher to decode the information. The game intensifies with the presence of a Boss character, forcing both players to remain quiet and avoid detection.</p>
-<h4>What I Did</h4>
-<ul>
-<li>Wrote a CRT shader in HLSL for visual effects.</li>
-<li>Created the minigame for obtaining code pieces.</li>
-<li>Came up with the busy work task for making the boss think you are working.</li>
-</ul></div>
-</section>
-<section class="page-section documentation">
-<h2>Project Documentation</h2>
-<ul class="project-documentation"><li><a href="https://github.com/DavinWam/Silent-Codes" target="_blank">GitHub</a></li></ul>
-</section>
-<section class="page-section">
-<h2>Screenshots</h2>
-<div class="screenshot-grid">
-<!-- Add <img> here -->
-</div>
-</section>
-<section class="page-section">
-<h2>Highlight of the Project</h2>
-<p class="pane highlights">For me this project was definitely a about implementing the CRT effect it gave me the chance to start learning HLSL, and see how to apply shaders through screenspace, target parts of the renderpipeline and more. Which became profoundly helpful in later projects, particularly as when I took a dive into Stylized PBR with a another one of my games Baby Steps.</p>
-</section>
-<section class="page-section">
-<h2>Team Credits</h2>
-<ul class="teamate-list"><li>Andrei Davydov - UI Programming</li>
-<li>Lois Kim - UI Art</li>
-<li>Yooeun - Programming</li></ul>
-</section>
-<div class="random-projects">
-<h2>Explore More Games</h2>
-<div class="game-grid"></div>
-<div class="carousel-buttons">
-<button id="prev-btn">Previous</button>
-<button id="next-btn">Next</button>
-</div>
-<section>
-<a class="page-section__button game-link" href="../index.html">Back To Projects</a>
-</section>
-</div>
-</div>
-<footer id="footer-container"></footer>
-<script src="RandomGame.js"></script>
-<script src="Modal.js"></script>
+    <header id="header-container"></header>
+    <section class="game-header">
+        <div class="project-container">
+            <h1 class="large-fade-in game-header__title">Silent Codes</h1>
+            <div class="pane">
+                <h3 class="large-fade-in game-header__tagline">Master Work Place Laziness.</h3>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <section class="page-section" id="game-showcase">
+            <section class="game-showcase__image-link">
+                <a href="https://deditch.itch.io/silent-codes">
+                    <img alt="Silent Codes Thumbnail" class="game-showcase__thumbnail image-effect"
+                        src="../thumbnails/thumbnail_silent_codes.jpg" />
+                </a>
+            </section>
+            <a class="page-section__button" href="https://deditch.itch.io/silent-codes" target="_blank">Play Now</a>
+        </section>
+        <section class="page-section">
+            <div class="pane project-header">
+                <h3>Silent Codes</h3>
+                <span>(2023)</span>
+                <p><strong>Roles:</strong> Game Design, Graphics Programming, UI Design</p>
+            </div>
+            <div class="pane project-description">
+                <p class="project-description__text">An interactive two-player puzzle game developed over a two-week
+                    period, blending traditional escape room elements with digital puzzle-solving. Player 1 navigates a
+                    memory puzzle minigame to extract crucial code pieces, while Player 2 uses a physical cipher to
+                    decode the information. The game intensifies with the presence of a Boss character, forcing both
+                    players to remain quiet and avoid detection.</p>
+                <h4>What I Did</h4>
+                <ul>
+                    <li>Wrote a CRT shader in HLSL for visual effects.</li>
+                    <li>Created the minigame for obtaining code pieces.</li>
+                    <li>Came up with the busy work task for making the boss think you are working.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="page-section documentation">
+            <h2>Project Documentation</h2>
+            <ul class="project-documentation">
+                <li><a href="https://github.com/DavinWam/Silent-Codes" target="_blank">GitHub</a></li>
+            </ul>
+        </section>
+        <section class="page-section">
+            <h2>Screenshots</h2>
+            <div class="screenshot-grid">
+                <img src="./screenshots/SilentCodes (3).png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                <img src="./screenshots/SilentCodes (1).png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                <img src="./screenshots/SilentCodes (2).png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+
+            </div>
+        </section>
+
+        <!-- The Modal/Lightbox -->
+        <div id="my-modal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="my-slides">
+                    <img src="./screenshots/SilentCodes (3).png" style="width:100%">
+                </div>
+                <div class="my-slides">
+                    <img src="./screenshots/SilentCodes (1).png" style="width:100%">
+                </div>
+                <div class="my-slides">
+                    <img src="./screenshots/SilentCodes (2).png" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+        <section class="page-section">
+            <h2>Highlight of the Project</h2>
+            <p class="pane highlights">For me this project was definitely a about implementing the CRT effect it gave me
+                the chance to start learning HLSL, and see how to apply shaders through screenspace, target parts of the
+                renderpipeline and more. Which became profoundly helpful in later projects, particularly as when I took
+                a dive into Stylized PBR with a another one of my games Baby Steps.</p>
+        </section>
+        <section class="page-section">
+            <h2>Team Credits</h2>
+            <ul class="teamate-list">
+                <li>Andrei Davydov - UI Programming</li>
+                <li>Lois Kim - UI Art</li>
+                <li>Yooeun - Programming</li>
+            </ul>
+        </section>
+        <div class="random-projects">
+            <h2>Explore More Games</h2>
+            <div class="game-grid"></div>
+            <div class="carousel-buttons">
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+            <section>
+                <a class="page-section__button game-link" href="../index.html">Back To Projects</a>
+            </section>
+        </div>
+    </div>
+    <footer id="footer-container"></footer>
+    <script src="RandomGame.js"></script>
+    <script src="Modal.js"></script>
 </body>
+
 </html>

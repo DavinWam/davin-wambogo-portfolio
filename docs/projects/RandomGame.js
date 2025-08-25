@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { title: "SCALE THE BEAST", link: "scale_the_beast.html", image: "../thumbnails/thumbnail_scale_the_beast.png" },
         { title: "BABY STEPS", link: "baby_steps.html", image: "../thumbnails/thumbnail_baby_steps.jpg" },
         { title: "Silent Codes ", link: "silent_codes.html", image: "../thumbnails/thumbnail_silent_codes.jpg" },
-        { title: "TAXES AND TENACITY", link: "taxes_and_tenactity.html", image: "../thumbnails/thumbnail_taxes_and_tenacity.png" },
+        { title: "TAXES AND TENACITY", link: "taxes_and_tenacity.html", image: "../thumbnails/thumbnail_taxes_and_tenacity.png" },
         // { title: "SPACE GAME", link: "space_game.html", image: "../thumbnails/thumbnail_space_game.png" },
         { title: "GOT STEAM, PUNK?", link: "got_steam_punk.html", image: "../thumbnails/thumbnail_got_steam,_punk.jpg" },
         { title: "LAB BAT", link: "lab_bat.html", image: "../thumbnails/thumbnail_lab_bat.PNG" },

@@ -7,7 +7,9 @@ let yourSketch = (p) => {
     '#F57382', // Light red
     '#FAC2AA'  // Peach
   ];
-    
+  
+  let canvas_height = 700;
+
   p.setup = function() {
     let canvas = p.createCanvas(p.windowWidth-20, 700); // Create the canvas to fill the width of the screen
     canvas.parent('background-canvas'); // Attach the canvas to the dedicated container
@@ -19,7 +21,7 @@ let yourSketch = (p) => {
 
   p.windowResized = function() {
     let width = Math.min(screen.width, window.innerWidth);
-    p.resizeCanvas(height, 700); // Keeps the height fixed at 700
+    p.resizeCanvas(width, canvas_height); // Keeps the height fixed at 700
     p.redraw(); // Redraw the canvas after resizing
 };
 

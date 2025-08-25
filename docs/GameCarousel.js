@@ -44,11 +44,11 @@ function updateCarousel() {
     console.log('Calculated Item Width:', itemWidth);
 
     // Disable or enable the prevButton button
-    const prevButton = document.querySelector('.prevButton');
+    const prevButton = document.querySelector('.prev-button');
     prevButton.disabled = currentIndex === 0;
 
     // Disable or enable the nextButton button
-    const nextButton = document.querySelector('.nextButton');
+    const nextButton = document.querySelector('.next-button');
     nextButton.disabled = currentIndex >= totalItems - itemsPerView;
 }
 

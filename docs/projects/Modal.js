@@ -1,9 +1,15 @@
 function openModal() {
-  document.getElementById("myModal").style.display = "flex";
+  document.getElementById("my-modal").style.display = "flex";
+  var i;
+  var slides = document.getElementsByClassName("myslides");
+  for (i = 0; i < slides.length; i++) {
+    print(i);
+    slides[i].style.display = "none"; // Hide all slides
+  }
 }
-
+ 
 function closeModal() {
-  document.getElementById("myModal").style.display = "none";
+  document.getElementById("my-modal").style.display = "none";
 }
 
 var slideIndex = 1;

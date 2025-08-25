@@ -1,83 +1,125 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=1024" name="viewport"/>
-<title>Got Steam, Punk?</title>
-<link href="../css/style.css" rel="stylesheet"/>
-<script src="../loadHeader.js"></script>
+    <meta charset="utf-8" />
+    <meta content="width=1024" name="viewport" />
+    <title>Got Steam, Punk?</title>
+    <link href="../css/style.css" rel="stylesheet" />
+    <script src="../loadHeader.js"></script>
 </head>
+
 <body>
-<header id="header-container"></header>
-<section class="game-header">
-<div class="project-container">
-<h1 class="large-fade-in game-header__title">Got Steam, Punk?</h1>
-<div class="pane">
-<h3 class="large-fade-in game-header__tagline">A Comedic Adventure on the High Seas.</h3>
-</div>
-</div>
-</section>
-<div class="container">
-<section class="page-section" id="game-showcase">
-<section class="game-showcase__video">
-<iframe allowfullscreen="" class="game-showcase__iframe" frameborder="0" height="550" src="https://youtube.com/embed/hTnZgLzd_wU" width="980"></iframe>
-</section>
-<a class="page-section__button" href="https://tarrott.itch.io/got-steam-punk" target="_blank">Play Now</a>
-</section>
-<section class="page-section">
-<div class="pane project-header">
-<h3>Got Steam, Punk?</h3>
-<span>(2021)</span>
-<p><strong>Roles:</strong> Game and Level Designer</p>
-</div>
-<div class="pane project-description"><p class="project-description__text">Developed during a game jam by a seven-member team, this game combines humor with a high-seas adventure on the world's most advanced, barely seaworthy steamship. Playing as a crew member, the goal is to keep the ship afloat by completing various repair tasks. The player is handed a steam-powered grappling hook to navigate the ship quickly, adding a dynamic element to the gameplay. The game features a cartoonish art style and a lighthearted narrative.</p>
-<h4>What I Did</h4>
-<ul>
-<li>Designed the ship’s layout and repair task sequence.</li>
-<li>Implemented the steam-powered grappling hook mechanics and the slide.</li>
-<li>Took the ship from it's blockout to the finished layout.</li>
-<li>Created a class document for the game's code.</li>
-</ul></div>
-</section>
-<section class="page-section documentation">
-<h2>Project Documentation</h2>
-<ul class="project-documentation">
-</ul>
-</section>
-<section class="page-section">
-<h2>Screenshots</h2>
-<div class="screenshot-grid">
-<!-- Add <img> here -->
-</div>
-</section>
-<section class="page-section">
-<h2>Highlight of the Project</h2>
-<p class="pane highlights">On Got Steam, Punk?, the real task was the interior of the ship—making it detailed and believable. Evan's solid models set the foundation, and together with Jeremy, we added some humor into the mix with the signs around the ship. My job was to figure out the best spots for grappling points for players to navigate quickly, keeping the gameplay smooth and engaging. I spent a good deal of time ensuring that every piece of the ship was placed just right, drawing from real-life references to get that authentic steamship feel.</p>
-</section>
-<section class="page-section">
-<h2>Team Credits</h2>
-<ul class="teamate-list"><li>Daniel Grammar - Music</li>
-<li>Evan Powers - Art</li>
-<li>James Espericueta - Programming</li>
-<li>Jeremy Kuznetsov - Art &amp; Writing</li>
-<li>Jaxon Lee - Programming</li>
-<li>Isaac Hill - Voice Acting</li></ul>
-</section>
-<div class="random-projects">
-<h2>Explore More Games</h2>
-<div class="game-grid"></div>
-<div class="carousel-buttons">
-<button id="prev-btn">Previous</button>
-<button id="next-btn">Next</button>
-</div>
-<section>
-<a class="page-section__button game-link" href="../index.html">Back To Projects</a>
-</section>
-</div>
-</div>
-<footer id="footer-container"></footer>
-<script src="RandomGame.js"></script>
-<script src="Modal.js"></script>
+    <header id="header-container"></header>
+    <section class="game-header">
+        <div class="project-container">
+            <h1 class="large-fade-in game-header__title">Got Steam, Punk?</h1>
+            <div class="pane">
+                <h3 class="large-fade-in game-header__tagline">A Comedic Adventure on the High Seas.</h3>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <section class="page-section" id="game-showcase">
+            <section class="game-showcase__video">
+                <iframe allowfullscreen="" class="game-showcase__iframe" frameborder="0" height="550"
+                    src="https://youtube.com/embed/hTnZgLzd_wU" width="980"></iframe>
+            </section>
+            <a class="page-section__button" href="https://tarrott.itch.io/got-steam-punk" target="_blank">Play Now</a>
+        </section>
+        <section class="page-section">
+            <div class="pane project-header">
+                <h3>Got Steam, Punk?</h3>
+                <span>(2021)</span>
+                <p><strong>Roles:</strong> Game and Level Designer</p>
+            </div>
+            <div class="pane project-description">
+                <p class="project-description__text">Developed during a game jam by a seven-member team, this game
+                    combines humor with a high-seas adventure on the world's most advanced, barely seaworthy steamship.
+                    Playing as a crew member, the goal is to keep the ship afloat by completing various repair tasks.
+                    The player is handed a steam-powered grappling hook to navigate the ship quickly, adding a dynamic
+                    element to the gameplay. The game features a cartoonish art style and a lighthearted narrative.</p>
+                <h4>What I Did</h4>
+                <ul>
+                    <li>Designed the ship’s layout and repair task sequence.</li>
+                    <li>Implemented the steam-powered grappling hook mechanics and the slide.</li>
+                    <li>Took the ship from it's blockout to the finished layout.</li>
+                    <li>Created a class document for the game's code.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="page-section documentation">
+            <h2>Project Documentation</h2>
+            <ul class="project-documentation">
+            </ul>
+        </section>
+        <section class="page-section">
+            <h2>Screenshots</h2>
+            <div class="screenshot-grid">
+                <img src="./screenshots/3d_GotSteamPunk (1).png" onclick="openModal();currentSlide(1)"
+                    class="hover-shadow">
+                <img src="./screenshots/3d_GotSteamPunk (2).png" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow">
+                <img src="./screenshots/3d_GotSteamPunk (3).png" onclick="openModal();currentSlide(3)"
+                    class="hover-shadow">
+            </div>
+        </section>
+
+        <!-- The Modal/Lightbox -->
+        <div id="my-modal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <div class="my-slides">
+                    <img src="./screenshots/3d_GotSteamPunk (1).png" style="width:100%">
+                </div>
+                <div class="my-slides">
+                    <img src="./screenshots/3d_GotSteamPunk (2).png" style="width:100%">
+                </div>
+                <div class="my-slides">
+                    <img src="./screenshots/3d_GotSteamPunk (3).png" style="width:100%">
+                </div>
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+
+        <section class="page-section">
+            <h2>Highlight of the Project</h2>
+            <p class="pane highlights">On Got Steam, Punk?, the real task was the interior of the ship—making it
+                detailed and believable. Evan's solid models set the foundation, and together with Jeremy, we added some
+                humor into the mix with the signs around the ship. My job was to figure out the best spots for grappling
+                points for players to navigate quickly, keeping the gameplay smooth and engaging. I spent a good deal of
+                time ensuring that every piece of the ship was placed just right, drawing from real-life references to
+                get that authentic steamship feel.</p>
+        </section>
+        <section class="page-section">
+            <h2>Team Credits</h2>
+            <ul class="teamate-list">
+                <li>Daniel Grammar - Music</li>
+                <li>Evan Powers - Art</li>
+                <li>James Espericueta - Programming</li>
+                <li>Jeremy Kuznetsov - Art &amp; Writing</li>
+                <li>Jaxon Lee - Programming</li>
+                <li>Isaac Hill - Voice Acting</li>
+            </ul>
+        </section>
+        <div class="random-projects">
+            <h2>Explore More Games</h2>
+            <div class="game-grid"></div>
+            <div class="carousel-buttons">
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+            <section>
+                <a class="page-section__button game-link" href="../index.html">Back To Projects</a>
+            </section>
+        </div>
+    </div>
+    <footer id="footer-container"></footer>
+    <script src="RandomGame.js"></script>
+    <script src="Modal.js"></script>
 </body>
+
 </html>
