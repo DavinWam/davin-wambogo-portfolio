@@ -1,4 +1,5 @@
 from utils.image_utils import thumb_path
+from game_data import format_teammate_entry,  get_teammates, get_contributions
 
 # === HTML Templates ===
 header_template = """<!DOCTYPE html>
@@ -30,12 +31,40 @@ def render_template(template_str, game_data, extra_data=None):
         "alt": game_data.get("title", ""),
         "style": "",
         "dates": game_data.get("dates", ""),
+        "year": (game_data.get("start_date", "")[:4] if game_data.get("start_date") else ""),
         "tagline": game_data.get("tagline", ""),
         "highlight": game_data.get("highlight", ""),
         "play_link": game_data.get("play_link", ""),
         "video_link": game_data.get("video_link") or game_data.get("video", ""),
     }
 
+    # === Handle full teammate list formatting ===
+    if "{teammates}" in template_str:
+        teammates = get_teammates(game_data)
+        formatted = [format_teammate_entry(t) for t in teammates if format_teammate_entry(t)]
+        context["teammates"] = ", ".join(formatted)
+
+    if extra_data:
+        context.update(extra_data)
+
+        if "teammate_index" in extra_data:
+            index = extra_data["teammate_index"]
+            teammates = get_teammates(game_data)
+            if isinstance(index, int) and 0 <= index < len(teammates):
+                teammate = teammates[index]
+                context["teammate_name"] = teammate.get("teammate_name", "")
+                context["teammate_role"] = teammate.get("role", "")
+            else:
+                context["teammate_name"] = ""
+                context["teammate_role"] = ""
+
+        if "contributions_index" in extra_data:
+            index = extra_data["contributions_index"]
+            contributions = get_contributions(game_data)
+            if isinstance(index, int) and 0 <= index < len(contributions):
+                context["contribution"] = contributions[index]
+            else:
+                context["contribution"] = ""    
 
     img_funcs = _validate_and_get_img_funcs(template_str, extra_data)
 
@@ -44,10 +73,37 @@ def render_template(template_str, game_data, extra_data=None):
         replacement = func(game_data["title"])
         result = result.replace("{img_path}", replacement, 1)
 
-    if extra_data:
-        context.update(extra_data)
 
     return result.format(**context)
+
+def render_template_list(
+    data_list: list,
+    template: str,
+    game_data: dict = None,
+    join_with: str = "",
+    wrap_tag: str = None,
+    index_names: list[str] = None
+) -> str:
+    game_data = game_data or {}
+    blocks = []
+
+    for i, item in enumerate(data_list):
+        context = {}
+
+        # Add all index names to the context
+        if index_names:
+            for name in index_names:
+                context[name] = i
+
+        rendered = render_template(template, game_data, extra_data=context)
+        if wrap_tag:
+            rendered = f"<{wrap_tag}>{rendered}</{wrap_tag}>"
+        blocks.append(rendered)
+
+    return join_with.join(blocks)
+
+
+
 
 def render_game(game: dict, template: str, extra_data: dict = None) -> str:
     return render_template(template, game, extra_data)

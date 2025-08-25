@@ -7,7 +7,12 @@
         "visibility": "private",
         "dates": null,
         "start_date": null,
-        "end_date": null
+        "end_date": null,
+        "project_contributions": [
+            "Designed the initial level layout.",
+            "Created the jetpack mechanics and gameplay flow.",
+            "Collaborated on the visual design of the environment."
+        ]
     },
     {
         "title": "Penrose",
@@ -17,7 +22,12 @@
         "visibility": "private",
         "dates": null,
         "start_date": null,
-        "end_date": null
+        "end_date": null,
+        "project_contributions": [
+            "Designed levels to reflect psychological themes.",
+            "Created environmental assets and visual storytelling elements.",
+            "Collaborated on the overall game narrative and design."
+        ]
     },
     {
         "title": "Enya's Journey",
@@ -33,6 +43,15 @@
         "video_link": "https://youtube.com/embed/2vaj-whRG80",
         "play_link": "https://deditch.itch.io/enyas-journey",
         "project_description": "A 2D RPG that blends pixel-art characters with modeled environments, created for a Game Programming school project over two months by a five-person team. A fantasy adventure built around fire, in an unstable world. One where a hero is chosen periodically to refuel the world's flame, lest the monster population increase to apocalyptic levels. My teammates contributed music, narrative writing, sprite creation, pixel art animation, and story programming.",
+        "project_contributions": [
+            "Authored the class document for programming and the Game Design document.",
+            "Programmed the battle system, covering stats, turn flow, spells, enemy encounters, etc.",
+            "Designed the RPG systems from class structure, spells, and items.",
+            "Designed and decorated the entire map, and created textures for terrain and water.",
+            "Created all custom shaders in Shader Graph for spell effects and the clouds.",
+            "Made all spell effects and fire effects in Visual Effects Graph.",
+            "Implemented and designed all the UI, excluding the dialogue system."
+        ],
         "documentation": [
             {
                 "name": "Game Design Document",
@@ -81,6 +100,11 @@
         "video_link": "https://youtube.com/embed/bEJWRTk5IG0",
         "play_link": "",
         "project_description": "\"Baby Steps\" is a VR game where players care for a baby by fulfilling its needs such as being held, fed, and entertained over a 4.5-minute session. The game was created as part of a final project for IMDM290 by a six-person team. It focuses on multitasking gameplay inspired by titles like \"Overcooked\" and \"Tattletail.\" The game features a cartoon-style shader, various animations, and a fully modeled in-game environment.",
+        "project_contributions": [
+            "Developed the baby AI, with various states such as Idle, Roaming, and Hungry.",
+            "Implemented the cel-shading shader using HLSL and wrote code to apply reverse hull technique onto objects.",
+            "Programmed interactions, such as the cooking process and feeding mechanics."
+        ],
         "documentation": [
             {
                 "name": "GitHub",
@@ -125,6 +149,12 @@
         "video_link": "https://youtube.com/embed/kV3OGCEIvKs",
         "play_link": "https://deditch.itch.io/taxes-and-tenacity",
         "project_description": "A roguelite game that weaves RPG elements with a life-and-tax system, created during a two-week game jam by a duo. In this world, the player embarks on dungeon expeditions to collect gold from defeated monsters, facing a looming tax deadline. Successfully paying your taxes means earning extra lives; failure leads to losing them all. With each dive, both the stakes and the character's capabilities escalate. My partner contributed by crafting the stages, the connecting map, and designing the floor bosses' attacks.",
+        "project_contributions": [
+            "programmed player, camera movement, stats and enemy ai.",
+            "Developed the enemy waves on each of the nodes",
+            "Balanced the in-game economy for upgrades and boosts.",
+            "Designed the tax based lives system."
+        ],
         "documentation": [
             {
                 "name": "GitHub",
@@ -153,6 +183,11 @@
         "video_link": "",
         "play_link": "https://deditch.itch.io/silent-codes",
         "project_description": "An interactive two-player puzzle game developed over a two-week period, blending traditional escape room elements with digital puzzle-solving. Player 1 navigates a memory puzzle minigame to extract crucial code pieces, while Player 2 uses a physical cipher to decode the information. The game intensifies with the presence of a Boss character, forcing both players to remain quiet and avoid detection.",
+        "project_contributions": [
+            "Wrote a CRT shader in HLSL for visual effects.",
+            "Created the minigame for obtaining code pieces.",
+            "Came up with the busy work task for making the boss think you are working."
+        ],
         "documentation": [
             {
                 "name": "GitHub",
@@ -189,6 +224,12 @@
         "video_link": "https://youtube.com/embed/hTnZgLzd_wU",
         "play_link": "https://tarrott.itch.io/got-steam-punk",
         "project_description": "Developed during a game jam by a seven-member team, this game combines humor with a high-seas adventure on the world's most advanced, barely seaworthy steamship. Playing as a crew member, the goal is to keep the ship afloat by completing various repair tasks.",
+        "project_contributions": [
+            "Designed the ship’s layout and repair task sequence.",
+            "Implemented the steam-powered grappling hook mechanics and the slide.",
+            "Took the ship from it's blockout to the finished layout.",
+            "Created a class document for the game's code."
+        ],
         "documentation": [],
         "highlight": "On \"Got Steam, Punk?\", the real task was the interior of the ship—making it detailed and believable. Evan's solid models set the foundation, and together with Jeremy, we added some humor into the mix with the signs around the ship. My job was to figure out the best spots for grappling points for players to navigate quickly, keeping the gameplay smooth and engaging. I spent a good deal of time ensuring that every piece of the ship was placed just right, drawing from real-life references to get that authentic steamship feel. Somehow while working on it I never felt comfortable with how it looked but after having time to look at it now, I'm fonder of the work I did there.",
         "teammates": [
@@ -232,6 +273,11 @@
         "video_link": "https://youtube.com/embed/oCgHkXPRw6k",
         "play_link": "[Insert Game Link Here]",
         "project_description": "Lab Bat is a Flash Game inspired puzzle platformer developed over a three-day game jam, inspired by a World War II story where bats were trained to drop bombs. In this game, the protagonist, a bat who originally could not fly, navigates a facility filled with hazards to deliver a bomb to its destination in exchange for flight.",
+        "project_contributions": [
+            "Designed all 6 puzzle levels, the players moveset and the level hazards.",
+            "Placed the level assets and contributed to pixel art like the ooze containers.",
+            "Designed and implemented the UI, including the intro animation."
+        ],
         "documentation": [],
         "highlight": "Within \"Lab Bat\", the fifth level stands out as my personal best. It's where the game starts to challenge the player's problem-solving skills. The setup involves placing the crate onto a moving platform, followed by the bomb. Most players instinctively cling to the bomb due to this order, only to find that the crate then obstructs the intended path. I found that the realization that they need to hold onto the crate instead was a satisfying moment from watching people play.",
         "teammates": [
@@ -263,6 +309,12 @@
         "video_link": "",
         "play_link": "https://primeloop.itch.io/scale-the-beast",
         "project_description": "\"Scale the Beast\" is an action platformer developed during the GMTK Game Jam 2024 in just 4 days. Working with the same team as our previous project, we focused on implementing code that could be reused effectively. The game emphasizes separating the functionality of classes into distinct components that aren't tightly coupled, ensuring flexibility and maintainability in the design.",
+        "project_contributions": [
+            "Implemented the character controller, animation and attack system.",
+            "Implemented the event based progression system.",
+            "Designed the level placing the assets for the main level was split 50/50.",
+            "Created the intro scene featuring a dramatic dragon entrance."
+        ],
         "documentation": [
             {
                 "name": "GitHub",
@@ -292,6 +344,14 @@
         "play_link": "",
         "highlight": "",
         "project_description": "Blades on Ice is a cooperative figure skating game where two players embody a pair ice dancing team. Switch between Practice, Performance, and Story Mode as you master iconic dance elements like twizzles, spins, and lifts. Gameplay blends rhythm timing, synchronized movement, and expressive presentation to capture the artistry of ice dance. Each performance is graded on musicality, connection, and precision.",
+        "project_contributions": [
+            "Authored the Game Design document, and made documentation for various tools.",
+            "Designed the skating mechanics and the overall gameplay loop.",
+            "Implemented a Stack-based UI system to reduce dependencies.",
+            "Implemented a data first approach to character stats, progression and routines and practice.",
+            "Programmed the input bufffering system for the motion inputs.",
+            "Created effects to exentuate the ice skating like the burst when a crossover is performed."
+        ],
         "documentation": [
             {
                 "name": "Game Design Document",
@@ -328,6 +388,12 @@
         "play_link": "",
         "highlight": "",
         "project_description": "",
+        "project_contributions": [
+            "Programmed a realtime FM synthesizer",
+            "Used single entry point to manage game states and remove start up ambiguity.",
+            "Made tools for creating waves and creating the grided play area.",
+            "Created the pixel art for the characters and environments."
+        ],
         "documentation": [],
         "teammates": []
     }

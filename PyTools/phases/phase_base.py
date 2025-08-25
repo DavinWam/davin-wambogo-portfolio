@@ -31,17 +31,16 @@ class Phase:
             f.write(str(soup))
 
     def overwrite_html_by_id(self, soup: BeautifulSoup, element_id: str, html_string: str):
-        target = soup.find(id=element_id)
-        if not target:
-            raise ValueError(f"[{self.name}] Could not find element with id='{element_id}'")
-        target.clear()
-        target.append(BeautifulSoup(html_string, "html.parser"))
+        self._overwrite_html_by_selector(soup, f"#{element_id}", html_string)
+
+    def overwrite_html_by_class(self, soup: BeautifulSoup, class_name: str, html_string: str):
+        self._overwrite_html_by_selector(soup, f".{class_name}", html_string)
 
     def append_html_by_id(self, soup: BeautifulSoup, element_id: str, html_string: str):
-        target = soup.find(id=element_id)
-        if not target:
-            raise ValueError(f"[{self.name}] Could not find element with id='{element_id}'")
-        target.append(BeautifulSoup(html_string, "html.parser"))
+        self._append_html_by_selector(soup, f"#{element_id}", html_string)
+
+    def append_html_by_class(self, soup: BeautifulSoup, class_name: str, html_string: str):
+        self._append_html_by_selector(soup, f"#{class_name}", html_string)
 
     def set_text_by_class(self, soup: BeautifulSoup, class_name: str, text: str) -> bool:
         """
@@ -63,3 +62,32 @@ class Phase:
 
     def exit(self):
         pass
+    
+    def _overwrite_html_by_selector(self, soup: BeautifulSoup, selector: str, html_string: str, before=False, after=False):
+        tag = soup.select_one(selector)
+        if not tag:
+            raise ValueError(f"[{self.name}] Could not find element with selector '{selector}'")
+
+        new_html = BeautifulSoup(html_string, "html.parser")
+
+        if before:
+            tag.insert_before(new_html)
+        elif after:
+            tag.insert_after(new_html)
+        else:
+            tag.clear()
+            tag.append(new_html)
+
+    def _append_html_by_selector(self, soup: BeautifulSoup, selector: str, html_string: str, before=False, after=False):
+        tag = soup.select_one(selector)
+        if not tag:
+            raise ValueError(f"[{self.name}] Could not find element with selector '{selector}'")
+
+        new_html = BeautifulSoup(html_string, "html.parser")
+
+        if before:
+            tag.insert_before(new_html)
+        elif after:
+            tag.insert_after(new_html)
+        else:
+            tag.append(new_html)

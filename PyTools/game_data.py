@@ -116,3 +116,44 @@ def write_roles_json():
         json.dump(all_roles, f, indent=2)
 
     print(f"[Info] Wrote {len(all_roles)} unique roles to {ROLES_JSON_PATH}")
+
+def format_teammate_entry(self, entry: object) -> str:
+    """Formats a teammate entry into 'Name – Role' or 'Name'."""
+    if isinstance(entry, str):
+        return entry.strip()
+
+    if isinstance(entry, dict):
+        name = (entry.get("name") or "").strip()
+        role = (entry.get("role") or "").strip()
+        if name and role:
+            return f"{name} – {role}"
+        return name or role
+
+    return ""
+
+def get_teammates(game):
+    raw_team = game.get("teammates") or game.get("team") or []
+    result = []
+
+    for entry in raw_team:
+        if isinstance(entry, dict):
+            name = entry.get("name") or entry.get("teammate_name")
+            role = entry.get("role") or ""
+        elif isinstance(entry, str):
+            name = entry
+            role = ""
+        else:
+            continue
+
+        if name:
+            result.append({
+                "teammate_name": name,
+                "role": role
+            })
+
+    return result
+
+def get_contributions(game: dict) -> list[str]:
+    """Returns a cleaned list of non-empty project contributions."""
+    raw = game.get("project_contributions") or game.get("contributions") or []
+    return [c for c in raw if not is_empty(c)]

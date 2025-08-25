@@ -1,9 +1,9 @@
 from phases.phase_base import Phase
 from utils.html_utils import find_project_html_files, game_to_html_filename, create_html_file
 from utils.image_utils import thumb_path
-from utils.template_utils import header_template, footer_template,render_template
+from utils.template_utils import header_template, footer_template,render_template, render_template_list
 from config import TOP_LEVEL_DIR
-from game_data import get_game_dataframe, is_empty
+from game_data import get_game_dataframe, is_empty, get_teammates, get_contributions
 import os
 
 
@@ -26,7 +26,17 @@ fallback_image_link_template = """
 </section>
 """
 
+project_header_inner_template = """
+<h3>{title}</h3>
+<span>({year})</span>
+<p><strong>Roles:</strong> {roles}</p>
+"""
 
+doc_link_template = '<a href="{link}" target="_blank">{link_name}</a>'
+
+teammate_template = "{teammate_name} - {teammate_role}"
+
+what_i_did_template = "{contribution}"
 
 PROJECT_HTML_BODY_TEMPLATE = """
 <section class="game-header">
@@ -44,19 +54,15 @@ PROJECT_HTML_BODY_TEMPLATE = """
 
     <section class="page-section">
     <div class="pane project-header">
-        <h3>{title}</h3>
-        <span>(YEAR)</span>
-        <p><strong>Roles:</strong> TODO</p>
     </div>
     <div class="pane project-description">
-        <p>Description goes here.</p>
+        <p class="project-description__text">Description goes here.</p>
     </div>
     </section>
 
     <section class="page-section documentation">
     <h2>Project Documentation</h2>
-    <ul>
-        <li><a href="#">Design Doc</a></li>
+    <ul class="project-documentation">
     </ul>
     </section>
 
@@ -69,13 +75,13 @@ PROJECT_HTML_BODY_TEMPLATE = """
 
     <section class="page-section">
     <h2>Highlight of the Project</h2>
-    <p class="pane">Highlight paragraph goes here.</p>
+    <p class="pane highlights">Highlight paragraph goes here.</p>
     </section>
 
     <section class="page-section">
     <h2>Team Credits</h2>
-    <ul>
-        <li>Teammate Name - Role</li>
+    <ul class="teamate-list">
+
     </ul>
     </section>
 
@@ -127,6 +133,12 @@ class projects_setup(Phase):
             self.insert_title(soup, game)
             self.insert_tagline(soup, game)
             self.insert_showcase(soup, game)  # just testing this
+            self.insert_project_header(soup,game)
+            self.insert_project_description(soup,game)
+            # self.insert_documentation(soup,game)
+            # self.insert_screenshots(soup,game)
+            # self.insert_highlight(soup,game)
+            self.insert_team_credits(soup,game)
 
             self.write_html(label)
 
@@ -221,59 +233,70 @@ class projects_setup(Phase):
             combined_html = "\n".join(html_parts)
             self.overwrite_html_by_id(soup, "game-showcase", combined_html)
 
-
-    def insert_play_link(self, soup, game):
-        if not game.get("play_link"): return
-        link = soup.select_one(".game-link")
-        if link:
-            link["href"] = game["play_link"]
-
     def insert_project_header(self, soup, game):
-        if not game.get("game-header__title"): return
-        header = soup.select_one(".project-header h3")
-        year = soup.select_one(".project-header span")
-        roles = soup.select_one(".project-header p")
-        if header:
-            header.string = game["game-header__title"]
-        if year and game.get("start_date"):
-            year.string = game["start_date"][:4]
-        if roles and game.get("roles"):
-            roles.string = f"Roles: {game['roles']}"
+        html = render_template(project_header_inner_template, game)
+        self.overwrite_html_by_class(soup, "project-header", html)
 
     def insert_project_description(self, soup, game):
-        if not game.get("description"): return
-        desc = soup.select_one(".project-description p")
-        if desc:
-            desc.string = game["description"]
+        desc = game.get("project_description") or game.get("description")
+        if is_empty(desc):
+            return
+
+        # Add contributions
+        contributions = get_contributions(game)
+        contribution_html = ""
+        if contributions:
+            contribution_html = render_template_list(
+                data_list=contributions,
+                template=what_i_did_template,
+                game_data=game,
+                wrap_tag="li",
+                join_with="\n",
+                index_names=["contributions_index"]
+            )
+            contribution_html = f"<h4>What I Did</h4>\n<ul>\n{contribution_html}\n</ul>"
+
+        # Final assembled HTML for the section
+        full_html = f"""<p class="project-description__text">{desc}</p>\n{contribution_html}"""
+
+        # Overwrite the whole .project-description pane
+        self.overwrite_html_by_class(soup, "project-description", full_html)
+
+
 
     def insert_documentation(self, soup, game):
-        if not game.get("documentation"): return
-        doc_list = soup.select_one(".documentation ul")
-        if doc_list:
-            doc_list.clear()
-            for doc in game["documentation"]:
-                li = soup.new_tag("li")
-                a = soup.new_tag("a", href=doc.get("url", "#"))
-                a.string = doc.get("name", "Doc")
-                li.append(a)
-                doc_list.append(li)
-
+        docs = game.get("documentation", [])
+        if not docs:
+            return
+        rendered = render_template_list(docs, doc_link_template, game_data=game, join_with="\n", wrap_tag="li")
+        self.insert_html_into_ul(soup, "project-documentation", rendered)
+    
+    
     def insert_screenshots(self, soup, game):
         pass
 
-
     def insert_highlight(self, soup, game):
-        if not game.get("highlight"): return
-        p = soup.select_one(".page-section p.pane")
-        if p:
-            p.string = game["highlight"]
+        highlight = game.get("highlight", "")
+        if is_empty(highlight):
+            return
+        # .highlights already points at the <p> container
+        self.insert_text_value(soup, value=highlight, class_name="highlights", game=game)
+
+
+
 
     def insert_team_credits(self, soup, game):
-        if not game.get("team"): return
-        ul = soup.select_one(".page-section ul")
-        if ul:
-            ul.clear()
-            for entry in game["team"]:
-                li = soup.new_tag("li")
-                li.string = entry
-                ul.append(li)
+        data_list = get_teammates(game)
+        if not data_list:
+            return
+
+        html = render_template_list(
+            data_list,
+            template=teammate_template,
+            game_data=game,
+            join_with="\n",
+            wrap_tag="li",
+            index_names=["teammate_index"]
+        )
+
+        self.overwrite_html_by_class(soup, "teamate-list", html)
