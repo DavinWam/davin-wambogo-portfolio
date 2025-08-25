@@ -136,8 +136,8 @@ class projects_setup(Phase):
             self.insert_project_header(soup,game)
             self.insert_project_description(soup,game)
             self.insert_documentation(soup,game)
-            # self.insert_screenshots(soup,game)
-            # self.insert_highlight(soup,game)
+            self.insert_screenshots(soup,game)
+            self.insert_highlight(soup,game)
             self.insert_team_credits(soup,game)
 
             self.write_html(label)

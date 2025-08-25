@@ -1,21 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Array of game details
-    const games = [
-        { title: "ENYA'S JOURNEY", link: "enyas_journey.html", image: "../thumbnail_enyas_journey.jpg" },
-        { title: "SCALE THE BEAST", link: "scale_the_beast.html", image: "../thumbnail_scale_the_beast.png" },
-        { title: "BABY STEPS", link: "baby_steps.html", image: "../thumbnail_baby_steps.jpg" },
-        { title: "Silent Codes ", link: "silent_codes.html", image: "../thumbnail_silent_codes.jpg" },
-        { title: "TAXES AND TENACITY", link: "taxes_and_tenactity.html", image: "../thumbnail_taxes_and_tenactity.png" },
-        // { title: "SPACE GAME", link: "space_game.html", image: "../thumbnail_space_game.png" },
-        { title: "GOT STEAM, PUNK?", link: "got_steam_punk.html", image: "../thumbnail_got_steam_punk.jpg" },
-        { title: "LAB BAT", link: "lab_bat.html", image: "../thumbnail_lab_bat.PNG" },
-        { title: "OTHER PROJECTS", link: "OtherProjects.html", image: "../Thumbnail_16_9.png" },
-        // { title: "PENROSE", link: "penrose.html", image: "../thumbnail_penrose.PNG" },
-        // { title: "VALDRADA", link: "valdrada.html", image: "../thumbnail_valdrada.jpg" },
-        // { title: "LUMINAQUA ", link: "fish_animation.html", image: "../thumbnail_fish_animation.jpg" }
+    // const games = [
+    //     { title: "ENYA'S JOURNEY", link: "enyas_journey.html", image: "../thumbnail_enyas_journey.jpg" },
+    //     { title: "SCALE THE BEAST", link: "scale_the_beast.html", image: "../thumbnail_scale_the_beast.png" },
+    //     { title: "BABY STEPS", link: "baby_steps.html", image: "../thumbnail_baby_steps.jpg" },
+    //     { title: "Silent Codes ", link: "silent_codes.html", image: "../thumbnail_silent_codes.jpg" },
+    //     { title: "TAXES AND TENACITY", link: "taxes_and_tenactity.html", image: "../thumbnail_taxes_and_tenactity.png" },
+    //     // { title: "SPACE GAME", link: "space_game.html", image: "../thumbnail_space_game.png" },
+    //     { title: "GOT STEAM, PUNK?", link: "got_steam_punk.html", image: "../thumbnail_got_steam_punk.jpg" },
+    //     { title: "LAB BAT", link: "lab_bat.html", image: "../thumbnail_lab_bat.PNG" },
+    //     { title: "OTHER PROJECTS", link: "OtherProjects.html", image: "../Thumbnail_16_9.png" },
+    //     // { title: "PENROSE", link: "penrose.html", image: "../thumbnail_penrose.PNG" },
+    //     // { title: "VALDRADA", link: "valdrada.html", image: "../thumbnail_valdrada.jpg" },
+    //     // { title: "LUMINAQUA ", link: "fish_animation.html", image: "../thumbnail_fish_animation.jpg" }
 
-        // Add more projects as needed
-    ];
+    //     // Add more projects as needed
+    // ];
 
     // Function to get the filename from the URL
     function getFileName(url) {
@@ -31,6 +31,23 @@ document.addEventListener("DOMContentLoaded", function () {
         visitedGames.push(currentFileName);
         sessionStorage.setItem('visitedGames', JSON.stringify(visitedGames));
     }
+
+       // Load games from JSON
+    fetch('./games.json')
+        .then(response => response.json())
+        .then(games => {
+            console.log("Loaded games:", games);  // For now, just print them
+
+            // If you want to use this later, here's a working stub for thumbnail path correction
+            games.forEach(game => {
+                game.image = `./thumbnails/thumbnail_${game.filename}.jpg`; // or .png depending
+            });
+
+            // Continue your carousel logic here...
+        })
+        .catch(error => {
+            console.error("Failed to load games.json:", error);
+        });
 
     // Function to filter games
     function filterGames(gameList, visited) {
