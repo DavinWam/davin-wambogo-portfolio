@@ -1,34 +1,5 @@
 [
-    {
-        "title": "Space Blitz",
-        "roles": "Game Design, Level Design",
-        "filename": "space_game",
-        "thumbnail": "thumbnail_space_game.png",
-        "visibility": "private",
-        "dates": null,
-        "start_date": null,
-        "end_date": null,
-        "project_contributions": [
-            "Designed the initial level layout.",
-            "Created the jetpack mechanics and gameplay flow.",
-            "Collaborated on the visual design of the environment."
-        ]
-    },
-    {
-        "title": "Penrose",
-        "roles": "Level Design, Art",
-        "filename": "penrose",
-        "thumbnail": "thumbnail_penrose.PNG",
-        "visibility": "private",
-        "dates": null,
-        "start_date": null,
-        "end_date": null,
-        "project_contributions": [
-            "Designed levels to reflect psychological themes.",
-            "Created environmental assets and visual storytelling elements.",
-            "Collaborated on the overall game narrative and design."
-        ]
-    },
+
     {
         "title": "Enya's Journey",
         "roles": "Game Design, Programming, UI, Level Design, Art & Animation",
@@ -396,5 +367,34 @@
         ],
         "documentation": [],
         "teammates": []
+    },    {
+        "title": "Space Blitz",
+        "roles": "Game Design, Level Design",
+        "filename": "space_game",
+        "thumbnail": "thumbnail_space_game.png",
+        "visibility": "private",
+        "dates": null,
+        "start_date": null,
+        "end_date": null,
+        "project_contributions": [
+            "Designed the initial level layout.",
+            "Created the jetpack mechanics and gameplay flow.",
+            "Collaborated on the visual design of the environment."
+        ]
+    },
+    {
+        "title": "Penrose",
+        "roles": "Level Design, Art",
+        "filename": "penrose",
+        "thumbnail": "thumbnail_penrose.PNG",
+        "visibility": "private",
+        "dates": null,
+        "start_date": null,
+        "end_date": null,
+        "project_contributions": [
+            "Designed levels to reflect psychological themes.",
+            "Created environmental assets and visual storytelling elements.",
+            "Collaborated on the overall game narrative and design."
+        ]
     }
 ]

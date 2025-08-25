@@ -124,8 +124,6 @@ class projects_setup(Phase):
         self.open_htmls([game["filename"] for game in self.games])
 
         for game in self.games:
-            if game["title"] != "Blades on Ice":
-                continue  # skip all others for now
 
             label = game["filename"]
             soup = self.soups[label]
